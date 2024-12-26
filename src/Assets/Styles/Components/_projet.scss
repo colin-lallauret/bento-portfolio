@@ -1,0 +1,103 @@
+.projets-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    .button-more {
+        // box-shadow: 0px 0px 5px 3px #11172b;
+        border: 1px solid #11172b;
+        padding: 20px;
+        border-radius: 5px;
+        font-weight: $light;
+        transition: .15s ease-in-out;
+
+        &:hover {
+            background-color: #11172b;
+        }
+    }
+
+    .gradient-border {
+        display: flex;
+        max-width: 1200px;
+        width: 90%;
+        border-radius: 5px;
+        height: 300px;
+        padding: 1px;
+        cursor: pointer;
+        transition: 0.5s;
+        background: linear-gradient(90deg, var(--c1, $blue), var(--c2, $pink) 51%, var(--c1, $yellow)) var(--x, 0)/ 200%;
+
+        &:hover {
+            --x: 100%;
+
+            .projet {
+                background-color: #060913f6;
+            }
+        }
+
+        &.blue-pink {
+            --c1: #3043FE;
+            --c2: #BE4FF2;
+        }
+
+        &.pink-blue {
+            --c1: #BE4FF2;
+            --c2: #3043FE;
+        }
+    }
+
+    .projet {
+        border-radius: 5px;
+        background-color: $black;
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+        transition: $btn-transition;
+
+        > img {
+            width: 40%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60%;
+            padding: 10px 0px;
+
+            h2 {
+                font-size: 4rem;
+                font-weight: bold;
+            }
+
+            .description {
+                font-weight: $thin;
+            }
+
+            .tags {
+                display: flex;
+                gap: 10px;
+
+                p {
+                    border: 1px solid $white;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    transition: $btn-transition;
+                    font-size: 14px;
+                    font-weight: $regular;
+                    opacity: .3;
+
+                    &:hover {
+                        background-color: $white;
+                        color: $black;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

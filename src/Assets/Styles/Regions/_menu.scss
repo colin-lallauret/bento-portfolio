@@ -1,0 +1,102 @@
+aside {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #1E1E20;
+    z-index: 98;
+    border-radius: 10px;
+    border: 0.5px solid #343436;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+
+    &:hover {
+        display: flex;
+        opacity: 1;
+    }
+
+    &.show-menu {
+        display: flex;
+        opacity: 1;
+    }
+
+    .menu-middle {
+        height: 20px;
+        background-color: #343436;
+        width: 1px;
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        > a {
+            border: 0.5px solid #343436;
+            background-color: 232124;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            transition: .25s;
+
+            img {
+                width: 22px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: $thin;
+                position: fixed;
+                bottom: 55px;
+                opacity: 0;
+                transition: .25s;
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .menu-hover-second {
+            &:hover {
+                background-color: $pink;
+            }
+        }
+
+        .menu-hover-primary {
+            &:hover {
+                background-color: $blue;
+            }
+        }
+
+        .active {
+            background-color: $blue;
+
+            &:hover {
+                background-color: $blue;
+            }
+
+            &::after {
+                position: fixed;
+                top: 46px;
+                content: "";
+                width: 10px;
+                height: 2px;
+                background-color: #676769;
+            }
+        }
+    }
+}

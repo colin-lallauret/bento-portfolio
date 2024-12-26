@@ -1,0 +1,33 @@
+//Fonts weight
+$thin: 100;
+$extralight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+//Colors
+$black: #060913;
+$white: #F2F6FA;
+
+$blue: #3043FE;
+$pink: #BE4FF2;
+
+$yellow: #FFC622;
+$red: #F13535;
+$green: #48E7C6;
+
+$gradient-blue-pink: linear-gradient(90deg, $blue 0%, $pink 100%);
+$gradient-pink-blue: linear-gradient(180deg, $blue 0%, $pink 100%);
+
+$gradient-blue-green: linear-gradient(90deg, $blue 0%, $green 100%);
+$gradient-green-blue: linear-gradient(180deg, $blue 0%, $green 100%);
+
+$gradient-red-pink: linear-gradient(90deg, $red 0%, $pink 100%);
+$gradient-pink-red: linear-gradient(180deg, $red 0%, $pink 100%);
+
+//Transitions
+$btn-transition: .15s ease-in-out;
