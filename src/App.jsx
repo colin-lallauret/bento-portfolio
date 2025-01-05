@@ -1,36 +1,38 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom/client';
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion';
-import Lenis from 'lenis';
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Lenis from "lenis";
 
-import Home from './Pages/Home'
-import Projets from './Pages/Projets'
-import Apropos from './Pages/Apropos'
+import All from "./Pages/All";
+import Projects from "./Pages/Projects";
+import Me from "./Pages/Me";
 
 function App() {
-    const lenis = new Lenis()
+  const lenis = new Lenis();
 
-    const scrollSpeed = 1;
+  const scrollSpeed = 1;
 
-    function raf(time) {
-        lenis.raf(time * scrollSpeed)
-        requestAnimationFrame(raf)
-    }
+  function raf(time) {
+    lenis.raf(time * scrollSpeed);
+    requestAnimationFrame(raf);
+  }
 
-    requestAnimationFrame(raf)
+  requestAnimationFrame(raf);
 
-    const location = useLocation();
+  const location = useLocation();
 
-    return <>
-        <AnimatePresence mode='wait'>
-            <Routes location={location} key={location.pathname}>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/projets' element={<Projets />}></Route>
-                <Route path='/a-propos' element={<Apropos />}></Route>
-            </Routes>
-        </AnimatePresence>
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<All />}></Route>
+          <Route path="/projets" element={<Projects />}></Route>
+          <Route path="/moi" element={<Me />}></Route>
+        </Routes>
+      </AnimatePresence>
     </>
+  );
 }
 
-export default App
+export default App;
