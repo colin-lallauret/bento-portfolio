@@ -3,12 +3,17 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    .logo {
-        img {
-            width: 48px;
-            height: auto;
-        }
+    a {
+        .logo {
+            height: 48px;
+            width: fit-content;
 
+            img {
+                width: 48px;
+                height: 48px;
+            }
+
+        }
     }
 
     .menu {
@@ -19,7 +24,6 @@ header {
         border-radius: 55px;
         justify-content: center;
         align-items: center;
-        height: 48px;
 
         a {
             width: fit-content;
@@ -34,7 +38,7 @@ header {
             align-items: center;
             text-align: center;
             font-style: italic;
-            font-size: 16px;
+            font-size: 14px;
 
             &.active {
                 background-color: #F8F8F8;
