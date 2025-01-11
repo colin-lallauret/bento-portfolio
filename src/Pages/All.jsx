@@ -4,9 +4,11 @@ import transition from "../transition";
 
 import Header from "../Components/Regions/Header";
 import KnowMore from "../Components/KnowMore";
+import RollBanner from "../Components/RollBanner";
 
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
+import Map from "../Assets/Images/map.png";
 
 function All() {
   useEffect(() => {
@@ -36,7 +38,27 @@ function All() {
       <main className="home">
         <div className="item" id="first">
           <KnowMore />
-          <div className="know-more-wrapper"></div>
+
+          <div className="know-more-wrapper">
+            <RollBanner />
+
+            <div className="map-others-wrapper">
+              <div className="map">
+                <img src={Map} alt="map" />
+              </div>
+
+              <div className="others">
+                <div className="cv">
+                  <div className="cv-content">
+                    <span>2025 CV</span>
+                    <p>RESUME</p>
+                  </div>
+                  <div className="cv-btns"></div>
+                </div>
+                <div className="theme-switcher"></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="item" id="second"></div>
         <div className="item" id="third"></div>
