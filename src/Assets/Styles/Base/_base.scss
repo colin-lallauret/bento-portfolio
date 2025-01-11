@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family: "Lato", serif;
     font-optical-sizing: auto;
     font-weight: $regular;
     font-style: normal;
-    color: $white;
+    color: $black;
 }
 
 body {
@@ -137,7 +137,6 @@ a {
 
 @supports not selector(::-webkit-scrollbar) {
     body {
-        scrollbar-color: $blue
-                        $black;
+        scrollbar-color: $blue $black;
     }
 }

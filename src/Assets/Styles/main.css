@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
+  font-family: "Lato", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #F2F6FA;
+  color: #060913;
 }
 
 body {
@@ -129,67 +129,64 @@ a div {
     scrollbar-color: #3043FE #060913;
   }
 }
-.outfit-thin {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+.lato-thin {
+  font-family: "Lato", serif;
   font-weight: 100;
   font-style: normal;
 }
 
-.outfit-extralight {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.outfit-light {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+.lato-light {
+  font-family: "Lato", serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.outfit-regular {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+.lato-regular {
+  font-family: "Lato", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.outfit-medium {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.outfit-semibold {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.outfit-bold {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+.lato-bold {
+  font-family: "Lato", serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.outfit-extrabold {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
+.lato-black {
+  font-family: "Lato", serif;
+  font-weight: 900;
   font-style: normal;
 }
 
-.outfit-black {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: #060913;
-  font-style: normal;
+.lato-thin-italic {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
 header {
