@@ -10,11 +10,13 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
+    padding: 64px 0;
+    margin: 0 auto;
     background-color: $generalbackground;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-image: url('/src/Assets/Images/Grid.svg');
+    max-width: 1152px;
 }
 
 a {

@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import transition from "../transition";
 
 import Header from "../Components/Regions/Header";
-import Scroll from "../Components/Scroll";
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 
@@ -34,8 +33,6 @@ function Projects() {
       <Header />
       <main className="home">
         <div className="fullPage">
-          <h1>Mes projets</h1>
-          <Scroll />
         </div>
         <div className="projets-container"></div>
       </main>

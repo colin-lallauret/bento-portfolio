@@ -33,9 +33,7 @@ function All() {
     <>
       <Header />
       <main className="home">
-        <div className="fullPage">
-          <h1>Colin LALLAURET</h1>
-        </div>
+        <div className="fullPage"></div>
       </main>
     </>
   );

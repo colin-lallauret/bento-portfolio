@@ -10,11 +10,13 @@
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: 64px 0;
+  margin: 0 auto;
   background-color: #E6E6E7;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-image: url("/src/Assets/Images/Grid.svg");
+  max-width: 1152px;
 }
 
 a {
@@ -128,6 +130,47 @@ a div {
   font-family: "Lato", serif;
   font-weight: 900;
   font-style: italic;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .logo img {
+  width: 48px;
+  height: auto;
+}
+header .menu {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(240, 240, 241, 0.6);
+  padding: 0 8px;
+  border-radius: 55px;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+header .menu a {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header .menu .item {
+  width: 94px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+}
+header .menu .item.active {
+  background-color: #F8F8F8;
+  border-radius: 55px;
+  font-weight: 600;
 }
 @keyframes mouse-scroll {
   0% {

@@ -1,24 +1,44 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import Logo from '../../Assets/Images/Logo/logo-white.svg';
+import Logo from "../../Assets/Images/Logo/logo-black.svg";
 
 const Header = () => {
-  return <>
-    <header>
-        <Link to="/">
-            <div>
-                <img src = {Logo} alt="Logo" ></img>
-                <p>Colin LALLAURET</p>
-            </div>
-        </Link>
-        <div>
-            <Link to="/"><div className='hover-link-2 padding-text'>Accueil</div></Link>
-            <Link to="/projets"><div className='hover-link-2 padding-text'>Projets</div></Link>
-            <Link to="/a-propos"><div className='hover-link-2 padding-text'>À Propos</div></Link>
-        </div>
-    </header>
-  </>
-}
+  const location = useLocation();
 
-export default Header
+  return (
+    <header>
+      <Link to="/">
+        <div className="logo">
+          <img src={Logo} alt="Logo" />
+        </div>
+      </Link>
+      <div className="menu">
+        <Link to="/">
+          <div className={`item ${location.pathname === "/" ? "active" : ""}`}>
+            Tous
+          </div>
+        </Link>
+        <Link to="/moi">
+          <div
+            className={`item ${location.pathname === "/moi" ? "active" : ""}`}
+          >
+            Moi ?
+          </div>
+        </Link>
+        <Link to="/projets">
+          <div
+            className={`item ${
+              location.pathname === "/projets" ? "active" : ""
+            }`}
+          >
+            Projets
+          </div>
+        </Link>
+      </div>
+      <div></div>
+    </header>
+  );
+};
+
+export default Header;
