@@ -9,6 +9,10 @@ import RollBanner from "../Components/RollBanner";
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 import Map from "../Assets/Images/map.png";
+import Download from "../Assets/Images/download.png";
+import Visuel from "../Assets/Images/visuel.svg";
+import Night from "../Assets/Images/night.svg";
+import Day from "../Assets/Images/day.svg";
 
 function All() {
   useEffect(() => {
@@ -32,6 +36,12 @@ function All() {
     };
   }, []);
 
+  const handleThemeSwitch = (e) => {
+    const buttons = document.querySelectorAll(".theme-switcher .btn");
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    e.currentTarget.classList.add("active");
+  };
+
   return (
     <>
       <Header />
@@ -43,9 +53,7 @@ function All() {
             <RollBanner />
 
             <div className="map-others-wrapper">
-              <div className="map">
-                <img src={Map} alt="map" />
-              </div>
+              <img className="map" src={Map} alt="map" />
 
               <div className="others">
                 <div className="cv">
@@ -53,9 +61,19 @@ function All() {
                     <span>2025 CV</span>
                     <p>RESUME</p>
                   </div>
-                  <div className="cv-btns"></div>
+                  <div className="cv-btns">
+                    <img src={Download} alt="download" />
+                    <img src={Visuel} alt="visuel" />
+                  </div>
                 </div>
-                <div className="theme-switcher"></div>
+                <div className="theme-switcher">
+                  <div className="btn active" onClick={handleThemeSwitch}>
+                    <img src={Day} alt="day" />
+                  </div>
+                  <div className="btn" onClick={handleThemeSwitch}>
+                    <img src={Night} alt="night" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
