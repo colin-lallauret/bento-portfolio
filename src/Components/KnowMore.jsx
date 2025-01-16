@@ -3,7 +3,7 @@ import IosPicture from "../Assets/Images/ios_picture.png";
 
 function KnowMore() {
   return (
-    <div className="know-more">
+    <div className="know-more internal-link">
       <div className="ios-picture">
         <img src={IosPicture} alt="ios picture" />
         <h2>

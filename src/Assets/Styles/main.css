@@ -378,6 +378,11 @@ main.home .item#first .know-more-wrapper .map-others-wrapper .others .cv-btns {
   align-items: center;
   gap: 16px;
 }
+main.home .item#first .know-more-wrapper .map-others-wrapper .others .cv-btns button {
+  outline: none;
+  background-color: transparent;
+  border: 0;
+}
 main.home .item#first .know-more-wrapper .map-others-wrapper .others .cv-btns img {
   width: 28px;
   height: auto;
@@ -410,10 +415,186 @@ main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-swit
 main.home .item#second {
   background-color: blue;
   width: calc(50% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.home .item#second .socialsmedia--software-mail {
+  display: flex;
+  gap: 16px;
+}
+main.home .item#second .socialsmedia--software-mail .socials-media {
+  width: calc(35% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: lightblue;
+}
+main.home .item#second .socialsmedia--software-mail .socials-media a {
+  background-color: rgba(245, 245, 245, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  height: 128px;
+}
+main.home .item#second .socialsmedia--software-mail .software-mail {
+  width: calc(65% - 8px);
+  display: flex;
+  flex-direction: column;
+  background-color: lightskyblue;
+  gap: 16px;
+}
+main.home .item#second .socialsmedia--software-mail .software-mail .software {
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+  height: 272px;
+}
+main.home .item#second .socialsmedia--software-mail .software-mail .mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+  height: 128px;
+}
+main.home .item#second .studies {
+  min-height: 700px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+main.home .item#second .studies div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+main.home .item#second .studies div:first-child span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.home .item#second .studies div:first-child p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3F424A;
+}
+main.home .item#second .studies div:last-child {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+main.home .item#second .studies div:last-child span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.home .item#second .studies div:last-child span em {
+  font-size: 12px;
+  font-weight: 600;
+  color: #82848A;
 }
 main.home .item#third {
   background-color: green;
   width: calc(50% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.home .item#third .projects,
+main.home .item#third .experiences {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+}
+main.home .item#third .projects .up-title,
+main.home .item#third .experiences .up-title {
+  display: flex;
+  flex-direction: column;
+}
+main.home .item#third .projects .up-title span,
+main.home .item#third .experiences .up-title span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.home .item#third .projects .up-title p,
+main.home .item#third .experiences .up-title p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3F424A;
+}
+main.home .item#third .projects {
+  min-height: 700px;
+}
+main.home .item#third .experiences .separator {
+  height: 1px;
+  width: 80%;
+  background-color: #E6E6E7;
+  align-self: center;
+  border-radius: 1px;
+  margin: 48px 0 48px 0;
+}
+main.home .item#third .experiences .dev-web,
+main.home .item#third .experiences .summer-job {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.home .item#third .experiences .summer-job .exp .title p {
+  color: #B7B7B8;
+  text-decoration: line-through;
+}
+main.home .item#third .experiences .exp {
+  display: flex;
+  cursor: pointer;
+}
+main.home .item#third .experiences .exp .title {
+  width: 70%;
+}
+main.home .item#third .experiences .exp .title p {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3F424A;
+}
+main.home .item#third .experiences .exp .title span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #3F424A;
+}
+main.home .item#third .experiences .exp .company {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+main.home .item#third .experiences .exp .company p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3F424A;
+  text-align: end;
+}
+main.home .item#third .experiences .exp .company p i {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3F424A;
+}
+main.home .item#third .experiences .exp .company span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.home .internal-link::before {
+  content: url("/src/Assets/Images/internal-link.svg");
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: -22px;
+  margin-left: auto;
 }
 @keyframes mouse-scroll {
   0% {
