@@ -10,7 +10,6 @@ main {
             width: 100px;
 
             &#first {
-                background-color: red;
                 width: 100%;
                 display: flex;
                 gap: 16px;
@@ -28,7 +27,7 @@ main {
                     .ios-picture {
                         display: flex;
                         width: 100%;
-                        justify-content: start;
+                        justify-content: flex-start;
                         align-items: center;
                         gap: 16px;
 
@@ -57,7 +56,7 @@ main {
 
                     .availability {
                         display: flex;
-                        justify-content: start;
+                        justify-content: flex-start;
                         align-items: center;
                         gap: 10px;
 
@@ -110,7 +109,6 @@ main {
 
                 .know-more-wrapper {
                     width: 55%;
-                    background-color: lightsalmon;
                     display: flex;
                     flex-direction: column;
                     flex-wrap: wrap;
@@ -270,7 +268,6 @@ main {
             }
 
             &#second {
-                background-color: blue;
                 width: calc(50% - (16px / 2));
                 display: flex;
                 flex-direction: column;
@@ -286,8 +283,6 @@ main {
                         flex-direction: column;
                         gap: 16px;
 
-                        background-color: lightblue;
-
                         a {
                             background-color: rgba($background, .8);
                             display: flex;
@@ -302,8 +297,6 @@ main {
                         width: calc(65% - (16px / 2));
                         display: flex;
                         flex-direction: column;
-
-                        background-color: lightskyblue;
                         gap: 16px;
 
                         .software {
@@ -311,6 +304,99 @@ main {
                             background-color: rgba($background, .8);
                             border-radius: 24px;
                             height: 272px;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            padding: 32px 0;
+
+                            .software-text {
+                                padding: 0 32px;
+
+                                span {
+                                    color: $grey;
+                                    font-size: 12px;
+                                }
+
+                                p {
+                                    color: $darkgrey;
+                                    font-size: 24px;
+                                    font-weight: $medium;
+                                }
+                            }
+
+                            .logo-slider {
+                                // Variables pour les tailles d'image
+                                $min-image-size: 50px;
+                                $max-image-size: 40px;
+
+                                // Définition de la taille d'image utilisée
+                                --image-size: #{$max-image-size};
+
+                                // Styles généraux du conteneur
+                                overflow: hidden;
+                                width: 100%;
+                                margin: 0 auto;
+                                position: relative;
+                                display: flex;
+                                height: fit-content;
+
+                                .img-wrapper {
+                                    display: flex;
+                                    gap: 16px;
+                                    animation: marquee 30s linear infinite; // Appliquer l'animation à l'ensemble du wrapper
+                                }
+
+                                // Styles pour le conteneur des images
+                                div {
+                                    display: flex;
+                                    position: relative;
+                                    justify-content: space-around;
+                                }
+
+                                .img-container {
+                                    height: 80px;
+                                    width: 80px;
+                                    border-radius: 18px;
+                                    background-color: $generalbackground;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                // Styles des images
+                                img {
+                                    display: block;
+                                    min-width: var(--image-size);
+                                    height: var(--image-size);
+                                    margin: 0 1vw;
+                                }
+
+                                // Effet de dégradé à droite du conteneur
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    left: 0;
+                                    top: 0;
+                                    background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+                                }
+
+                                // Médias queries pour les tailles d'images sur écrans plus petits
+                                @media (max-width: 900px) {
+                                    --image-size: min(max(#{$min-image-size}, 10vw), #{$max-image-size});
+                                }
+                            }
+
+                            // Animation de défilement horizontal
+                            @keyframes marquee {
+                                0% {
+                                    transform: translateX(0);
+                                }
+
+                                100% {
+                                    transform: translateX(-50%); // Déplacez de 50% pour que les images doublées continuent à défiler
+                                }
+                            }
                         }
 
                         .mail {
@@ -366,11 +452,193 @@ main {
                             }
                         }
                     }
+
+                    .timeline {
+                        position: relative;
+                        margin: 0 auto;
+                        padding: 40px 0;
+                        box-sizing: border-box;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            width: 2px;
+                            height: 85%;
+                            background: $lightgrey;
+                        }
+
+                        ul {
+                            padding: 0;
+                            margin: 0;
+
+                            li {
+                                list-style: none;
+                                position: relative;
+                                width: 50%;
+                                box-sizing: border-box;
+
+                                .content {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+
+                                    p {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+                                }
+
+                                &.now {
+                                    &::before {
+                                        background: $blue !important;
+                                        box-shadow: 0 0 0 3px $blue !important;
+                                    }
+                                }
+
+                                &:nth-child(even) {
+                                    float: left;
+                                    text-align: right;
+                                    clear: both;
+                                    padding: 20px 36px 64px 0;
+
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 10px;
+                                        height: 10px;
+                                        top: 24px;
+                                        right: -6px;
+                                        background: $lightgrey;
+                                        border-radius: 50%;
+                                        box-shadow: 0 0 0 3px $lightgrey;
+                                    }
+
+                                    .time {
+                                        position: absolute;
+                                        top: 12px;
+                                        right: -112px;
+                                        margin: 0;
+
+                                        h4 {
+                                            font-size: 32px;
+                                            font-weight: $bold;
+                                            text-align: center;
+                                            color: $darkgrey;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(odd) {
+                                    float: right;
+                                    text-align: left;
+                                    clear: both;
+                                    padding: 20px 0 64px 36px;
+
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 10px;
+                                        height: 10px;
+                                        top: 24px;
+                                        left: -4px;
+                                        background: $lightgrey;
+                                        border-radius: 50%;
+                                        box-shadow: 0 0 0 3px $lightgrey;
+                                    }
+
+                                    .time {
+                                        position: absolute;
+                                        top: 12px;
+                                        left: -112px;
+                                        margin: 0;
+
+                                        h4 {
+                                            font-size: 32px;
+                                            font-weight: $bold;
+                                            text-align: center;
+                                            color: $darkgrey;
+                                        }
+                                    }
+                                }
+
+                                h3 {
+                                    padding: 0;
+                                    margin: 0;
+                                    color: $darkgrey;
+                                    font-weight: $semibold;
+                                    font-size: 20px;
+
+                                    em {
+                                        font-weight: $thin;
+                                    }
+                                }
+
+                                p {
+                                    font-size: 12px !important;
+                                    color: $black !important;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+
+                                span {
+                                    font-size: 12px;
+                                    font-weight: $light;
+                                    font-style: italic;
+                                    color: $black !important;
+                                }
+
+                                .time h4 {
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        // @media(max-width: 1000px) {
+                        //     width: 100%;
+                        // }
+
+                        // @media(max-width: 767px) {
+                        //     width: 100%;
+                        //     padding-bottom: 0;
+
+                        //     h1 {
+                        //         font-size: 40px;
+                        //         text-align: center;
+                        //     }
+
+                        //     &:before {
+                        //         left: 20px;
+                        //         height: 100%;
+                        //     }
+
+                        //     ul {
+                        //         li {
+                        //             width: 100%;
+                        //             text-align: left;
+                        //             padding-left: 50px;
+                        //             padding-bottom: 50px;
+
+                        //             &:nth-child(odd):before,
+                        //             &:nth-child(even):before {
+                        //                 top: -18px;
+                        //                 left: 16px;
+                        //             }
+
+                        //             .time {
+                        //                 top: -30px;
+                        //                 left: 50px;
+                        //                 right: inherit;
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                    }
                 }
             }
 
             &#third {
-                background-color: green;
                 width: calc(50% - (16px / 2));
 
                 display: flex;
@@ -404,6 +672,118 @@ main {
 
                 .projects {
                     min-height: 700px;
+
+                    .btns {
+                        margin-top: 16px;
+                        margin-bottom: 32px;
+
+                        display: flex;
+                        gap: 8px;
+
+                        .btn {
+                            padding: 12px;
+                            min-width: 120px;
+                            text-align: center;
+                            background-color: $background;
+                            border-radius: 10px;
+                            color: $lightgrey;
+                            font-weight: $medium;
+                            cursor: pointer;
+
+                            &.active {
+                                color: $darkgrey;
+                                box-shadow: 0px 0px 10px -4px rgba($darkgrey, 0.25)
+                            }
+                        }
+                    }
+
+                    .projects-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+
+                        .separator {
+                            height: 1px;
+                            width: 85%;
+                            background-color: $generalbackground;
+                            border-radius: 1px;
+                            margin: 0 auto;
+                        }
+
+                        .project-item {
+                            display: flex;
+                            gap: 16px;
+
+                            &.right {
+
+                                h5,
+                                p {
+                                    text-align: end;
+                                }
+
+                                .tags {
+                                    align-self: end;
+                                }
+                            }
+
+                            img {
+                                width: 50%;
+                                height: auto;
+                                border-radius: 8px;
+                                height: 150px;
+                            }
+
+                            .project-text {
+                                width: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                h5 {
+                                    font-size: 32px;
+                                    color: $darkgrey;
+                                    font-weight: $bold;
+                                }
+
+                                p {
+                                    color: $grey;
+                                    font-size: 14px;
+                                }
+
+                                .tags {
+                                    display: flex;
+                                    gap: 8px;
+                                    margin-top: 8px;
+
+                                    span {
+                                        padding: 2px 12px;
+                                        border-radius: 50px;
+                                        background-color: $grey;
+                                        color: $darkgrey;
+                                        font-weight: $bold;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btn-random {
+                        align-self: center;
+                        margin-top: 32px;
+                        border-radius: 8px;
+                        background-color: $darkgrey;
+                        padding: 4px 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        img {
+                            height: 32px;
+                            width: 32px;
+                        }
+                    }
                 }
 
                 .experiences {
@@ -458,7 +838,7 @@ main {
                             width: 30%;
                             display: flex;
                             flex-direction: column;
-                            align-items: end;
+                            align-items: flex-end;
                             justify-content: center;
 
                             p {

@@ -14,6 +14,10 @@ import Mail from "../Assets/Images/mail.svg";
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 import Map from "../Assets/Images/map.png";
+import Software from "../Components/Software";
+import Timeline from "../Components/Timeline";
+import ProjectUIUX from "../Components/ProjectUIUX";
+import Experiences from "../Components/Experiences";
 
 function All() {
   useEffect(() => {
@@ -61,7 +65,7 @@ function All() {
           <div className="socialsmedia--software-mail">
             <SocialsMedia />
             <div className="software-mail">
-              <div className="software"></div>
+              <Software />
               <a className="mail" href="mailto:colinlallauret1@gmail.com">
                 <img src={Mail} alt="mail" />
               </a>
@@ -72,14 +76,16 @@ function All() {
               <span>BIENTÔT UN BAC+3</span>
               <p>FORMATIONS</p>
             </div>
-            <div></div>
+            <div>
+              <Timeline />
+            </div>
             <div>
               <span>
                 *BUT : <em>B</em>achelor <em>U</em>niversitaire <em>T</em>
                 echnologique
               </span>
               <span>
-                **MMI : <em>M</em>étiers du <em>M</em>ultimédia et de l’
+                **MMI :<em>M</em>étiers du <em>M</em>ultimédia et de l’
                 <em>I</em>nternet
               </span>
             </div>
@@ -91,61 +97,21 @@ function All() {
               <span>UN PETIT TEASING DE MES</span>
               <p>PROJETS</p>
             </div>
-          </div>
-          <div className="experiences internal-link">
-            <div className="dev-web">
-              <div className="up-title">
-                <span>2 ANS</span>
-                <p>EXPÉRIENCE</p>
-              </div>
-
-              <div className="exp">
-                <div className="title">
-                  <p>Développeur web</p>
-                  <span>(en alternance)</span>
-                </div>
-
-                <div className="company">
-                  <p>Groupe Vidon</p>
-                  <span>2023 - 2025</span>
-                </div>
-              </div>
+            <div className="btns">
+              <div className="btn active">UI / UX Design</div>
+              <div className="btn">Web</div>
+              <div className="btn">3D / Game</div>
+            </div>
+            <div className="projects-wrapper">
+              <ProjectUIUX />
             </div>
 
-            <div className="separator"></div>
-
-            <div className="summer-job">
-              <div className="up-title">
-                <span>LE MONDE PROFESSIONNEL</span>
-                <p>JOBS D’ÉTÉ</p>
-              </div>
-
-              <div className="exp">
-                <div className="title">
-                  <p>Agent de propreté événementiel</p>
-                </div>
-
-                <div className="company">
-                  <p>
-                    Association <br />
-                    <i>« Les Vieilles Charrues »</i>
-                  </p>
-                  <span>juillet 2023</span>
-                </div>
-              </div>
-
-              <div className="exp">
-                <div className="title">
-                  <p>Vendeur / Livreur en porte à porte</p>
-                </div>
-
-                <div className="company">
-                  <p>SARL Deligel</p>
-                  <span>juin - août 2022</span>
-                </div>
-              </div>
+            <div className="btn-random">
+              <img src="https://picsum.photos/100" alt="Random" />
             </div>
           </div>
+
+          <Experiences />
         </div>
       </main>
     </>
