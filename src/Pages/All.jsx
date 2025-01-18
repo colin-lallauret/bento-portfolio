@@ -14,10 +14,14 @@ import Mail from "../Assets/Images/mail.svg";
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 import Map from "../Assets/Images/map.png";
+import Random from "../Assets/Images/random.svg";
+
 import Software from "../Components/Software";
 import Timeline from "../Components/Timeline";
 import ProjectUIUX from "../Components/ProjectUIUX";
 import Experiences from "../Components/Experiences";
+import ProjectWeb from "../Components/ProjectWeb";
+import Project3dGame from "../Components/Project3dGame";
 
 function All() {
   useEffect(() => {
@@ -40,6 +44,21 @@ function All() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
+
+  const [activeProject, setActiveProject] = React.useState("UI / UX Design");
+
+  const renderProject = () => {
+    switch (activeProject) {
+      case "UI / UX Design":
+        return <ProjectUIUX />;
+      case "Web":
+        return <ProjectWeb />;
+      case "3D / Game":
+        return <Project3dGame />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
@@ -81,12 +100,14 @@ function All() {
             </div>
             <div>
               <span>
-                *BUT : <em>B</em>achelor <em>U</em>niversitaire <em>T</em>
+                <i style={{ opacity: 0 }}>*</i>*BUT : <em>B</em>achelor{" "}
+                <em>U</em>niversitaire <em>T</em>
                 echnologique
               </span>
               <span>
-                **MMI :<em>M</em>étiers du <em>M</em>ultimédia et de l’
-                <em>I</em>nternet
+                **MMI : <em>M</em>étiers du <em>M</em>ultimédia et de l’
+                <em>I</em>
+                nternet
               </span>
             </div>
           </div>
@@ -98,16 +119,33 @@ function All() {
               <p>PROJETS</p>
             </div>
             <div className="btns">
-              <div className="btn active">UI / UX Design</div>
-              <div className="btn">Web</div>
-              <div className="btn">3D / Game</div>
+              <div
+                className={`btn ${
+                  activeProject === "UI / UX Design" ? "active" : ""
+                }`}
+                onClick={() => setActiveProject("UI / UX Design")}
+              >
+                UI / UX Design
+              </div>
+              <div
+                className={`btn ${activeProject === "Web" ? "active" : ""}`}
+                onClick={() => setActiveProject("Web")}
+              >
+                Web
+              </div>
+              <div
+                className={`btn ${
+                  activeProject === "3D / Game" ? "active" : ""
+                }`}
+                onClick={() => setActiveProject("3D / Game")}
+              >
+                3D / Game
+              </div>
             </div>
-            <div className="projects-wrapper">
-              <ProjectUIUX />
-            </div>
+            <div className="projects-wrapper">{renderProject()}</div>
 
             <div className="btn-random">
-              <img src="https://picsum.photos/100" alt="Random" />
+              <img src={Random} alt="Random" />
             </div>
           </div>
 

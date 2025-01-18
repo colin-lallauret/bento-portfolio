@@ -230,7 +230,7 @@ main {
                                 img {
                                     width: 28px;
                                     height: auto;
-                                    cursor: pointer;
+                                    cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
                                 }
                             }
 
@@ -245,7 +245,7 @@ main {
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    cursor: pointer;
+                                    cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
                                     transition: .25 ease-in-out;
 
                                     img {
@@ -378,7 +378,7 @@ main {
                                     height: 100%;
                                     left: 0;
                                     top: 0;
-                                    background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+                                    background: linear-gradient(to right, $background, rgba($background, 0) 80px, rgba($background, 0) calc(100% - 80px), $background);
                                 }
 
                                 // Médias queries pour les tailles d'images sur écrans plus petits
@@ -688,11 +688,11 @@ main {
                             border-radius: 10px;
                             color: $lightgrey;
                             font-weight: $medium;
-                            cursor: pointer;
+                            cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
                             &.active {
                                 color: $darkgrey;
-                                box-shadow: 0px 0px 10px -4px rgba($darkgrey, 0.25)
+                                box-shadow: 0px 0px 10px -4px rgba($darkgrey, 0.5)
                             }
                         }
                     }
@@ -777,7 +777,7 @@ main {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        cursor: pointer;
+                        cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
                         img {
                             height: 32px;
@@ -816,7 +816,7 @@ main {
 
                     .exp {
                         display: flex;
-                        cursor: pointer;
+                        cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
                         .title {
                             width: 70%;
@@ -870,7 +870,7 @@ main {
                 height: fit-content;
                 width: fit-content;
                 position: relative;
-                cursor: pointer;
+                cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
                 margin-bottom: -22px;
                 margin-left: auto;
             }

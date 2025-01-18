@@ -17,6 +17,7 @@ body {
     scroll-behavior: smooth;
     background-image: url('/src/Assets/Images/Grid.svg');
     max-width: 1152px;
+    min-height: 100vh;
 }
 
 a {
@@ -72,5 +73,17 @@ a {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+body,
+a {
+    cursor: url('/src/Assets/Images/Cursors/Cursor.svg'), auto;
+}
+
+a,
+.hand-cursor {
+    &:hover {
+        cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
     }
 }

@@ -7,7 +7,7 @@ function Software() {
         <div className="img-wrapper">
           {[...Array(16)].map((_, index) => (
             <div className="img-container" key={index}>
-              <img src="https://picsum.photos/100" alt={`Slider ${index}`} />
+              <img src="https://picsum.photos/201" alt={`Slider ${index}`} />
             </div>
           ))}
         </div>
