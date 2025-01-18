@@ -73,6 +73,7 @@ a div {
   transform: translate(-50%, -50%);
 }
 
+html,
 body,
 a {
   cursor: url("/src/Assets/Images/Cursors/Cursor.svg"), auto;
