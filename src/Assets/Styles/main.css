@@ -887,6 +887,30 @@ main.home .internal-link::before {
   margin-bottom: -22px;
   margin-left: auto;
 }
+
+main {
+  margin-top: 64px;
+}
+main.me {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.me .container {
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 32px;
+  border-radius: 24px;
+  min-height: 300px;
+}
+main.me .container .title span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.me .container .title p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3F424A;
+}
 @keyframes mouse-scroll {
   0% {
     top: 10%;

@@ -32,8 +32,26 @@ function Me() {
   return (
     <>
       <Header />
-      <main className="home">
-        <div className="fullPage">
+      <main className="me">
+        <div className="container about">
+          <div className="title">
+            <span>BESOINS D’UN PEU PLUS D’INFORMATION SUR MOI ?</span>
+            <p>À PROPOS</p>
+          </div>
+        </div>
+
+        <div className="container studies">
+          <div className="title">
+            <span>PLUS DE DÉTAILS SUR MES ÉTUDES ?</span>
+            <p>FORMATIONS</p>
+          </div>
+        </div>
+
+        <div className="container experiences">
+          <div className="title">
+            <span>MES DÉBUTS DANS LE MONDE PROFESSIONNEL</span>
+            <p>EXPÉRIENCE</p>
+          </div>
         </div>
       </main>
     </>
