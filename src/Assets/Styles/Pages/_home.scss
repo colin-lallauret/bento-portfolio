@@ -24,6 +24,10 @@ main {
                     flex-direction: column;
                     gap: 16px;
 
+                    &::before {
+                        margin-bottom: -38px;
+                    }
+
                     .ios-picture {
                         display: flex;
                         width: 100%;
@@ -115,41 +119,53 @@ main {
                     gap: 16px;
 
                     .banner {
+                        position: relative;
+                        overflow: hidden;
                         display: flex;
                         align-items: center;
+                        justify-content: start;
                         width: 100%;
                         height: 48px;
-                        border-radius: 48px;
-                        background-color: rgba($background, .8);
-                        overflow: hidden;
-                        gap: 8px;
-                        box-shadow: inset -40px 0px 30px -30px rgba($background, .9), inset 40px 0px 30px -30px rgba($background, .9);
+                        background-color: rgba(245, 245, 245, 0.8);
+                        border-radius: 100px;
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            width: 100px;
+                            height: 100%;
+                            z-index: 1;
+                            pointer-events: none;
+                        }
+
+                        &::before {
+                            left: 0;
+                            background: linear-gradient(to right, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+                        }
+
+                        &::after {
+                            right: 0;
+                            background: linear-gradient(to left, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+                        }
+
+                        .scroll-content {
+                            display: flex;
+                            gap: 8px;
+                            animation: scroll 35s linear infinite;
+                            white-space: nowrap;
+                        }
 
                         .text-roll {
                             display: flex;
                             align-items: center;
                             gap: 8px;
 
-                            &:first-child {
-                                animation: bannermove 20s linear infinite;
-                            }
-
-                            @keyframes bannermove {
-                                0% {
-                                    margin-left: 0%;
-                                    transform: translateX(0);
-                                }
-
-                                100% {
-                                    margin-left: -128%;
-                                }
-
-                            }
-
                             img {
                                 width: 14px;
                                 height: 14px;
-                                opacity: .6;
+                                opacity: 0.6;
                             }
 
                             div {
@@ -158,7 +174,7 @@ main {
 
                                 p {
                                     font-size: 14px;
-                                    font-weight: $bold;
+                                    font-weight: bold;
                                 }
 
                                 span {
@@ -166,7 +182,18 @@ main {
                                 }
                             }
                         }
+
+                        @keyframes scroll {
+                            0% {
+                                transform: translateX(0);
+                            }
+
+                            100% {
+                                transform: translateX(-50%);
+                            }
+                        }
                     }
+
 
                     .map-others-wrapper {
                         width: 100%;

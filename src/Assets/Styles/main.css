@@ -224,6 +224,9 @@ main.home .item#first .know-more {
   flex-direction: column;
   gap: 16px;
 }
+main.home .item#first .know-more::before {
+  margin-bottom: -38px;
+}
 main.home .item#first .know-more .ios-picture {
   display: flex;
   width: 100%;
@@ -300,32 +303,43 @@ main.home .item#first .know-more-wrapper {
   gap: 16px;
 }
 main.home .item#first .know-more-wrapper .banner {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: start;
   width: 100%;
   height: 48px;
-  border-radius: 48px;
   background-color: rgba(245, 245, 245, 0.8);
-  overflow: hidden;
+  border-radius: 100px;
+}
+main.home .item#first .know-more-wrapper .banner::before, main.home .item#first .know-more-wrapper .banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+main.home .item#first .know-more-wrapper .banner::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(245, 245, 245), rgba(245, 245, 245, 0));
+}
+main.home .item#first .know-more-wrapper .banner::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(245, 245, 245), rgba(245, 245, 245, 0));
+}
+main.home .item#first .know-more-wrapper .banner .scroll-content {
+  display: flex;
   gap: 8px;
-  box-shadow: inset -40px 0px 30px -30px rgba(245, 245, 245, 0.9), inset 40px 0px 30px -30px rgba(245, 245, 245, 0.9);
+  animation: scroll 35s linear infinite;
+  white-space: nowrap;
 }
 main.home .item#first .know-more-wrapper .banner .text-roll {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-main.home .item#first .know-more-wrapper .banner .text-roll:first-child {
-  animation: bannermove 20s linear infinite;
-}
-@keyframes bannermove {
-  0% {
-    margin-left: 0%;
-    transform: translateX(0);
-  }
-  100% {
-    margin-left: -128%;
-  }
 }
 main.home .item#first .know-more-wrapper .banner .text-roll img {
   width: 14px;
@@ -338,10 +352,18 @@ main.home .item#first .know-more-wrapper .banner .text-roll div {
 }
 main.home .item#first .know-more-wrapper .banner .text-roll div p {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
 }
 main.home .item#first .know-more-wrapper .banner .text-roll div span {
   font-size: 14px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 main.home .item#first .know-more-wrapper .map-others-wrapper {
   width: 100%;
