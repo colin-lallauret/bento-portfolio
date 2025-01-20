@@ -9,6 +9,11 @@
     color: $black;
 }
 
+html {
+    padding: 0 8px;
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 64px 0;
     margin: 0 auto;
