@@ -93,3 +93,15 @@ a,
         cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
     }
 }
+
+header {
+    @media (max-width: 768px) {
+        justify-content: center !important;
+        height: 48px;
+
+        .logo-wrapper,
+        .empty {
+            display: none;
+        }
+    }
+}

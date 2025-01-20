@@ -89,6 +89,17 @@ a:hover,
   cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
 }
 
+@media (max-width: 768px) {
+  header {
+    justify-content: center !important;
+    height: 48px;
+  }
+  header .logo-wrapper,
+  header .empty {
+    display: none;
+  }
+}
+
 .inter-thin {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
