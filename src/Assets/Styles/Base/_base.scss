@@ -23,6 +23,10 @@ body {
     background-image: url('/src/Assets/Images/Grid.svg');
     max-width: 1152px;
     min-height: 100vh;
+
+    @media (max-width: 768px) {
+        padding: 32px 0 64px 0;
+    }
 }
 
 a {

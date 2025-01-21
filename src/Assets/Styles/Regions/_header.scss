@@ -3,6 +3,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
+    .empty {
+        width: 48px;
+    }
+
     a {
         .logo {
             height: 48px;

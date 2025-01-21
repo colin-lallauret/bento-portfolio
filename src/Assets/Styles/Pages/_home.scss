@@ -14,6 +14,10 @@ main {
                 display: flex;
                 gap: 16px;
 
+                @media (max-width: 1168px) {
+                    flex-direction: column;
+                }
+
                 .know-more {
                     border-radius: 24px;
                     padding: 32px;
@@ -23,6 +27,14 @@ main {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+
+                    @media (max-width: 1168px) {
+                        width: 100%;
+                    }
+
+                    @media (max-width: 512px) {
+                        padding: 24px;
+                    }
 
                     &::before {
                         margin-bottom: -38px;
@@ -34,6 +46,14 @@ main {
                         justify-content: flex-start;
                         align-items: center;
                         gap: 16px;
+
+                        @media (max-width: 1168px) {
+                            flex-wrap: wrap;
+                        }
+
+                        @media (max-width: 512px) {
+                            justify-content: center;
+                        }
 
                         img {
                             width: 104px;
@@ -118,6 +138,10 @@ main {
                     flex-wrap: wrap;
                     gap: 16px;
 
+                    @media (max-width: 1168px) {
+                        width: 100%;
+                    }
+
                     .banner {
                         position: relative;
                         overflow: hidden;
@@ -200,8 +224,19 @@ main {
                         display: flex;
                         gap: 16px;
 
+                        @media (max-width: 1168px) {
+                            flex-direction: column;
+                        }
+
                         .map {
                             width: calc(45% - (16px /2));
+                            max-height: 220px;
+
+                            @media (max-width: 1168px) {
+                                width: 100%;
+                                object-fit: cover;
+                                border-radius: 24px;
+                            }
 
                             img {
                                 width: -webkit-fill-available;
@@ -214,6 +249,10 @@ main {
                             flex-direction: column;
                             flex-wrap: wrap;
                             gap: 16px;
+
+                            @media (max-width: 1168px) {
+                                width: 100%;
+                            }
 
                             >div {
                                 width: 100%;
@@ -309,15 +348,27 @@ main {
                 flex-direction: column;
                 gap: 16px;
 
+                @media (max-width: 1168px) {
+                    width: 100%;
+                }
+
                 .socialsmedia--software-mail {
                     display: flex;
                     gap: 16px;
+
+                    @media (max-width: 1168px) {
+                        flex-direction: column-reverse;
+                    }
 
                     .socials-media {
                         width: calc(35% - (16px / 2));
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
+
+                        @media (max-width: 1168px) {
+                            width: 100%;
+                        }
 
                         a {
                             background-color: rgba($background, .8);
@@ -334,6 +385,10 @@ main {
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
+
+                        @media (max-width: 1168px) {
+                            width: 100%;
+                        }
 
                         .software {
                             display: flex;
@@ -454,6 +509,10 @@ main {
                     flex-direction: column;
                     padding: 32px;
 
+                    @media (max-width: 512px) {
+                        padding: 24px;
+                    }
+
                     div {
                         &:first-child {
                             display: flex;
@@ -538,6 +597,11 @@ main {
                                     clear: both;
                                     padding: 20px 36px 64px 0;
 
+                                    @media (max-width: 1168px) {
+                                        text-align: left;
+                                        padding: 0 0 64px 36px;
+                                    }
+
                                     &:before {
                                         content: '';
                                         position: absolute;
@@ -556,11 +620,21 @@ main {
                                         right: -112px;
                                         margin: 0;
 
+                                        @media (max-width: 1168px) {
+                                            position: relative;
+                                            top: 0;
+                                            right: 0;
+                                        }
+
                                         h4 {
                                             font-size: 32px;
                                             font-weight: $bold;
                                             text-align: center;
                                             color: $darkgrey;
+
+                                            @media (max-width: 1168px) {
+                                                text-align: start;
+                                            }
                                         }
                                     }
                                 }
@@ -570,6 +644,10 @@ main {
                                     text-align: left;
                                     clear: both;
                                     padding: 20px 0 64px 36px;
+
+                                    @media (max-width: 1168px) {
+                                        padding: 0 0 64px 36px;
+                                    }
 
                                     &:before {
                                         content: '';
@@ -589,11 +667,21 @@ main {
                                         left: -112px;
                                         margin: 0;
 
+                                        @media (max-width: 1168px) {
+                                            position: relative;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
                                         h4 {
                                             font-size: 32px;
                                             font-weight: $bold;
                                             text-align: center;
                                             color: $darkgrey;
+
+                                            @media (max-width: 1168px) {
+                                                text-align: start;
+                                            }
                                         }
                                     }
                                 }
@@ -627,49 +715,64 @@ main {
                                 .time h4 {
                                     margin: 0;
                                     padding: 0;
+
+                                    @media (max-width: 1168px) {
+                                        text-align: start;
+                                    }
                                 }
                             }
                         }
 
-                        // @media(max-width: 1000px) {
-                        //     width: 100%;
-                        // }
+                        @media (max-width: 1168px) {
+                            width: 100%;
+                            padding-bottom: 0;
 
-                        // @media(max-width: 767px) {
-                        //     width: 100%;
-                        //     padding-bottom: 0;
+                            h1 {
+                                font-size: 40px;
+                                text-align: center;
+                            }
 
-                        //     h1 {
-                        //         font-size: 40px;
-                        //         text-align: center;
-                        //     }
+                            &:before {
+                                left: 20px;
+                                height: 86%;
+                                top: 56px;
+                            }
 
-                        //     &:before {
-                        //         left: 20px;
-                        //         height: 100%;
-                        //     }
+                            ul {
+                                li {
+                                    width: 100%;
+                                    text-align: left;
+                                    padding-left: 50px;
+                                    padding-bottom: 50px;
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    padding: 0 0 64px 36px;
 
-                        //     ul {
-                        //         li {
-                        //             width: 100%;
-                        //             text-align: left;
-                        //             padding-left: 50px;
-                        //             padding-bottom: 50px;
+                                    &:nth-child(odd):before,
+                                    &:nth-child(even):before {
+                                        top: -18px;
+                                        left: 16px;
 
-                        //             &:nth-child(odd):before,
-                        //             &:nth-child(even):before {
-                        //                 top: -18px;
-                        //                 left: 16px;
-                        //             }
+                                        @media (max-width: 1168px) {
+                                            top: 14px;
+                                        }
+                                    }
 
-                        //             .time {
-                        //                 top: -30px;
-                        //                 left: 50px;
-                        //                 right: inherit;
-                        //             }
-                        //         }
-                        //     }
-                        // }
+                                    .time {
+                                        top: -30px;
+                                        left: 50px;
+                                        right: inherit;
+
+                                        @media (max-width: 1168px) {
+                                            position: relative;
+                                            top: 0;
+                                            right: 0;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -681,6 +784,10 @@ main {
                 flex-direction: column;
                 gap: 16px;
 
+                @media (max-width: 1168px) {
+                    width: 100%;
+                }
+
                 .projects,
                 .experiences {
                     display: flex;
@@ -688,6 +795,10 @@ main {
                     padding: 32px;
                     background-color: rgba($background, .8);
                     border-radius: 24px;
+
+                    @media (max-width: 512px) {
+                        padding: 24px;
+                    }
 
                     .up-title {
                         display: flex;
@@ -714,7 +825,12 @@ main {
                         margin-bottom: 32px;
 
                         display: flex;
+                        flex-wrap: wrap;
                         gap: 8px;
+
+                        @media (max-width: 512px) {
+                            justify-content: center;
+                        }
 
                         .btn {
                             padding: 12px;
@@ -750,15 +866,32 @@ main {
                             display: flex;
                             gap: 16px;
 
+                            @media (max-width: 1168px) {
+                                flex-direction: column;
+                            }
+
                             &.right {
+
+                                @media (max-width: 1168px) {
+                                    flex-direction: column-reverse;
+                                }
 
                                 h5,
                                 p {
                                     text-align: end;
+
+                                    @media (max-width: 1168px) {
+                                        text-align: start;
+                                    }
                                 }
 
                                 .tags {
                                     align-self: end;
+
+                                    @media (max-width: 1168px) {
+                                        align-self: start;
+                                        flex-wrap: wrap;
+                                    }
                                 }
                             }
 
@@ -767,6 +900,11 @@ main {
                                 height: auto;
                                 border-radius: 8px;
                                 height: 150px;
+                                object-fit: cover;
+
+                                @media (max-width: 1168px) {
+                                    width: 100%;
+                                }
                             }
 
                             .project-text {
@@ -774,6 +912,10 @@ main {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 8px;
+
+                                @media (max-width: 1168px) {
+                                    width: 100%;
+                                }
 
                                 h5 {
                                     font-size: 32px;
@@ -854,8 +996,17 @@ main {
                         display: flex;
                         cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
+                        @media (max-width: 512px) {
+                            flex-direction: column;
+                            gap: 16px;
+                        }
+
                         .title {
                             width: 70%;
+
+                            @media (max-width: 512px) {
+                                width: 100%;
+                            }
 
                             p {
                                 font-size: 32px;
@@ -877,11 +1028,20 @@ main {
                             align-items: flex-end;
                             justify-content: center;
 
+                            @media (max-width: 512px) {
+                                width: 100%;
+                                align-items: start;
+                            }
+
                             p {
                                 font-size: 16px;
                                 font-weight: $medium;
                                 color: $darkgrey;
                                 text-align: end;
+
+                                @media (max-width: 512px) {
+                                    text-align: start;
+                                }
 
                                 i {
                                     font-size: 12px;
