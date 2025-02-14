@@ -101,11 +101,79 @@ a,
 header {
     @media (max-width: 768px) {
         justify-content: center !important;
-        height: 48px;
+        height: 0px;
 
         .logo-wrapper,
-        .empty {
-            display: none;
+        .empty,
+        .menu {
+            display: none !important;
+        }
+
+        .mobile-menu {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            flex-wrap: nowrap;
+            padding: 6px;
+            border: 1px solid $lightgrey;
+            border-radius: 16px;
+            background-color: $background;
+            box-shadow: 0px 0px 10px rgba($darkgrey, 0.15);
+            gap: 10px;
+            z-index: 98;
+            bottom: 16px;
+
+            .pages,
+            .links {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                .btn {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+
+                    &.active {
+                        background-color: $blue;
+                        border: 1px solid $lightgrey;
+
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+
+            .separator {
+                height: 20px;
+                width: 1px;
+                background-color: $lightgrey;
+                border-radius: 1px;
+            }
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+main {
+    @media (max-width: 768px) {
+
+        &.home,
+        &.me,
+        &.projects {
+            margin-top: 0px !important;
         }
     }
 }

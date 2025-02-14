@@ -97,11 +97,70 @@ a:hover,
 @media (max-width: 768px) {
   header {
     justify-content: center !important;
-    height: 48px;
+    height: 0px;
   }
   header .logo-wrapper,
-  header .empty {
-    display: none;
+  header .empty,
+  header .menu {
+    display: none !important;
+  }
+  header .mobile-menu {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-wrap: nowrap;
+    padding: 6px;
+    border: 1px solid #B7B7B8;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 0px 10px rgba(63, 66, 74, 0.15);
+    gap: 10px;
+    z-index: 98;
+    bottom: 16px;
+  }
+  header .mobile-menu .pages,
+  header .mobile-menu .links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  header .mobile-menu .pages .btn,
+  header .mobile-menu .links .btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  header .mobile-menu .pages .btn.active,
+  header .mobile-menu .links .btn.active {
+    background-color: #3043FE;
+    border: 1px solid #B7B7B8;
+  }
+  header .mobile-menu .pages .btn.active img,
+  header .mobile-menu .links .btn.active img {
+    filter: brightness(0) invert(1);
+  }
+  header .mobile-menu .separator {
+    height: 20px;
+    width: 1px;
+    background-color: #B7B7B8;
+    border-radius: 1px;
+  }
+}
+header .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main.home, main.me, main.projects {
+    margin-top: 0px !important;
   }
 }
 
