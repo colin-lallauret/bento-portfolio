@@ -15,7 +15,7 @@ function SocialsMedia() {
         <img src={Github} alt="Github" />
       </a>
 
-      <a target="_blank" href="#lien-vers-cal.com">
+      <a target="_blank" href="https://cal.com/colin-lallauret">
         <img src={Cal} alt="Cal.com" />
       </a>
     </div>

@@ -1,53 +1,57 @@
 import React from "react";
 
+import MinecraftVR from "../Assets/Images/Projects/MinecraftVR.png";
+import IlePerdu from "../Assets/Images/Projects/IlePerdu.png";
+import NinjaCut from "../Assets/Images/Projects/NinjaCut.png";
+
 function Project3dGame() {
   return (
     <>
       <div className="project-item left">
-        <img src="https://picsum.photos/102" alt="Project 1" />
+        <img src={MinecraftVR} alt="MinecraftVR" />
         <div className="project-text">
-          <h5>3D Game 1</h5>
+          <h5>MinecraftVR</h5>
           <p>
-            Suspendisse rhoncus sollicitudin purus, ut congue risus luctus et.
-            Nam non arcu metus quisque varius lacus ex, quis efficitur.
+            La réalisation d’un environnement interactif en réalité virtuelle
+            sur le thème du meilleur jeu au monde... nommé « Minecraft » 🥁.
           </p>
           <div className="tags">
-            <span>Aliquam</span>
-            <span>Aliquam</span>
-            <span>Aliquam</span>
+            <span>Unity</span>
+            <span>VR</span>
+            <span>Interaction</span>
           </div>
         </div>
       </div>
       <div className="separator"></div>
       <div className="project-item right">
         <div className="project-text">
-          <h5>3D Game 2</h5>
+          <h5>Île perdu</h5>
           <p>
-            Suspendisse rhoncus sollicitudin purus, ut congue risus luctus et.
-            Nam non arcu metus quisque varius lacus ex, quis efficitur.
+            L’imagination et la conception d’une île abandonnée, figée dans le
+            temps, qui s’est fait piller par des pirates.
           </p>
           <div className="tags">
-            <span>Aliquam</span>
-            <span>Aliquam</span>
-            <span>Aliquam</span>
+            <span>Blender</span>
+            <span>3D</span>
+            <span>Créativité</span>
           </div>
         </div>
-        <img src="https://picsum.photos/102" alt="Project 2" />
+        <img src={IlePerdu} alt="Île perdu" />
       </div>
       <div className="separator"></div>
 
       <div className="project-item left">
-        <img src="https://picsum.photos/102" alt="Project 3" />
+        <img src={NinjaCut} alt="NinjaCut" />
         <div className="project-text">
-          <h5>3D Game 3</h5>
+          <h5>NinjaCut</h5>
           <p>
-            Suspendisse rhoncus sollicitudin purus, ut congue risus luctus et.
-            Nam non arcu metus quisque varius lacus ex, quis efficitur.
+            Le développement d’un jeu sur Unity, inspiré du célèbre jeu nommé «
+            Fruit Ninja ».
           </p>
           <div className="tags">
-            <span>Aliquam</span>
-            <span>Aliquam</span>
-            <span>Aliquam</span>
+            <span>Game</span>
+            <span>Unity</span>
+            <span>Mini-Projet</span>
           </div>
         </div>
       </div>

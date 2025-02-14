@@ -1,10 +1,14 @@
 import React from "react";
 
+import CnT from "../Assets/Images/Projects/CnT.png";
+import Bleep from "../Assets/Images/Projects/Bleep.png";
+import Kult from "../Assets/Images/Projects/Kult.png";
+
 function ProjectUIUX() {
   return (
     <>
       <div className="project-item left">
-        <img src="https://picsum.photos/100" alt="Project 1" />
+        <img src={CnT} alt="C&T" />
         <div className="project-text">
           <h5>C&T</h5>
           <p>
@@ -33,12 +37,12 @@ function ProjectUIUX() {
             <span>Figma</span>
           </div>
         </div>
-        <img src="https://picsum.photos/100" alt="Project 2" />
+        <img src={Bleep} alt="Bleep" />
       </div>
       <div className="separator"></div>
 
       <div className="project-item left">
-        <img src="https://picsum.photos/100" alt="Project 3" />
+        <img src={Kult} alt="Kult" />
         <div className="project-text">
           <h5>KULT’</h5>
           <p>

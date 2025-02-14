@@ -7,6 +7,11 @@ import Mail from "../Assets/Images/mail.svg";
 import Cv from "../Assets/Images/cv.svg";
 
 function About() {
+  const getAvailability = () => {
+    const currentHour = new Date().getHours();
+    return currentHour >= 9 && currentHour < 17 ? "Disponible" : "Indisponible";
+  };
+
   return (
     <div className="container about" id="about">
       <div className="title">
@@ -17,10 +22,16 @@ function About() {
         <div className="picture-wrapper">
           <div className="availability">
             <div className="text-pulse">
-              <div className="dot"></div>
-              <span>Disponible</span>
+              <div
+                className={`dot ${
+                  getAvailability() === "Indisponible" ? "red" : ""
+                }`}
+              ></div>
+              <span>{getAvailability()}</span>
             </div>
-            <a href="#">Prendre contact</a>
+            <a href="https://cal.com/colin-lallauret" target="_blank">
+              Prendre contact
+            </a>
           </div>
           <div className="picture">
             <img src={MyPicture} alt="picture" />

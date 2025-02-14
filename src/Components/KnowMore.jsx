@@ -1,7 +1,15 @@
 import React from "react";
 import IosPicture from "../Assets/Images/ios_picture.png";
+import { Link } from "react-router-dom";
 
 function KnowMore() {
+  const getAvailability = () => {
+    const currentHour = new Date().getHours();
+    return currentHour >= 9 && currentHour < 17
+      ? "Disponible maintenant"
+      : "Indisponible actuellement";
+  };
+
   return (
     <div className="know-more internal-link">
       <div className="ios-picture">
@@ -14,11 +22,15 @@ function KnowMore() {
       <p className="text">
         Hello, moi c’est Colin. Actuellement ? <br />
         Je suis étudiant en <u>BUT MMI</u> <i>(3ème année)</i> et alternant en
-        développement web. <em>En savoir plus</em>
+        développement web. <Link to="/moi">En savoir plus</Link>
       </p>
       <div className="availability">
-        <div className="dot"></div>
-        <span>Disponible maintenant</span>
+        <div
+          className={`dot ${
+            getAvailability() === "Indisponible actuellement" ? "red" : ""
+          }`}
+        ></div>
+        <span>{getAvailability()}</span>
       </div>
     </div>
   );

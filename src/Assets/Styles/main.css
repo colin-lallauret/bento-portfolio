@@ -294,7 +294,8 @@ main.home .item#first .know-more .ios-picture h2 {
 main.home .item#first .know-more .text i {
   font-size: 10px;
 }
-main.home .item#first .know-more .text em {
+main.home .item#first .know-more .text em,
+main.home .item#first .know-more .text a {
   font-size: 10px;
   font-weight: 700;
   text-decoration: underline;
@@ -312,6 +313,12 @@ main.home .item#first .know-more .availability .dot {
   width: 16px;
   background: #33ce98;
   border-radius: 50%;
+}
+main.home .item#first .know-more .availability .dot.red {
+  background: #FF5C5C;
+}
+main.home .item#first .know-more .availability .dot.red:after {
+  background: #FF5C5C;
 }
 main.home .item#first .know-more .availability .dot:after {
   content: "";
@@ -524,6 +531,9 @@ main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-swit
 }
 main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-switcher .btn.active img {
   opacity: 1;
+}
+main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-switcher .btn.in-development {
+  cursor: not-allowed;
 }
 main.home .item#second {
   width: calc(50% - 8px);
@@ -1066,7 +1076,7 @@ main.home .item#third .projects .projects-wrapper .project-item .project-text .t
 main.home .item#third .projects .projects-wrapper .project-item .project-text .tags span {
   padding: 2px 12px;
   border-radius: 50px;
-  background-color: #82848A;
+  background-color: #B7B7B8;
   color: #3F424A;
   font-weight: 700;
   font-size: 12px;
@@ -1497,6 +1507,12 @@ main.me .about-wrapper .picture-wrapper .availability .text-pulse .dot {
   width: 16px;
   background: #33ce98;
   border-radius: 50%;
+}
+main.me .about-wrapper .picture-wrapper .availability .text-pulse .dot.red {
+  background: #FF5C5C;
+}
+main.me .about-wrapper .picture-wrapper .availability .text-pulse .dot.red:after {
+  background: #FF5C5C;
 }
 main.me .about-wrapper .picture-wrapper .availability .text-pulse .dot:after {
   content: "";

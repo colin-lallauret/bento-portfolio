@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Experiences() {
   return (
@@ -9,7 +10,7 @@ function Experiences() {
           <p>EXPÉRIENCE</p>
         </div>
 
-        <div className="exp">
+        <Link to="/moi#groupe-vidon" className="exp">
           <div className="title">
             <p>Développeur web</p>
             <span>(en alternance)</span>
@@ -19,7 +20,7 @@ function Experiences() {
             <p>Groupe Vidon</p>
             <span>2023 - 2025</span>
           </div>
-        </div>
+        </Link>
       </div>
 
       <div className="separator"></div>
@@ -30,7 +31,7 @@ function Experiences() {
           <p>JOBS D’ÉTÉ</p>
         </div>
 
-        <div className="exp">
+        <Link to="/moi#vieilles-charrues" className="exp">
           <div className="title">
             <p>Agent de propreté événementiel</p>
           </div>
@@ -42,9 +43,9 @@ function Experiences() {
             </p>
             <span>juillet 2023</span>
           </div>
-        </div>
+        </Link>
 
-        <div className="exp">
+        <Link to="/moi#deligel" className="exp">
           <div className="title">
             <p>Vendeur / Livreur en porte à porte</p>
           </div>
@@ -53,7 +54,7 @@ function Experiences() {
             <p>SARL Deligel</p>
             <span>juin - août 2022</span>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

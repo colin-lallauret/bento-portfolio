@@ -71,7 +71,8 @@ main {
                             font-size: 10px;
                         }
 
-                        em {
+                        em,
+                        a {
                             font-size: 10px;
                             font-weight: $bold;
                             text-decoration: underline;
@@ -85,6 +86,14 @@ main {
                         gap: 10px;
 
                         .dot {
+                            &.red {
+                                background: #FF5C5C;
+
+                                &:after {
+                                    background: #FF5C5C;
+                                }
+                            }
+
                             transform: scale(0.8);
                             position: relative;
                             height: 16px;
@@ -334,6 +343,10 @@ main {
                                         img {
                                             opacity: 1;
                                         }
+                                    }
+
+                                    &.in-development {
+                                        cursor: not-allowed;
                                     }
                                 }
                             }
@@ -936,7 +949,7 @@ main {
                                     span {
                                         padding: 2px 12px;
                                         border-radius: 50px;
-                                        background-color: $grey;
+                                        background-color: $lightgrey;
                                         color: $darkgrey;
                                         font-weight: $bold;
                                         font-size: 12px;

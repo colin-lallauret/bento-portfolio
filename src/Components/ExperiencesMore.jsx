@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Vidon from "../Assets/Images/vidon.svg";
 import Deligel from "../Assets/Images/deligel.png";
@@ -12,7 +12,7 @@ function ExperiencesMore() {
         <p>EXPÉRIENCE</p>
       </div>
       <div className="experiences-wrapper">
-        <div className="experience">
+        <div id="groupe-vidon" className="experience">
           <div className="company">
             <div className="name-date">
               <p>Groupe Vidon</p>
@@ -83,7 +83,7 @@ function ExperiencesMore() {
         <p>JOBS D’ÉTÉ</p>
       </div>
       <div className="experiences-wrapper">
-        <div className="experience">
+        <div id="deligel" className="experience">
           <div className="company">
             <div className="name-date">
               <p>SARL Deligel</p>
@@ -113,7 +113,7 @@ function ExperiencesMore() {
             <img src={Deligel} alt="Deligel" />
           </div>
         </div>
-        <div className="experience">
+        <div id="vieilles-charrues" className="experience">
           <div className="company">
             <div className="name-date">
               <p>

@@ -25,7 +25,7 @@ function ThemeSwitcher() {
       <div className="btn active" onClick={handleThemeSwitch}>
         <img src={Day} alt="day" />
       </div>
-      <div className="btn" onClick={handleThemeSwitch}>
+      <div className="btn in-development" onClick={handleThemeSwitch}>
         <img src={Night} alt="night" />
       </div>
     </div>
