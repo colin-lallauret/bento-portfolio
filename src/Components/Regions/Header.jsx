@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Logo from "../../Assets/Images/Logo/logo-black.svg";
 
@@ -11,23 +11,22 @@ import CV from "../../Assets/Images/Mobile/cv2.svg";
 import LinkedIn from "../../Assets/Images/Mobile/linkedin2.svg";
 
 const Header = () => {
-  const location = useLocation();
-
-  const urls = [
-    "/projet/ui-ux/bleep",
-    "/projet/ui-ux/cnt",
-    "/projet/ui-ux/kult",
-    "/projet/web/webdoc-mmi",
-    "/projet/web/runner",
-    "/projet/web/portfolio",
-    "/projet/3d-game/minecraft-vr",
-    "/projet/3d-game/ile-perdu",
-    "/projet/3d-game/ninjacut",
-  ];
+  const navigate = useNavigate();
 
   const handleRandomClick = () => {
+    const urls = [
+      "/projet/ui-ux/bleep",
+      "/projet/ui-ux/cnt",
+      "/projet/ui-ux/kult",
+      "/projet/web/webdoc-mmi",
+      "/projet/web/runner",
+      "/projet/web/portfolio",
+      "/projet/3d-game/minecraft-vr",
+      "/projet/3d-game/ile-perdu",
+      "/projet/3d-game/ninjacut",
+    ];
     const randomUrl = urls[Math.floor(Math.random() * urls.length)];
-    window.location.href = randomUrl;
+    navigate(randomUrl);
   };
 
   return (
