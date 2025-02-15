@@ -172,8 +172,12 @@ main {
 
         &.home,
         &.me,
-        &.projects {
+        &.project {
             margin-top: 0px !important;
+
+            .title-wrapper {
+                margin-top: 0px !important;
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
 import Arrow from "../../../Assets/Images/arrow.svg";
 
-function Bleep() {
+function Runner() {
   useEffect(() => {
     document.title = "Portfolio — Colin LALLAURET";
 
@@ -37,13 +37,13 @@ function Bleep() {
       <main className="project">
         <div className="title-wrapper">
           <div className="title">
-            <h1>Bleep</h1>
-            <p>#UI / UX Design</p>
+            <h1>Runner</h1>
+            <p>#Web</p>
           </div>
           <div className="tags">
-            <p className="tag">Mobile</p>
-            <p className="tag">Email</p>
-            <p className="tag">Figma</p>
+            <p className="tag">Game</p>
+            <p className="tag">React</p>
+            <p className="tag">Mini-Projet</p>
           </div>
         </div>
         <div className="img-wrapper">
@@ -55,7 +55,7 @@ function Bleep() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>Bleep, la « mailbox » sécurisée.</h3>
+            <h3>Runner, mon premier jeu avec React</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
               lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
@@ -81,11 +81,6 @@ function Bleep() {
             </p>
           </div>
           <div className="info-wrapper">
-            <div className="group-solo">
-              <h3>Réaliser en groupe</h3>
-              <p>Colin LALLAURET (moi)</p>
-              <p>Théo LE GOURRIEREC</p>
-            </div>
             <div className="used">
               <img src={randomImg} alt="rdm" />
               <img src={randomImg} alt="rdm" />
@@ -94,11 +89,11 @@ function Bleep() {
           </div>
         </div>
         <div className="btns-wrapper">
-          <Link to="/projet/3d-game/ninjacut" className="btn-next-project">
+          <Link to="/projet/web/portfolio" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
             Projet précédent
           </Link>
-          <Link to="/projet/ui-ux/cnt" className="btn-next-project">
+          <Link to="/projet/web/webdoc-mmi" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
             Projet suivant
           </Link>
@@ -108,4 +103,4 @@ function Bleep() {
   );
 }
 
-export default transition(Bleep);
+export default transition(Runner);

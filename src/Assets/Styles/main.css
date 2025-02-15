@@ -159,7 +159,10 @@ header .mobile-menu {
 }
 
 @media (max-width: 768px) {
-  main.home, main.me, main.projects {
+  main.home, main.me, main.project {
+    margin-top: 0px !important;
+  }
+  main.home .title-wrapper, main.me .title-wrapper, main.project .title-wrapper {
     margin-top: 0px !important;
   }
 }
@@ -1683,6 +1686,172 @@ main.me .about-wrapper .text .btns .internal a {
 main.me .about-wrapper .text .btns .internal a:hover {
   color: #82848A;
   box-shadow: 0px 0px 15px -5px rgba(6, 9, 19, 0.5);
+}
+
+main.project {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.project .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 64px 0 48px 0;
+}
+main.project .title-wrapper .title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+main.project .title-wrapper .title h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #3F424A;
+}
+main.project .title-wrapper .title p {
+  font-size: 20px;
+  font-style: italic;
+  color: #3F424A;
+}
+main.project .title-wrapper .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+main.project .title-wrapper .tags .tag {
+  padding: 2px 12px;
+  border-radius: 50px;
+  color: #3F424A;
+  background-color: #B7B7B8;
+  font-size: 12px;
+  font-weight: 700;
+}
+main.project .img-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main.project .img-wrapper > img {
+  width: 100%;
+  border-radius: 24px;
+}
+main.project .img-wrapper .img-group {
+  display: flex;
+  gap: 16px;
+}
+main.project .img-wrapper .img-group img {
+  width: calc(50% - 8px);
+  border-radius: 24px;
+}
+main.project .content-wrapper {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 1168px) {
+  main.project .content-wrapper {
+    flex-direction: column;
+  }
+}
+main.project .content-wrapper .text {
+  width: 70%;
+  padding: 32px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1168px) {
+  main.project .content-wrapper .text {
+    width: 100%;
+  }
+}
+main.project .content-wrapper .text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3F424A;
+  margin-bottom: 8px;
+}
+main.project .content-wrapper .text p {
+  line-height: 140%;
+}
+main.project .content-wrapper .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 30%;
+}
+@media (max-width: 1168px) {
+  main.project .content-wrapper .info-wrapper {
+    width: 100%;
+  }
+}
+main.project .content-wrapper .info-wrapper .group-solo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 32px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+}
+main.project .content-wrapper .info-wrapper .group-solo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3F424A;
+  margin-bottom: 12px;
+}
+main.project .content-wrapper .info-wrapper .used {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+}
+main.project .content-wrapper .info-wrapper .used img {
+  height: 48px;
+  width: auto;
+}
+main.project .btns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+main.project .btn-next-project {
+  display: flex;
+  text-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #3F424A;
+  cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
+  color: #F5F5F5;
+}
+main.project .btn-next-project:first-child img {
+  transform: rotate(90deg);
+}
+main.project .btn-next-project:last-child {
+  flex-direction: row-reverse;
+}
+main.project .btn-next-project:last-child img {
+  transform: rotate(-90deg);
+}
+main.project .btn-next-project img {
+  height: 16px;
+  width: auto;
 }
 @keyframes mouse-scroll {
   0% {
