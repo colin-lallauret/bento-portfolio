@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import MinecraftVR from "../Assets/Images/Projects/MinecraftVR.png";
 import IlePerdu from "../Assets/Images/Projects/IlePerdu.png";
@@ -7,7 +8,7 @@ import NinjaCut from "../Assets/Images/Projects/NinjaCut.png";
 function Project3dGame() {
   return (
     <>
-      <div className="project-item left">
+      <Link to="/projet/3d-game/minecraft-vr" className="project-item left">
         <img src={MinecraftVR} alt="MinecraftVR" />
         <div className="project-text">
           <h5>MinecraftVR</h5>
@@ -21,9 +22,9 @@ function Project3dGame() {
             <span>Interaction</span>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="separator"></div>
-      <div className="project-item right">
+      <Link to="/projet/3d-game/ile-perdu" className="project-item right">
         <div className="project-text">
           <h5>Île perdu</h5>
           <p>
@@ -37,10 +38,10 @@ function Project3dGame() {
           </div>
         </div>
         <img src={IlePerdu} alt="Île perdu" />
-      </div>
+      </Link>
       <div className="separator"></div>
 
-      <div className="project-item left">
+      <Link to="/projet/3d-game/ninjacut" className="project-item left">
         <img src={NinjaCut} alt="NinjaCut" />
         <div className="project-text">
           <h5>NinjaCut</h5>
@@ -54,7 +55,7 @@ function Project3dGame() {
             <span>Mini-Projet</span>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 }

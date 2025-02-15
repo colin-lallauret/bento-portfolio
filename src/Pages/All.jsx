@@ -60,6 +60,24 @@ function All() {
     }
   };
 
+  const navigate = useNavigate();
+
+  const handleRandomClick = () => {
+    const urls = [
+      "/projet/ui-ux/bleep",
+      "/projet/ui-ux/cnt",
+      "/projet/ui-ux/kult",
+      "/projet/web/webdoc-mmi",
+      "/projet/web/runner",
+      "/projet/web/portfolio",
+      "/projet/3d-game/minecraft-vr",
+      "/projet/3d-game/ile-perdu",
+      "/projet/3d-game/ninjacut",
+    ];
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+    navigate(randomUrl);
+  };
+
   return (
     <>
       <Header />
@@ -144,7 +162,7 @@ function All() {
             </div>
             <div className="projects-wrapper">{renderProject()}</div>
 
-            <div className="btn-random">
+            <div className="btn-random" onClick={handleRandomClick}>
               <img src={Random} alt="Random" />
             </div>
           </div>

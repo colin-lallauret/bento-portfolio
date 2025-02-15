@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Webdoc from "../Assets/Images/Projects/Webdoc.png";
 import Runner from "../Assets/Images/Projects/Runner.png";
@@ -7,7 +8,7 @@ import Portfolio from "../Assets/Images/Projects/Portfolio.png";
 function ProjectWeb() {
   return (
     <>
-      <div className="project-item left">
+      <Link to="/projet/web/webdoc-mmi" className="project-item left">
         <img src={Webdoc} alt="Webdoc MMI" />
         <div className="project-text">
           <h5>Webdoc MMI</h5>
@@ -21,9 +22,9 @@ function ProjectWeb() {
             <span>Équipe</span>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="separator"></div>
-      <div className="project-item right">
+      <Link to="/projet/web/runner" className="project-item right">
         <div className="project-text">
           <h5>Runner</h5>
           <p>
@@ -37,10 +38,10 @@ function ProjectWeb() {
           </div>
         </div>
         <img src={Runner} alt="Runner" />
-      </div>
+      </Link>
       <div className="separator"></div>
 
-      <div className="project-item left">
+      <Link to="/projet/web/portfolio" className="project-item left">
         <img src={Portfolio} alt="Portfolio" />
         <div className="project-text">
           <h5>Portfolio</h5>
@@ -54,7 +55,7 @@ function ProjectWeb() {
             <span>Bento</span>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 }

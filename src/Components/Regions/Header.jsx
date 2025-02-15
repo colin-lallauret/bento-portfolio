@@ -13,6 +13,23 @@ import LinkedIn from "../../Assets/Images/Mobile/linkedin2.svg";
 const Header = () => {
   const location = useLocation();
 
+  const urls = [
+    "/projet/ui-ux/bleep",
+    "/projet/ui-ux/cnt",
+    "/projet/ui-ux/kult",
+    "/projet/web/webdoc-mmi",
+    "/projet/web/runner",
+    "/projet/web/portfolio",
+    "/projet/3d-game/minecraft-vr",
+    "/projet/3d-game/ile-perdu",
+    "/projet/3d-game/ninjacut",
+  ];
+
+  const handleRandomClick = () => {
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+    window.location.href = randomUrl;
+  };
+
   return (
     <header>
       <Link to="/" className="logo-wrapper">
@@ -33,15 +50,14 @@ const Header = () => {
             Moi ?
           </div>
         </Link>
-        <Link to="/projets">
-          <div
-            className={`item ${
-              location.pathname === "/projets" ? "active" : ""
-            }`}
-          >
-            Projets
-          </div>
-        </Link>
+        <button
+          className={`item ${
+            location.pathname.startsWith("/projet") ? "active" : ""
+          }`}
+          onClick={handleRandomClick}
+        >
+          Projets
+        </button>
       </div>
 
       <div className="mobile-menu">
@@ -58,15 +74,14 @@ const Header = () => {
               <img src={Me} alt="Me" />
             </div>
           </Link>
-          <Link to="/projets">
-            <div
-              className={`btn ${
-                location.pathname === "/projets" ? "active" : ""
-              }`}
-            >
-              <img src={Project} alt="Project" />
-            </div>
-          </Link>
+          <button
+            className={`btn ${
+              location.pathname.startsWith("/projet") ? "active" : ""
+            }`}
+            onClick={handleRandomClick}
+          >
+            <img src={Project} alt="Project" />
+          </button>
         </div>
         <div className="separator"></div>
         <div className="links">

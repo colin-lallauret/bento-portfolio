@@ -43,6 +43,10 @@ header {
             text-align: center;
             font-style: italic;
             font-size: 14px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
             &.active {
                 background-color: #F8F8F8;
