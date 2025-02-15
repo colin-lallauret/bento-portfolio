@@ -8,7 +8,7 @@ const transition = (OgComponent) => {
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
         }
       } else {
         window.scrollTo(0, 0);
@@ -20,7 +20,7 @@ const transition = (OgComponent) => {
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
         }
       } else {
         window.scrollTo(0, 0);

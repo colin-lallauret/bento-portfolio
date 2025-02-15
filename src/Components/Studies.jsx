@@ -8,7 +8,7 @@ function Studies() {
         <p>FORMATIONS</p>
       </div>
       <div className="studies-wrapper">
-        <div className="study">
+        <div className="study" id="but-mmi">
           <div className="date">2022 - 2025</div>
           <div className="text">
             <div className="title">
@@ -66,7 +66,7 @@ function Studies() {
             </div>
           </div>
         </div>
-        <div className="study">
+        <div className="study" id="but-info">
           <div className="date">2021 - 2022</div>
           <div className="text">
             <h4>
@@ -101,7 +101,7 @@ function Studies() {
             </div>
           </div>
         </div>
-        <div className="study">
+        <div className="study" id="bac">
           <div className="date">2021</div>
           <div className="text">
             <h4>Baccalauréat série générale</h4>
