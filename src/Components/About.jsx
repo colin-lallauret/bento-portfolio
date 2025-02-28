@@ -1,6 +1,6 @@
 import React from "react";
 
-import MyPicture from "../Assets/Images/mypicture.png";
+import MyPicture from "../Assets/Images/photo.png";
 import LinkedIn from "../Assets/Images/linkedin.svg";
 import Github from "../Assets/Images/github.svg";
 import Mail from "../Assets/Images/mail.svg";
@@ -42,7 +42,7 @@ function About() {
             <p>
               Hello, moi c’est <em>Colin</em> j’ai 21 ans et je suis étudiant en
               troisième année d’un <em>B</em>achelor <em>U</em>
-              niversitaire <em>T</em>echnologique en <em>M</em>étiers du{" "}
+              niversitaire <em>T</em>echnologique <em>M</em>étiers du{" "}
               <em>M</em>ultimédia et de l’<em>I</em>nternet que je réalise en
               alternance en tant que développeur web.
             </p>
