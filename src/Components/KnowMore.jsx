@@ -7,7 +7,7 @@ function KnowMore() {
     const currentHour = new Date().getHours();
     return currentHour >= 9 && currentHour < 17
       ? "Disponible maintenant"
-      : "Indisponible actuellement";
+      : "Indisponible actuellement (9h - 17h)";
   };
 
   return (
@@ -27,7 +27,7 @@ function KnowMore() {
       <div className="availability">
         <div
           className={`dot ${
-            getAvailability() === "Indisponible actuellement" ? "red" : ""
+            getAvailability() === "Indisponible actuellement (9h - 17h)" ? "red" : ""
           }`}
         ></div>
         <span>{getAvailability()}</span>

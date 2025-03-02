@@ -9,7 +9,7 @@ import Cv from "../Assets/Images/cv.svg";
 function About() {
   const getAvailability = () => {
     const currentHour = new Date().getHours();
-    return currentHour >= 9 && currentHour < 17 ? "Disponible" : "Indisponible";
+    return currentHour >= 9 && currentHour < 17 ? "Disponible" : "Indisponible (9h - 17h)";
   };
 
   return (
@@ -24,7 +24,7 @@ function About() {
             <div className="text-pulse">
               <div
                 className={`dot ${
-                  getAvailability() === "Indisponible" ? "red" : ""
+                  getAvailability() === "Indisponible (9h - 17h)" ? "red" : ""
                 }`}
               ></div>
               <span>{getAvailability()}</span>
