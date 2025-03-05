@@ -2,8 +2,8 @@ import fs from "fs-extra";
 import path from "path";
 import sharp from "sharp";
 
-const inputDir = "src/assets"; // Dossier contenant les images
-const outputDir = "public/images"; // Dossier où stocker les WebP
+const inputDir = "src/Assets";
+const outputDir = "public/images";
 
 async function convertImages() {
   await fs.ensureDir(outputDir);
