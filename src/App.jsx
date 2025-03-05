@@ -36,7 +36,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <Suspense fallback={<div className="loading">Chargement...</div>}>
+    <Suspense fallback={<div className="loading"></div>}>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<All />} />
