@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "convert-images": "node Scripts/convertImages.js",
+    "convert-images": "node src/Scripts/convertImages.js",
     "build": "vite build",
     "vercel-build": "yarn convert-images && yarn build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
