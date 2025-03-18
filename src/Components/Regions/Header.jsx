@@ -46,7 +46,7 @@ const Header = () => {
           <div
             className={`item ${location.pathname === "/moi" ? "active" : ""}`}
           >
-            Moi ?
+            À propos ?
           </div>
         </Link>
         <button

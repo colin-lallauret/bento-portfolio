@@ -5,6 +5,10 @@ import transition from "../../../transition";
 import FavIcon from "../../../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
+import Image1 from "../../../Assets/Images/Full_img/ile/1.png";
+import Image2 from "../../../Assets/Images/Full_img/ile/2.png";
+import Image3 from "../../../Assets/Images/Full_img/ile/3.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function IlePerdu() {
@@ -47,10 +51,10 @@ function IlePerdu() {
           </div>
         </div>
         <div className="img-wrapper">
-          <img src={randomImg} alt="rdm" />
+          <img src={Image1} alt="rdm" />
           <div className="img-group">
-            <img src={randomImg} alt="rdm" />
-            <img src={randomImg} alt="rdm" />
+            <img src={Image2} alt="rdm" />
+            <img src={Image3} alt="rdm" />
           </div>
         </div>
         <div className="content-wrapper">
