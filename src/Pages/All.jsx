@@ -89,7 +89,14 @@ function All() {
             <RollBanner />
 
             <div className="map-others-wrapper">
-              <img className="map" src={Map} alt="map" loading="lazy" />
+              <img
+                className="map"
+                src={Map}
+                alt="map"
+                width="800"
+                height="600"
+                fetchPriority="high"
+              />
 
               <div className="others">
                 <Cv />
