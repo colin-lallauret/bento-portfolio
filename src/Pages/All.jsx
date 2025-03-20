@@ -102,6 +102,8 @@ function All() {
                 width="800"
                 height="600"
                 fetchPriority="high"
+                decoding="async"
+                importance="high"
               />
 
               <div className="others">
