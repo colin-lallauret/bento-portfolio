@@ -89,7 +89,7 @@ function All() {
             <RollBanner />
 
             <div className="map-others-wrapper">
-              <img
+              {/* <img
                 className="map"
                 src={Map}
                 alt="map"
@@ -98,7 +98,8 @@ function All() {
                 fetchPriority="high"
                 decoding="async"
                 importance="high"
-              />
+              /> */}
+              <div className="map"></div>
 
               <div className="others">
                 <Cv />

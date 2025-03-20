@@ -503,12 +503,20 @@ main.home .item#first .know-more-wrapper .map-others-wrapper {
   }
 }
 main.home .item#first .know-more-wrapper .map-others-wrapper .map {
-  width: calc(45% - 8px);
+  width: calc(51% - 8px);
   max-height: 220px;
+  background-image: url("../../../../public/map.webp");
+  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 1168px) {
   main.home .item#first .know-more-wrapper .map-others-wrapper .map {
+    max-height: 220px;
+    height: 220px;
     width: 100%;
+    background-image: url("../../../../public/map.webp");
+    background-size: cover;
+    background-position: center;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 24px;
