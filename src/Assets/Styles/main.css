@@ -505,7 +505,7 @@ main.home .item#first .know-more-wrapper .map-others-wrapper {
 main.home .item#first .know-more-wrapper .map-others-wrapper .map {
   width: calc(51% - 8px);
   max-height: 220px;
-  background-image: url("../../../../public/map.webp");
+  background-image: url("../../../../public/map.webp"), url("../../../../map.webp");
   background-size: cover;
   background-position: center;
 }
@@ -514,7 +514,7 @@ main.home .item#first .know-more-wrapper .map-others-wrapper .map {
     max-height: 220px;
     height: 220px;
     width: 100%;
-    background-image: url("../../../../public/map.webp");
+    background-image: url("../../../../public/map.webp"), url("../../../../map.webp");
     background-size: cover;
     background-position: center;
     -o-object-fit: cover;

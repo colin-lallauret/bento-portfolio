@@ -240,7 +240,7 @@ main {
                         .map {
                             width: calc(51% - (16px /2));
                             max-height: 220px;
-                            background-image: url('../../../../public/map.webp');
+                            background-image: url('../../../../public/map.webp'), url('../../../../map.webp');
                             background-size: cover;
                             background-position: center;
 
@@ -248,7 +248,7 @@ main {
                                 max-height: 220px;
                                 height: 220px;
                                 width: 100%;
-                                background-image: url('../../../../public/map.webp');
+                                background-image: url('../../../../public/map.webp'), url('../../../../map.webp');
                                 background-size: cover;
                                 background-position: center;
                                 object-fit: cover;
