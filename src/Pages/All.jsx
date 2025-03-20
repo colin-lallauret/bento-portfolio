@@ -13,7 +13,7 @@ import Mail from "../Assets/Images/mail.svg";
 
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
-import Map from "../Assets/Images/map.png";
+import Map from "../Assets/Images/map.webp";
 import Random from "../Assets/Images/random.svg";
 
 import Software from "../Components/Software";
@@ -89,7 +89,7 @@ function All() {
             <RollBanner />
 
             <div className="map-others-wrapper">
-              <img className="map" src={Map} alt="map" />
+              <img className="map" src={Map} alt="map" loading="lazy" />
 
               <div className="others">
                 <Cv />

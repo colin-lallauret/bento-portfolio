@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import CnT from "../Assets/Images/Projects/CnT.png";
-import Bleep from "../Assets/Images/Projects/Bleep.png";
-import Kult from "../Assets/Images/Projects/Kult.png";
+import CnT from "../Assets/Images/Projects/CnT.webp";
+import Bleep from "../Assets/Images/Projects/Bleep.webp";
+import Kult from "../Assets/Images/Projects/Kult.webp";
 
 function ProjectUIUX() {
   return (
     <>
       <Link to="/projet/ui-ux/cnt" className="project-item left">
-        <img src={CnT} alt="C&T" />
+        <img src={CnT} alt="C&T" loading="lazy" />
         <div className="project-text">
           <h5>C&T</h5>
           <p>
@@ -38,12 +38,12 @@ function ProjectUIUX() {
             <span>Figma</span>
           </div>
         </div>
-        <img src={Bleep} alt="Bleep" />
+        <img src={Bleep} alt="Bleep" loading="lazy" />
       </Link>
       <div className="separator"></div>
 
       <Link to="/projet/ui-ux/kult" className="project-item left">
-        <img src={Kult} alt="Kult" />
+        <img src={Kult} alt="Kult" loading="lazy" />
         <div className="project-text">
           <h5>KULT’</h5>
           <p>

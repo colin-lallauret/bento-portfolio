@@ -1,5 +1,5 @@
 import React from "react";
-import IosPicture from "../Assets/Images/ios_picture.png";
+import IosPicture from "../Assets/Images/ios_picture.webp";
 import { Link } from "react-router-dom";
 
 function KnowMore() {
@@ -13,7 +13,7 @@ function KnowMore() {
   return (
     <div className="know-more internal-link">
       <div className="ios-picture">
-        <img src={IosPicture} alt="ios picture" />
+        <img src={IosPicture} alt="ios picture" loading="lazy" />
         <h2>
           Colin <br />
           LALLAURET
