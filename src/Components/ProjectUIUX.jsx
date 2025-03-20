@@ -9,7 +9,7 @@ function ProjectUIUX() {
   return (
     <>
       <Link to="/projet/ui-ux/cnt" className="project-item left">
-        <img src={CnT} alt="C&T" loading="lazy" />
+        <img src={CnT} alt="C&T" loading="lazy" width="252" height="150" />
         <div className="project-text">
           <h5>C&T</h5>
           <p>
@@ -38,12 +38,12 @@ function ProjectUIUX() {
             <span>Figma</span>
           </div>
         </div>
-        <img src={Bleep} alt="Bleep" loading="lazy" />
+        <img src={Bleep} alt="Bleep" loading="lazy" width="252" height="150" />
       </Link>
       <div className="separator"></div>
 
       <Link to="/projet/ui-ux/kult" className="project-item left">
-        <img src={Kult} alt="Kult" loading="lazy" />
+        <img src={Kult} alt="Kult" loading="lazy" width="252" height="150" />
         <div className="project-text">
           <h5>KULT’</h5>
           <p>

@@ -27,6 +27,12 @@ function All() {
   useEffect(() => {
     document.title = "Portfolio — Colin LALLAURET";
 
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = Map;
+    document.head.appendChild(link);
+
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
       if (document.visibilityState === "hidden") {

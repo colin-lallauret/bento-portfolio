@@ -13,7 +13,7 @@ function KnowMore() {
   return (
     <div className="know-more internal-link">
       <div className="ios-picture">
-        <img src={IosPicture} alt="ios picture" loading="lazy" />
+        <img src={IosPicture} alt="ios picture" loading="lazy" height="104" width="104" />
         <h2>
           Colin <br />
           LALLAURET
