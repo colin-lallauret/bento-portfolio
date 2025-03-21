@@ -9,11 +9,14 @@ import Image1 from "../../../Assets/Images/Full_img/minecraft/1.png";
 import Image2 from "../../../Assets/Images/Full_img/minecraft/2.png";
 import Image3 from "../../../Assets/Images/Full_img/minecraft/3.png";
 
+import Unity from "../../../Assets/Images/Icons/Logiciels/unity.png";
+import MetaQuest from "../../../Assets/Images/Icons/Logiciels/metaquest.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function MinecraftVR() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "Minecraft VR (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +24,7 @@ function MinecraftVR() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "Minecraft VR (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +35,6 @@ function MinecraftVR() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,47 +60,63 @@ function MinecraftVR() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>Minecraft VR, ...</h3>
+            <h3>MinecraftVR</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              Dans le cadre d&apos;une ressource de Dispositif Interactif,
+              j&apos;ai réalisé ma première expérience de Réalité Virtuelle en
+              créant un concept simple. L&apos;objectif était de comprendre les
+              aspects matériels nécessaires et le développement derrière la
+              création d&apos;un tel projet, notamment pour explorer la manière
+              dont on peut concevoir un environnement interactif en VR.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Idéalisation :</b> Recherche d&apos;un thème pour mon
+                environnement virtuel et réflexion sur une idée de quête à
+                intégrer dans ce monde.
+              </p>
+              <p>
+                <b>Développement :</b> Création d&apos;un environnement de base
+                avec sol, murs et ciel. Ajout d&apos;interactions de base
+                (locomotion, grab, téléportation, escalade). Conception
+                d&apos;une quête consistant à rechercher une clé pour
+                déverrouiller une porte, sur un thème inspiré de Minecraft.
+              </p>
+              <p>
+                <b>Tests :</b> Déploiement de l&apos;environnement virtuel dans
+                le casque Meta Quest 3 et présentation d&apos;une démo de mon
+                &quot;jeu&quot; devant ma promotion.
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> Conception d&apos;environnement VR,
+                développement d&apos;interactions en réalité virtuelle,
+                programmation en Unity.
+              </p>
+              <p>
+                <b>Soft skills :</b> Créativité, gestion de projet, présentation
+                publique.
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Unity} alt="rdm" />
+              <img src={MetaQuest} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/3d-game/ile-perdu" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (Île Perdu)
           </Link>
           <Link to="/projet/3d-game/ninjacut" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (NinjaCut)
           </Link>
         </div>
       </main>

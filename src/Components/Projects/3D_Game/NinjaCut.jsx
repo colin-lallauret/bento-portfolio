@@ -9,11 +9,13 @@ import Image1 from "../../../Assets/Images/Full_img/ninjacut/1.png";
 import Image2 from "../../../Assets/Images/Full_img/ninjacut/2.png";
 import Image3 from "../../../Assets/Images/Full_img/ninjacut/3.png";
 
+import Unity from "../../../Assets/Images/Icons/Logiciels/unity.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function NinjaCut() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "NinjaCut (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +23,7 @@ function NinjaCut() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "NinjaCut (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +34,6 @@ function NinjaCut() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,47 +59,59 @@ function NinjaCut() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>NinjaCut, ...</h3>
+            <h3>NinjaCut</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              Inspiré du célèbre jeu mobile &quot;Fruit Ninja&quot;, l’objectif
+              était de créer une version similaire dans Unity. Ce projet visait
+              à comprendre la mécanique du jeu et à la transposer en un jeu
+              interactif, avec différents niveaux de difficulté et un système de
+              score.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Compréhension de l&apos;environnement :</b> Analyse des
+                assets fournis pour comprendre la logique du jeu.
+              </p>
+              <p>
+                <b>Développement :</b> Création de l&apos;écran de démarrage
+                avec 3 niveaux de difficulté, gestion des trajectoires
+                aléatoires des fruits, détection des bonus/malus en fonction des
+                objets touchés. Mise en place de l&apos;écran de game over avec
+                possibilité de relance rapide et gestion du système de score.
+              </p>
+              <p>
+                <b>Tests & fix :</b> Tests des différents niveaux de difficulté
+                et correction des problèmes liés à la trajectoire aléatoire des
+                gameobjects.
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> Développement de jeux vidéo, programmation
+                en Unity, gestion des mécaniques de gameplay.
+              </p>
+              <p>
+                <b>Soft skills :</b> Résolution de problèmes, gestion de projet,
+                réactivité face aux imprévus.
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Unity} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/3d-game/minecraft-vr" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (Minecraft VR)
           </Link>
           <Link to="/projet/ui-ux/bleep" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (Bleep)
           </Link>
         </div>
       </main>

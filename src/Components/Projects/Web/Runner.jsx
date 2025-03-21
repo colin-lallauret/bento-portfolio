@@ -9,11 +9,14 @@ import Image1 from "../../../Assets/Images/Full_img/run/1.png";
 import Image2 from "../../../Assets/Images/Full_img/run/2.png";
 import Image3 from "../../../Assets/Images/Full_img/run/3.png";
 
+import Reactt from "../../../Assets/Images/Icons/Logiciels/react.png";
+import Vite from "../../../Assets/Images/Icons/Logiciels/vite.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function Runner() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "Runner (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +24,7 @@ function Runner() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "Runner (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +35,6 @@ function Runner() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,47 +60,58 @@ function Runner() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>Runner, mon premier jeu avec React</h3>
+            <h3>Runner</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              Développement d’un jeu de type Runner en React + Vite. L’objectif
+              était de travailler sur les mécaniques fondamentales : saut,
+              détection des collisions, système de points, augmentation
+              progressive de la difficulté et relance rapide du jeu.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Compréhension de l&apos;environnement :</b> Installation du
+                projet, analyse des fichiers et assets fournis.
+              </p>
+              <p>
+                <b>Développement :</b> Implémentation des inputs pour le saut,
+                détection des collisions, gestion du game over, système de score
+                et sauvegarde du meilleur score.
+              </p>
+              <p>
+                <b>Optimisation :</b> Augmentation de la difficulté dynamique en
+                fonction du temps de jeu (vitesse accrue et apparition plus
+                fréquente d’obstacles).
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> Développement en React + Vite, Gestion des
+                événements et des collisions, Optimisation et équilibrage de la
+                difficulté
+              </p>
+              <p>
+                <b>Soft skills :</b> Gestion du stress et de la pression, Prise
+                de décision rapide, Débogage et amélioration continue
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Reactt} alt="rdm" />
+              <img src={Vite} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/web/portfolio" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (Portfolio)
           </Link>
           <Link to="/projet/web/webdoc-mmi" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (Webdoc MMI)
           </Link>
         </div>
       </main>

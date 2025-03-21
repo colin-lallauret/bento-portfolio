@@ -9,11 +9,13 @@ import Image1 from "../../../Assets/Images/Full_img/cett/1.png";
 import Image2 from "../../../Assets/Images/Full_img/cett/2.png";
 import Image3 from "../../../Assets/Images/Full_img/cett/3.png";
 
+import Figma from "../../../Assets/Images/Icons/Logiciels/figma.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function ColinNTheo() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "C&T (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +23,7 @@ function ColinNTheo() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "C&T (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +34,6 @@ function ColinNTheo() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,30 +59,47 @@ function ColinNTheo() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>C&T, du design à la rédaction.</h3>
+            <h3>C&T</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              Dans ce projet en duo, nous avions pour objectif de créer une page
+              web et un article fictif sur le SEO. L&apos;idée était de
+              maximiser la visibilité de notre contenu sur les moteurs de
+              recherche. Nous avons donc conçu un article optimisé intégrant des
+              mots-clés, des backlinks et d&apos;autres techniques de
+              référencement pour assurer une meilleure portée et pertinence.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Recherche :</b> Étude de l&apos;existant pour comprendre les
+                enjeux du SEO et l&apos;organisation des articles web.
+              </p>
+              <p>
+                <b>Rédaction :</b> Création des titres principaux et rédaction
+                en appliquant les principes du référencement naturel.
+              </p>
+              <p>
+                <b>Maquettage :</b> Élaboration d&apos;une direction artistique
+                (couleurs, nom du site, typographie...), puis mise en page de
+                l&apos;article sur une maquette desktop.
+              </p>
+              <p>
+                <b>Amélioration :</b> Relecture et optimisation du contenu,
+                ajout de backlinks, intégration d&apos;interactions et
+                réorganisation des sections si nécessaire.
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> Référencement naturel (SEO), Rédaction web
+                optimisée, Maquettage et design UI/UX
+              </p>
+              <p>
+                <b>Soft skills :</b> Travail en équipe, Communication efficace,
+                Sens de l&apos;analyse
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="group-solo">
@@ -91,20 +108,18 @@ function ColinNTheo() {
               <p>Théo LE GOURRIEREC</p>
             </div>
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Figma} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/ui-ux/bleep" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (Bleep)
           </Link>
           <Link to="/projet/ui-ux/kult" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (Kult)
           </Link>
         </div>
       </main>

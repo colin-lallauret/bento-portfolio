@@ -9,11 +9,13 @@ import Image1 from "../../../Assets/Images/Full_img/ile/1.png";
 import Image2 from "../../../Assets/Images/Full_img/ile/2.png";
 import Image3 from "../../../Assets/Images/Full_img/ile/3.png";
 
+import Blender from "../../../Assets/Images/Icons/Logiciels/blender.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function IlePerdu() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "Ile Perdu (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +23,7 @@ function IlePerdu() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "Ile Perdu (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +34,6 @@ function IlePerdu() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,47 +59,57 @@ function IlePerdu() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>Ile perdu, ...</h3>
+            <h3>Ile perdu</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              L&apos;objectif de ce projet était de créer un rendu en 360° sous
+              forme de &quot;Showcase Loop&quot; dans Blender. J&apos;ai choisi
+              de réaliser une île au style pirate, en concevant chaque objet de
+              la scène manuellement pour offrir un rendu immersif et détaillé.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Imagination :</b> Réflexion sur le thème, l’histoire et le
+                style visuel de la réalisation. Choix d’une ambiance de pirate
+                pour l’île.
+              </p>
+              <p>
+                <b>Réalisation :</b> Création de l’île à partir de zéro,
+                modélisation et texturisation de chaque objet de la scène.
+              </p>
+              <p>
+                <b>Rendu :</b> Production d’un rendu vidéo en boucle infinie
+                pour mettre en avant l’île et ses détails dans un environnement
+                360°.
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> Réflexion sur le thème, l’histoire et le
+                style visuel de la réalisation. Choix d’une ambiance de pirate
+                pour l’île.
+              </p>
+              <p>
+                <b>Soft skills :</b> Création de l’île à partir de zéro,
+                modélisation et texturisation de chaque objet de la scène.
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Blender} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/web/webdoc-mmi" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (Webdoc MMI)
           </Link>
           <Link to="/projet/3d-game/minecraft-vr" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (Minecraft VR)
           </Link>
         </div>
       </main>

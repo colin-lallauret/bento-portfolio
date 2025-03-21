@@ -1,4 +1,187 @@
 main {
+    &.projects {
+        margin-top: 64px;
+
+        .projects,
+        .experiences {
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            background-color: rgba($background, .8);
+            border-radius: 24px;
+
+            @media (max-width: 512px) {
+                padding: 24px;
+            }
+
+            .up-title {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 12px;
+                    color: $grey;
+                }
+
+                p {
+                    font-size: 24px;
+                    font-weight: $medium;
+                    color: $darkgrey;
+                }
+            }
+        }
+
+        .projects {
+            min-height: 700px;
+
+            .btns {
+                margin-top: 16px;
+                margin-bottom: 32px;
+
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+
+                @media (max-width: 512px) {
+                    justify-content: center;
+                }
+
+                .btn {
+                    padding: 12px;
+                    min-width: 120px;
+                    text-align: center;
+                    background-color: $background;
+                    border-radius: 10px;
+                    color: #535355;
+                    font-weight: $regular;
+                    opacity: 0.5;
+                    cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
+
+                    &.active {
+                        color: $darkgrey;
+                        opacity: 1;
+                        font-weight: $medium;
+                        box-shadow: 0px 0px 10px -4px rgba($darkgrey, 0.5)
+                    }
+                }
+            }
+
+            .projects-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .separator {
+                    height: 1px;
+                    width: 85%;
+                    background-color: $generalbackground;
+                    border-radius: 1px;
+                    margin: 0 auto;
+                }
+
+                .project-item {
+                    display: flex;
+                    gap: 16px;
+
+                    @media (max-width: 1168px) {
+                        flex-direction: column;
+                    }
+
+                    &.right {
+
+                        @media (max-width: 1168px) {
+                            flex-direction: column-reverse;
+                        }
+
+                        h5,
+                        p {
+                            text-align: end;
+
+                            @media (max-width: 1168px) {
+                                text-align: start;
+                            }
+                        }
+
+                        .tags {
+                            align-self: end;
+
+                            @media (max-width: 1168px) {
+                                align-self: start;
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 50%;
+                        height: auto;
+                        border-radius: 8px;
+                        height: 150px;
+                        object-fit: cover;
+
+                        @media (max-width: 1168px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .project-text {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        @media (max-width: 1168px) {
+                            width: 100%;
+                        }
+
+                        h5 {
+                            font-size: 32px;
+                            color: $darkgrey;
+                            font-weight: $bold;
+                        }
+
+                        p {
+                            color: $grey;
+                            font-size: 14px;
+                        }
+
+                        .tags {
+                            display: flex;
+                            gap: 8px;
+                            margin-top: 8px;
+
+                            span {
+                                padding: 2px 12px;
+                                border-radius: 50px;
+                                background-color: $lightgrey;
+                                color: $darkgrey;
+                                font-weight: $bold;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-random {
+                align-self: center;
+                margin-top: 32px;
+                border-radius: 8px;
+                background-color: $darkgrey;
+                padding: 4px 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+        }
+    }
+
     &.project {
         display: flex;
         flex-direction: column;
@@ -80,17 +263,41 @@ main {
                 border-radius: 24px;
                 display: flex;
                 flex-direction: column;
-                gap: 8px;
+                gap: 24px;
 
                 @media (max-width: 1168px) {
                     width: 100%;
                 }
 
                 h3 {
-                    font-size: 24px;
+                    font-size: 40px;
                     font-weight: $bold;
                     color: $darkgrey;
+                    margin-bottom: 0px;
+                }
+
+                h4 {
+                    font-size: 28px;
+                    font-weight: $medium;
+                    color: $darkgrey;
                     margin-bottom: 8px;
+                }
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    p {
+                        display: list-item;
+                        margin-left: 2em;
+                        color: $grey;
+                    }
+
+                    b {
+                        font-weight: $semibold;
+                        color: $darkgrey;
+                    }
                 }
 
                 p {

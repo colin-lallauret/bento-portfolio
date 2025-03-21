@@ -9,11 +9,13 @@ import Image1 from "../../../Assets/Images/Full_img/kult/1.png";
 import Image2 from "../../../Assets/Images/Full_img/kult/2.png";
 import Image3 from "../../../Assets/Images/Full_img/kult/3.png";
 
+import Figma from "../../../Assets/Images/Icons/Logiciels/figma.png";
+
 import Arrow from "../../../Assets/Images/arrow.svg";
 
 function Kult() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "Kult (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +23,7 @@ function Kult() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "Kult (projet) — Colin LALLAURET";
         favicon.href = FavIcon;
       }
     };
@@ -32,8 +34,6 @@ function Kult() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
-
-  const randomImg = "https://picsum.photos/1920/1080";
 
   return (
     <>
@@ -59,33 +59,42 @@ function Kult() {
         </div>
         <div className="content-wrapper">
           <div className="text">
-            <h3>
-              Kult, l&apos;application pour les sorties culturelles dans le
-              Tregor.
-            </h3>
+            <h3>Kult&apos;</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
-              lobortis leo. Ut sit amet lacinia sapien, vestibulum eleifend
-              lorem. In et mauris tempor, congue orci quis, tempor magna.
-              Aliquam vitae risus ipsum. Duis aliquet velit vel justo
-              sollicitudin, in pellentesque dolor lacinia. Ut tincidunt id augue
-              sit amet pellentesque. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.
+              Nous avons développé un concept d&apos;application visant à
+              centraliser tous les événements culturels du Trégor.
+              L&apos;application permettrait aux utilisateurs de découvrir
+              facilement les événements à venir, de filtrer les résultats selon
+              leurs préférences et d&apos;accéder rapidement aux informations
+              essentielles.
             </p>
-            <p>
-              Etiam nec tincidunt quam. Fusce ultrices nisi semper, euismod
-              tellus vel, lacinia velit. Nunc gravida lectus quis metus congue
-              placerat. Phasellus dolor sapien, tempus vitae tellus vel,
-              accumsan semper tortor. Integer non dictum nibh, id vulputate
-              orci. Suspendisse potenti. Aenean eu nisl sapien. Ut dignissim est
-              et odio accumsan, volutpat placerat augue dapibus. Phasellus erat
-              augue, semper non leo sed, condimentum commodo turpis. Phasellus
-              non ipsum sapien. Suspendisse pulvinar venenatis massa, ac ornare
-              nibh dapibus id. Donec posuere faucibus mi vel consectetur. Fusce
-              imperdiet egestas leo, at condimentum odio mattis vel. In in
-              rhoncus purus, vel hendrerit felis. In sed sagittis velit, quis
-              volutpat mauris. Nullam ornare congue tincidunt.
-            </p>
+            <div>
+              <h4>Déroulé du projet</h4>
+              <p>
+                <b>Analyse :</b> Étude des solutions existantes et
+                identification des besoins non couverts.
+              </p>
+              <p>
+                <b>Création :</b> Conception du flow utilisateur, des wireframes
+                et de l&apos;identité visuelle (nom, couleurs, typographie).
+              </p>
+              <p>
+                <b>Maquettage :</b> Réalisation des écrans clés, de
+                l&apos;accueil aux filtres de recherche, en passant par les
+                catalogues d&apos;événements et la page de réservation.
+              </p>
+            </div>
+            <div>
+              <h4>Acquis</h4>
+              <p>
+                <b>Hard skill :</b> UX/UI Design, Wireframing et prototypage,
+                Recherche et analyse utilisateur
+              </p>
+              <p>
+                <b>Soft skills :</b> Gestion de projet, Esprit d&apos;analyse,
+                Collaboration interdisciplinaire
+              </p>
+            </div>
           </div>
           <div className="info-wrapper">
             <div className="group-solo">
@@ -94,20 +103,18 @@ function Kult() {
               <p>Théo LE GOURRIEREC</p>
             </div>
             <div className="used">
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
-              <img src={randomImg} alt="rdm" />
+              <img src={Figma} alt="rdm" />
             </div>
           </div>
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/ui-ux/cnt" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet précédent
+            Projet précédent (C&T)
           </Link>
           <Link to="/projet/web/portfolio" className="btn-next-project">
             <img src={Arrow} alt="arrow" />
-            Projet suivant
+            Projet suivant (Portfolio)
           </Link>
         </div>
       </main>

@@ -49,14 +49,23 @@ const Header = () => {
             À propos ?
           </div>
         </Link>
-        <button
+        {/* <button
           className={`item ${
             location.pathname.startsWith("/projet") ? "active" : ""
           }`}
           onClick={handleRandomClick}
         >
           Projets
-        </button>
+        </button> */}
+        <Link to="/projets">
+          <div
+            className={`item ${
+              location.pathname === "/projets" ? "active" : ""
+            }`}
+          >
+            Projets
+          </div>
+        </Link>
       </div>
 
       <div className="mobile-menu">

@@ -1698,6 +1698,177 @@ main.me .about-wrapper .text .btns .internal a:hover {
   box-shadow: 0px 0px 15px -5px rgba(6, 9, 19, 0.5);
 }
 
+main.projects {
+  margin-top: 64px;
+}
+main.projects .projects,
+main.projects .experiences {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 24px;
+}
+@media (max-width: 512px) {
+  main.projects .projects,
+  main.projects .experiences {
+    padding: 24px;
+  }
+}
+main.projects .projects .up-title,
+main.projects .experiences .up-title {
+  display: flex;
+  flex-direction: column;
+}
+main.projects .projects .up-title span,
+main.projects .experiences .up-title span {
+  font-size: 12px;
+  color: #82848A;
+}
+main.projects .projects .up-title p,
+main.projects .experiences .up-title p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3F424A;
+}
+main.projects .projects {
+  min-height: 700px;
+}
+main.projects .projects .btns {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 512px) {
+  main.projects .projects .btns {
+    justify-content: center;
+  }
+}
+main.projects .projects .btns .btn {
+  padding: 12px;
+  min-width: 120px;
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  color: #535355;
+  font-weight: 400;
+  opacity: 0.5;
+  cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
+}
+main.projects .projects .btns .btn.active {
+  color: #3F424A;
+  opacity: 1;
+  font-weight: 500;
+  box-shadow: 0px 0px 10px -4px rgba(63, 66, 74, 0.5);
+}
+main.projects .projects .projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+main.projects .projects .projects-wrapper .separator {
+  height: 1px;
+  width: 85%;
+  background-color: #E6E6E7;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+main.projects .projects .projects-wrapper .project-item {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item.right {
+    flex-direction: column-reverse;
+  }
+}
+main.projects .projects .projects-wrapper .project-item.right h5,
+main.projects .projects .projects-wrapper .project-item.right p {
+  text-align: end;
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item.right h5,
+  main.projects .projects .projects-wrapper .project-item.right p {
+    text-align: start;
+  }
+}
+main.projects .projects .projects-wrapper .project-item.right .tags {
+  align-self: end;
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item.right .tags {
+    align-self: start;
+    flex-wrap: wrap;
+  }
+}
+main.projects .projects .projects-wrapper .project-item img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item img {
+    width: 100%;
+  }
+}
+main.projects .projects .projects-wrapper .project-item .project-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1168px) {
+  main.projects .projects .projects-wrapper .project-item .project-text {
+    width: 100%;
+  }
+}
+main.projects .projects .projects-wrapper .project-item .project-text h5 {
+  font-size: 32px;
+  color: #3F424A;
+  font-weight: 700;
+}
+main.projects .projects .projects-wrapper .project-item .project-text p {
+  color: #82848A;
+  font-size: 14px;
+}
+main.projects .projects .projects-wrapper .project-item .project-text .tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+main.projects .projects .projects-wrapper .project-item .project-text .tags span {
+  padding: 2px 12px;
+  border-radius: 50px;
+  background-color: #B7B7B8;
+  color: #3F424A;
+  font-weight: 700;
+  font-size: 12px;
+}
+main.projects .projects .btn-random {
+  align-self: center;
+  margin-top: 32px;
+  border-radius: 8px;
+  background-color: #3F424A;
+  padding: 4px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
+}
+main.projects .projects .btn-random img {
+  height: 32px;
+  width: 32px;
+}
 main.project {
   display: flex;
   flex-direction: column;
@@ -1770,7 +1941,7 @@ main.project .content-wrapper .text {
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 24px;
 }
 @media (max-width: 1168px) {
   main.project .content-wrapper .text {
@@ -1778,10 +1949,30 @@ main.project .content-wrapper .text {
   }
 }
 main.project .content-wrapper .text h3 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   color: #3F424A;
+  margin-bottom: 0px;
+}
+main.project .content-wrapper .text h4 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #3F424A;
   margin-bottom: 8px;
+}
+main.project .content-wrapper .text > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main.project .content-wrapper .text > div p {
+  display: list-item;
+  margin-left: 2em;
+  color: #82848A;
+}
+main.project .content-wrapper .text > div b {
+  font-weight: 600;
+  color: #3F424A;
 }
 main.project .content-wrapper .text p {
   line-height: 140%;
