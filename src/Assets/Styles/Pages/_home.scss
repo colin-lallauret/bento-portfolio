@@ -859,12 +859,14 @@ main {
                             text-align: center;
                             background-color: $background;
                             border-radius: 10px;
-                            color: #8B8B8D;
+                            color: #535355;
                             font-weight: $regular;
+                            opacity: 0.5;
                             cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
                             &.active {
                                 color: $darkgrey;
+                                opacity: 1;
                                 font-weight: $medium;
                                 box-shadow: 0px 0px 10px -4px rgba($darkgrey, 0.5)
                             }
