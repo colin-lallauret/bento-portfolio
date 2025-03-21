@@ -82,14 +82,23 @@ const Header = () => {
               <img src={Me} alt="Me" />
             </div>
           </Link>
-          <button
+          {/* <button
             className={`btn ${
               location.pathname.startsWith("/projet") ? "active" : ""
             }`}
             onClick={handleRandomClick}
           >
             <img src={Project} alt="Project" />
-          </button>
+          </button> */}
+          <Link to="/projets">
+            <div
+              className={`item ${
+                location.pathname === "/projets" ? "active" : ""
+              }`}
+            >
+              Projets
+            </div>
+          </Link>
         </div>
         <div className="separator"></div>
         <div className="links">
