@@ -1701,6 +1701,11 @@ main.me .about-wrapper .text .btns .internal a:hover {
 main.projects {
   margin-top: 64px;
 }
+@media (max-width: 768px) {
+  main.projects {
+    margin-top: 0px;
+  }
+}
 main.projects .projects,
 main.projects .experiences {
   display: flex;

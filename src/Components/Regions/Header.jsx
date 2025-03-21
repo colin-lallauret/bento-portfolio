@@ -92,11 +92,11 @@ const Header = () => {
           </button> */}
           <Link to="/projets">
             <div
-              className={`item ${
+              className={`btn ${
                 location.pathname === "/projets" ? "active" : ""
               }`}
             >
-              Projets
+              <img src={Project} alt="Project" />
             </div>
           </Link>
         </div>

@@ -2,6 +2,10 @@ main {
     &.projects {
         margin-top: 64px;
 
+        @media (max-width: 768px) {
+            margin-top: 0px;
+        }
+
         .projects,
         .experiences {
             display: flex;
