@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function Timeline() {
   return (
     <div className="timeline">
-      <ul>
-        <li className="now">
+      <section>
+        <article className="now">
           <Link to="/moi#but-mmi">
             <div className="content">
               <h3>
@@ -29,8 +29,8 @@ function Timeline() {
               </h4>
             </div>
           </Link>
-        </li>
-        <li>
+        </article>
+        <article>
           <Link to="/moi#but-info">
             <div className="content">
               <h3>
@@ -46,8 +46,8 @@ function Timeline() {
               <h4>2022</h4>
             </div>
           </Link>
-        </li>
-        <li>
+        </article>
+        <article>
           <Link to="/moi#bac">
             <div className="content">
               <h3>Baccalauréat série générale</h3>
@@ -60,9 +60,9 @@ function Timeline() {
               <h4>2021</h4>
             </div>
           </Link>
-        </li>
+        </article>
         <div style={{ clear: "both" }}></div>
-      </ul>
+      </section>
     </div>
   );
 }

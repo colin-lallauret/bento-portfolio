@@ -797,42 +797,42 @@ main.home .item#second .studies .timeline:before {
   height: 85%;
   background: #B7B7B8;
 }
-main.home .item#second .studies .timeline ul {
+main.home .item#second .studies .timeline section {
   padding: 0;
   margin: 0;
 }
-main.home .item#second .studies .timeline ul li {
+main.home .item#second .studies .timeline section article {
   list-style: none;
   position: relative;
   width: 50%;
   box-sizing: border-box;
 }
-main.home .item#second .studies .timeline ul li .content {
+main.home .item#second .studies .timeline section article .content {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-main.home .item#second .studies .timeline ul li .content p {
+main.home .item#second .studies .timeline section article .content p {
   display: flex;
   flex-direction: column;
 }
-main.home .item#second .studies .timeline ul li.now::before {
+main.home .item#second .studies .timeline section article.now::before {
   background: #3043FE !important;
   box-shadow: 0 0 0 3px #3043FE !important;
 }
-main.home .item#second .studies .timeline ul li:nth-child(even) {
+main.home .item#second .studies .timeline section article:nth-child(even) {
   float: left;
   text-align: right;
   clear: both;
   padding: 20px 36px 64px 0;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(even) {
+  main.home .item#second .studies .timeline section article:nth-child(even) {
     text-align: left;
     padding: 0 0 64px 36px;
   }
 }
-main.home .item#second .studies .timeline ul li:nth-child(even):before {
+main.home .item#second .studies .timeline section article:nth-child(even):before {
   content: "";
   position: absolute;
   width: 10px;
@@ -843,42 +843,42 @@ main.home .item#second .studies .timeline ul li:nth-child(even):before {
   border-radius: 50%;
   box-shadow: 0 0 0 3px #B7B7B8;
 }
-main.home .item#second .studies .timeline ul li:nth-child(even) .time {
+main.home .item#second .studies .timeline section article:nth-child(even) .time {
   position: absolute;
   top: 12px;
   right: -112px;
   margin: 0;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(even) .time {
+  main.home .item#second .studies .timeline section article:nth-child(even) .time {
     position: relative;
     top: 0;
     right: 0;
   }
 }
-main.home .item#second .studies .timeline ul li:nth-child(even) .time h4 {
+main.home .item#second .studies .timeline section article:nth-child(even) .time h4 {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   color: #3F424A;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(even) .time h4 {
+  main.home .item#second .studies .timeline section article:nth-child(even) .time h4 {
     text-align: start;
   }
 }
-main.home .item#second .studies .timeline ul li:nth-child(odd) {
+main.home .item#second .studies .timeline section article:nth-child(odd) {
   float: right;
   text-align: left;
   clear: both;
   padding: 20px 0 64px 36px;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(odd) {
+  main.home .item#second .studies .timeline section article:nth-child(odd) {
     padding: 0 0 64px 36px;
   }
 }
-main.home .item#second .studies .timeline ul li:nth-child(odd):before {
+main.home .item#second .studies .timeline section article:nth-child(odd):before {
   content: "";
   position: absolute;
   width: 10px;
@@ -889,58 +889,58 @@ main.home .item#second .studies .timeline ul li:nth-child(odd):before {
   border-radius: 50%;
   box-shadow: 0 0 0 3px #B7B7B8;
 }
-main.home .item#second .studies .timeline ul li:nth-child(odd) .time {
+main.home .item#second .studies .timeline section article:nth-child(odd) .time {
   position: absolute;
   top: 12px;
   left: -112px;
   margin: 0;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(odd) .time {
+  main.home .item#second .studies .timeline section article:nth-child(odd) .time {
     position: relative;
     top: 0;
     left: 0;
   }
 }
-main.home .item#second .studies .timeline ul li:nth-child(odd) .time h4 {
+main.home .item#second .studies .timeline section article:nth-child(odd) .time h4 {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   color: #3F424A;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(odd) .time h4 {
+  main.home .item#second .studies .timeline section article:nth-child(odd) .time h4 {
     text-align: start;
   }
 }
-main.home .item#second .studies .timeline ul li h3 {
+main.home .item#second .studies .timeline section article h3 {
   padding: 0;
   margin: 0;
   color: #3F424A;
   font-weight: 600;
   font-size: 20px;
 }
-main.home .item#second .studies .timeline ul li h3 em {
+main.home .item#second .studies .timeline section article h3 em {
   font-weight: 100;
 }
-main.home .item#second .studies .timeline ul li p {
+main.home .item#second .studies .timeline section article p {
   font-size: 12px !important;
   color: #060913 !important;
   margin: 0;
   padding: 0;
 }
-main.home .item#second .studies .timeline ul li span {
+main.home .item#second .studies .timeline section article span {
   font-size: 12px;
   font-weight: 300;
   font-style: italic;
   color: #060913 !important;
 }
-main.home .item#second .studies .timeline ul li .time h4 {
+main.home .item#second .studies .timeline section article .time h4 {
   margin: 0;
   padding: 0;
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li .time h4 {
+  main.home .item#second .studies .timeline section article .time h4 {
     text-align: start;
   }
 }
@@ -958,7 +958,7 @@ main.home .item#second .studies .timeline ul li .time h4 {
     height: 86%;
     top: 56px;
   }
-  main.home .item#second .studies .timeline ul li {
+  main.home .item#second .studies .timeline section article {
     width: 100%;
     text-align: left;
     padding-left: 50px;
@@ -967,25 +967,25 @@ main.home .item#second .studies .timeline ul li .time h4 {
     flex-direction: column-reverse;
     padding: 0 0 64px 36px;
   }
-  main.home .item#second .studies .timeline ul li:nth-child(odd):before, main.home .item#second .studies .timeline ul li:nth-child(even):before {
+  main.home .item#second .studies .timeline section article:nth-child(odd):before, main.home .item#second .studies .timeline section article:nth-child(even):before {
     top: -18px;
     left: 16px;
   }
 }
 @media (max-width: 1168px) and (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li:nth-child(odd):before, main.home .item#second .studies .timeline ul li:nth-child(even):before {
+  main.home .item#second .studies .timeline section article:nth-child(odd):before, main.home .item#second .studies .timeline section article:nth-child(even):before {
     top: 14px;
   }
 }
 @media (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li .time {
+  main.home .item#second .studies .timeline section article .time {
     top: -30px;
     left: 50px;
     right: inherit;
   }
 }
 @media (max-width: 1168px) and (max-width: 1168px) {
-  main.home .item#second .studies .timeline ul li .time {
+  main.home .item#second .studies .timeline section article .time {
     position: relative;
     top: 0;
     right: 0;
@@ -1054,12 +1054,13 @@ main.home .item#third .projects .btns .btn {
   text-align: center;
   background-color: #F5F5F5;
   border-radius: 10px;
-  color: #B7B7B8;
-  font-weight: 500;
+  color: #8B8B8D;
+  font-weight: 400;
   cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
 }
 main.home .item#third .projects .btns .btn.active {
   color: #3F424A;
+  font-weight: 500;
   box-shadow: 0px 0px 10px -4px rgba(63, 66, 74, 0.5);
 }
 main.home .item#third .projects .projects-wrapper {
