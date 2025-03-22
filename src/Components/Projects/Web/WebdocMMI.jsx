@@ -92,7 +92,7 @@ function WebdocMMI() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Développement web (PHP, CSS, JavaScript),
+                <b>Hard skills :</b> Développement web (PHP, CSS, JavaScript),
                 Hébergement et gestion de serveur, Intégration de maquettes UX
               </p>
               <p>

@@ -86,7 +86,7 @@ function IlePerdu() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Réflexion sur le thème, l’histoire et le
+                <b>Hard skills :</b> Réflexion sur le thème, l’histoire et le
                 style visuel de la réalisation. Choix d’une ambiance de pirate
                 pour l’île.
               </p>

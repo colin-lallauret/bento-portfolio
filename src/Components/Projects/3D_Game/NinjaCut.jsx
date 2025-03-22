@@ -89,7 +89,7 @@ function NinjaCut() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Développement de jeux vidéo, programmation
+                <b>Hard skills :</b> Développement de jeux vidéo, programmation
                 en Unity, gestion des mécaniques de gameplay.
               </p>
               <p>

@@ -87,7 +87,7 @@ function Runner() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Développement en React + Vite, Gestion des
+                <b>Hard skills :</b> Développement en React + Vite, Gestion des
                 événements et des collisions, Optimisation et équilibrage de la
                 difficulté
               </p>

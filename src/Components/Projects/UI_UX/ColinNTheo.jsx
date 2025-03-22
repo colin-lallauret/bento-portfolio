@@ -92,7 +92,7 @@ function ColinNTheo() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Référencement naturel (SEO), Rédaction web
+                <b>Hard skills :</b> Référencement naturel (SEO), Rédaction web
                 optimisée, Maquettage et design UI/UX
               </p>
               <p>

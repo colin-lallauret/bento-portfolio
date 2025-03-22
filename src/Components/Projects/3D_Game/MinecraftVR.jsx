@@ -92,7 +92,7 @@ function MinecraftVR() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Conception d&apos;environnement VR,
+                <b>Hard skills :</b> Conception d&apos;environnement VR,
                 développement d&apos;interactions en réalité virtuelle,
                 programmation en Unity.
               </p>

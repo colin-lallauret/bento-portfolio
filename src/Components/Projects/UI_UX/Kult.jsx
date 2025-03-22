@@ -87,7 +87,7 @@ function Kult() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> UX/UI Design, Wireframing et prototypage,
+                <b>Hard skills :</b> UX/UI Design, Wireframing et prototypage,
                 Recherche et analyse utilisateur
               </p>
               <p>

@@ -95,7 +95,7 @@ function Portfolio() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Développement front-end (React, SCSS),
+                <b>Hard skills :</b> Développement front-end (React, SCSS),
                 Hébergement et déploiement web, Rédaction et structuration de
                 contenu
               </p>

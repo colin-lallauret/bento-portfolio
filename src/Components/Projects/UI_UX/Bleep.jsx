@@ -93,7 +93,7 @@ function Bleep() {
             <div>
               <h4>Acquis</h4>
               <p>
-                <b>Hard skill :</b> Analyse UX/UI, Sécurité et chiffrement des
+                <b>Hard skills :</b> Analyse UX/UI, Sécurité et chiffrement des
                 données, Conception d’expérience utilisateur
               </p>
               <p>
