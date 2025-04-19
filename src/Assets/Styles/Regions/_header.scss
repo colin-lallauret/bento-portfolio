@@ -56,3 +56,37 @@ header {
         }
     }
 }
+
+body {
+    @media (max-width: 768px) {
+        padding-top: 80px;
+    }
+}
+
+.hero-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 30px;
+    background-color: $yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $darkgrey;
+    flex-wrap: wrap;
+
+    .text-new {
+        font-weight: $bold;
+        color: $darkgrey;
+    }
+
+    .text-info {
+        text-decoration: underline;
+        font-style: italic;
+        color: $darkgrey;
+        font-weight: $light;
+        font-size: 12px;
+    }
+}

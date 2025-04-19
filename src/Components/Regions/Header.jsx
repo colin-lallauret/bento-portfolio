@@ -30,26 +30,33 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <Link to="/" className="logo-wrapper">
-        <div className="logo">
-          <img src={Logo} alt="Logo" />
-        </div>
+    <>
+      <Link to="/projet/3d-game/laval-virtual" className="hero-info">
+        <div className="text-new">NEW 🧑‍💻👾</div>Participation à Laval Virtual{" "}
+        <div className="text-info">(clique ici pour en savoir plus)</div>
       </Link>
-      <div className="menu">
-        <Link to="/">
-          <div className={`item ${location.pathname === "/" ? "active" : ""}`}>
-            Tous
+      <header>
+        <Link to="/" className="logo-wrapper">
+          <div className="logo">
+            <img src={Logo} alt="Logo" />
           </div>
         </Link>
-        <Link to="/moi">
-          <div
-            className={`item ${location.pathname === "/moi" ? "active" : ""}`}
-          >
-            À propos ?
-          </div>
-        </Link>
-        {/* <button
+        <div className="menu">
+          <Link to="/">
+            <div
+              className={`item ${location.pathname === "/" ? "active" : ""}`}
+            >
+              Tous
+            </div>
+          </Link>
+          <Link to="/moi">
+            <div
+              className={`item ${location.pathname === "/moi" ? "active" : ""}`}
+            >
+              À propos ?
+            </div>
+          </Link>
+          {/* <button
           className={`item ${
             location.pathname.startsWith("/projet") ? "active" : ""
           }`}
@@ -57,32 +64,36 @@ const Header = () => {
         >
           Projets
         </button> */}
-        <Link to="/projets">
-          <div
-            className={`item ${
-              location.pathname === "/projets" ? "active" : ""
-            }`}
-          >
-            Projets
-          </div>
-        </Link>
-      </div>
-
-      <div className="mobile-menu">
-        <div className="pages">
-          <Link to="/">
-            <div className={`btn ${location.pathname === "/" ? "active" : ""}`}>
-              <img src={Home} alt="Home" />
-            </div>
-          </Link>
-          <Link to="/moi">
+          <Link to="/projets">
             <div
-              className={`btn ${location.pathname === "/moi" ? "active" : ""}`}
+              className={`item ${
+                location.pathname === "/projets" ? "active" : ""
+              }`}
             >
-              <img src={Me} alt="Me" />
+              Projets
             </div>
           </Link>
-          {/* <button
+        </div>
+
+        <div className="mobile-menu">
+          <div className="pages">
+            <Link to="/">
+              <div
+                className={`btn ${location.pathname === "/" ? "active" : ""}`}
+              >
+                <img src={Home} alt="Home" />
+              </div>
+            </Link>
+            <Link to="/moi">
+              <div
+                className={`btn ${
+                  location.pathname === "/moi" ? "active" : ""
+                }`}
+              >
+                <img src={Me} alt="Me" />
+              </div>
+            </Link>
+            {/* <button
             className={`btn ${
               location.pathname.startsWith("/projet") ? "active" : ""
             }`}
@@ -90,35 +101,39 @@ const Header = () => {
           >
             <img src={Project} alt="Project" />
           </button> */}
-          <Link to="/projets">
-            <div
-              className={`btn ${
-                location.pathname === "/projets" ? "active" : ""
-              }`}
+            <Link to="/projets">
+              <div
+                className={`btn ${
+                  location.pathname === "/projets" ? "active" : ""
+                }`}
+              >
+                <img src={Project} alt="Project" />
+              </div>
+            </Link>
+          </div>
+          <div className="separator"></div>
+          <div className="links">
+            <a className="btn" href="mailto:colinlallauret1@gmail.com">
+              <img src={Mail} alt="Mail" />
+            </a>
+            <button
+              className="btn"
+              onClick={() => window.open("/CV2025_ColinLALLAURET.pdf")}
             >
-              <img src={Project} alt="Project" />
-            </div>
-          </Link>
+              <img src={CV} alt="Cv" />
+            </button>
+            <a
+              className="btn"
+              href="https://www.linkedin.com/in/colinlallauret/"
+            >
+              <img src={LinkedIn} alt="LinkedIn" />
+            </a>
+          </div>
         </div>
-        <div className="separator"></div>
-        <div className="links">
-          <a className="btn" href="mailto:colinlallauret1@gmail.com">
-            <img src={Mail} alt="Mail" />
-          </a>
-          <button
-            className="btn"
-            onClick={() => window.open("/CV2025_ColinLALLAURET.pdf")}
-          >
-            <img src={CV} alt="Cv" />
-          </button>
-          <a className="btn" href="https://www.linkedin.com/in/colinlallauret/">
-            <img src={LinkedIn} alt="LinkedIn" />
-          </a>
-        </div>
-      </div>
 
-      <div className="empty"></div>
-    </header>
+        <div className="empty"></div>
+      </header>
+    </>
   );
 };
 

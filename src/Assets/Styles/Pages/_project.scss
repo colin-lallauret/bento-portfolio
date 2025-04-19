@@ -236,6 +236,13 @@ main {
             flex-direction: column;
             gap: 16px;
 
+            .video {
+                width: 100%;
+                height: 700px;
+                border-radius: 24px;
+                background-color: $lightgrey;
+            }
+
             >img {
                 width: 100%;
                 border-radius: 24px;
@@ -244,6 +251,10 @@ main {
             .img-group {
                 display: flex;
                 gap: 16px;
+
+                .img-laval {
+                    object-fit: cover;
+                }
 
                 img {
                     width: calc(50% - 8px);

@@ -20,6 +20,7 @@ const MinecraftVR = lazy(() =>
 );
 const IlePerdu = lazy(() => import("./Components/Projects/3D_Game/IlePerdu"));
 const NinjaCut = lazy(() => import("./Components/Projects/3D_Game/NinjaCut"));
+const LavalVirtual = lazy(() => import("./Components/Projects/3D_Game/LavalVirtual"));
 
 function App() {
   const lenis = new Lenis();
@@ -57,6 +58,7 @@ function App() {
           />
           <Route path="/projet/3d-game/ile-perdu" element={<IlePerdu />} />
           <Route path="/projet/3d-game/ninjacut" element={<NinjaCut />} />
+          <Route path="/projet/3d-game/laval-virtual" element={<LavalVirtual />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
