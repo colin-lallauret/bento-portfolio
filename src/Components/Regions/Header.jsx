@@ -32,7 +32,8 @@ const Header = () => {
   return (
     <>
       <Link to="/projet/3d-game/laval-virtual" className="hero-info">
-        <div className="text-new">NEW 🧑‍💻👾</div>Participation à Laval Virtual{" "}
+        <div className="text-new">NEW 🧑‍💻👾</div>Participation au Laval Virtual
+        Hackaton{" "}
         <div className="text-info">(clique ici pour en savoir plus)</div>
       </Link>
       <header>

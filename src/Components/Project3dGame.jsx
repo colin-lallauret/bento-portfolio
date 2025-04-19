@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import MinecraftVR from "../Assets/Images/Projects/MinecraftVR.png";
 import IlePerdu from "../Assets/Images/Projects/IlePerdu.png";
 import NinjaCut from "../Assets/Images/Projects/NinjaCut.png";
+import LavalVirtual from "../Assets/Images/Projects/laval.png";
 
 function Project3dGame() {
   return (
@@ -68,7 +69,7 @@ function Project3dGame() {
             <span>VR / AR</span>
           </div>
         </div>
-        <img src={IlePerdu} alt="Île perdu" />
+        <img src={LavalVirtual} alt="Laval Virtual" />
       </Link>
     </>
   );
