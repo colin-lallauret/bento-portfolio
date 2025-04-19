@@ -56,6 +56,20 @@ function Project3dGame() {
           </div>
         </div>
       </Link>
+
+      <div className="separator"></div>
+      <Link to="/projet/3d-game/laval-virtual" className="project-item right">
+        <div className="project-text">
+          <h5>Laval Virtual</h5>
+          <p>Un marathon technologique de 30 heures, appelé « hackathon » !</p>
+          <div className="tags">
+            <span>Hackathon</span>
+            <span>30h</span>
+            <span>VR / AR</span>
+          </div>
+        </div>
+        <img src={IlePerdu} alt="Île perdu" />
+      </Link>
     </>
   );
 }
