@@ -17,7 +17,7 @@ import Arrow from "../../../Assets/Images/arrow.svg";
 
 function LavalVirtual() {
   useEffect(() => {
-    document.title = "NinjaCut (projet) — Colin LALLAURET";
+    document.title = "Laval Virtual (projet) — Colin LALLAURET";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");

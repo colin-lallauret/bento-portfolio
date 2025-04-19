@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import transition from "../transition";
 
 import Header from "../Components/Regions/Header";
+import Footer from "../Components/Regions/Footer";
 import KnowMore from "../Components/KnowMore";
 import RollBanner from "../Components/RollBanner";
 import Cv from "../Components/Cv";
@@ -180,6 +181,7 @@ function All() {
           <Experiences />
         </div>
       </main>
+      <Footer />
     </>
   );
 }

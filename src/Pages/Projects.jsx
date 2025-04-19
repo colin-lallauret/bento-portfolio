@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import transition from "../transition";
 
 import Header from "../Components/Regions/Header";
+import Footer from "../Components/Regions/Footer";
 import FavIcon from "../Assets/Favicon/favicon.ico";
 import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 import Random from "../Assets/Images/random.svg";
@@ -104,6 +105,7 @@ function Projects() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

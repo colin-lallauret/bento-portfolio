@@ -6,7 +6,10 @@ import Lenis from "lenis";
 const All = lazy(() => import("./Pages/All"));
 const Projects = lazy(() => import("./Pages/Projects"));
 const Me = lazy(() => import("./Pages/Me"));
-
+const MentionsLegales = lazy(() => import("./Pages/MentionsLegales"));
+const PolitiqueDeConfidentialite = lazy(() =>
+  import("./Pages/PolitiqueDeConfidentialite")
+);
 const Bleep = lazy(() => import("./Components/Projects/UI_UX/Bleep"));
 const Kult = lazy(() => import("./Components/Projects/UI_UX/Kult"));
 const CnT = lazy(() => import("./Components/Projects/UI_UX/ColinNTheo"));
@@ -20,7 +23,9 @@ const MinecraftVR = lazy(() =>
 );
 const IlePerdu = lazy(() => import("./Components/Projects/3D_Game/IlePerdu"));
 const NinjaCut = lazy(() => import("./Components/Projects/3D_Game/NinjaCut"));
-const LavalVirtual = lazy(() => import("./Components/Projects/3D_Game/LavalVirtual"));
+const LavalVirtual = lazy(() =>
+  import("./Components/Projects/3D_Game/LavalVirtual")
+);
 
 function App() {
   const lenis = new Lenis();
@@ -43,6 +48,11 @@ function App() {
           <Route path="/" element={<All />} />
           <Route path="/projets" element={<Projects />} />
           <Route path="/moi" element={<Me />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route
+            path="/politique-de-confidentialite"
+            element={<PolitiqueDeConfidentialite />}
+          />
 
           <Route path="/projet/ui-ux/bleep" element={<Bleep />} />
           <Route path="/projet/ui-ux/cnt" element={<CnT />} />
@@ -58,7 +68,10 @@ function App() {
           />
           <Route path="/projet/3d-game/ile-perdu" element={<IlePerdu />} />
           <Route path="/projet/3d-game/ninjacut" element={<NinjaCut />} />
-          <Route path="/projet/3d-game/laval-virtual" element={<LavalVirtual />} />
+          <Route
+            path="/projet/3d-game/laval-virtual"
+            element={<LavalVirtual />}
+          />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
