@@ -9,7 +9,9 @@ import Cv from "../Assets/Images/cv.svg";
 function About() {
   const getAvailability = () => {
     const currentHour = new Date().getHours();
-    return currentHour >= 9 && currentHour < 17 ? "Disponible" : "Indisponible (9h - 17h)";
+    return currentHour >= 9 && currentHour < 17
+      ? "Disponible"
+      : "Indisponible (9h - 17h)";
   };
 
   return (
@@ -40,17 +42,13 @@ function About() {
         <div className="text">
           <div className="paragraphs">
             <p>
-              Hello, moi c’est <em>Colin</em> j’ai 21 ans et je suis étudiant en
-              troisième année d’un <em>B</em>achelor <em>U</em>
-              niversitaire <em>T</em>echnologique <em>M</em>étiers du{" "}
-              <em>M</em>ultimédia et de l’<em>I</em>nternet que je réalise en
-              alternance en tant que développeur web.
+              Hello, moi c’est <em>Colin</em> j’ai 22 ans et je suis étudiant en
+              première année de <em>Master</em> <em>Création Numérique</em>{" "}
+              parcours DEDI à l’<em>Université de Toulon</em>.
             </p>
             <p>
               <em>Créatif, rigoureux et organisé.</em> Je suis actuellement à la
-              recherche d’une école (BAC+5) qui sera capable de m’accompagner
-              aussi bien <em>humainement</em> que <em>techniquement</em> pour ma
-              dernière étape avant le monde professionnel.
+              recherche d'opportunités dans le monde professionnel.
             </p>
           </div>
           <div className="btns">

@@ -7,6 +7,30 @@ function Timeline() {
     <div className="timeline">
       <section>
         <article className="now">
+          <Link to="/moi#master-cn-dedi">
+            <div className="content">
+              <h3>
+                Master Création Numérique<em></em>
+              </h3>
+              <p>Parcours Design d'Expérience et Design d'Interface </p>
+              <p>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+              </p>
+            </div>
+            <div className="time">
+              <h4>
+                2027
+                <br />
+                —
+                <br />
+                2025
+              </h4>
+            </div>
+          </Link>
+        </article>
+        <article>
           <Link to="/moi#but-mmi">
             <div className="content">
               <h3>

@@ -8,6 +8,32 @@ function Studies() {
         <p>FORMATIONS</p>
       </div>
       <div className="studies-wrapper">
+        <div className="study" id="master-cn-dedi">
+          <div className="date">2025 - 2027</div>
+          <div className="text">
+            <div className="title">
+              <h4>Master Création Numérique</h4>
+              <span>Parcours Design d'Expérience et Design d'Interface</span>
+            </div>
+            <div className="tags-wrapper">
+              <div className="tags">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+              </div>
+              <div className="tags">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+              </div>
+            </div>
+            <div className="paragraphs">
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+            </div>
+          </div>
+        </div>
         <div className="study" id="but-mmi">
           <div className="date">2022 - 2025</div>
           <div className="text">

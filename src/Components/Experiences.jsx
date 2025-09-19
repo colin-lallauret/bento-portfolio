@@ -10,6 +10,18 @@ function Experiences() {
           <p>EXPÉRIENCE</p>
         </div>
 
+        <Link to="/moi#stage-rennes" className="exp">
+          <div className="title">
+            <p>UI/UX Designer</p>
+            <span>(en Stage)</span>
+          </div>
+
+          <div className="company">
+            <p>Université de Rennes</p>
+            <span>juillet 2025</span>
+          </div>
+        </Link>
+
         <Link to="/moi#groupe-vidon" className="exp">
           <div className="title">
             <p>Développeur web</p>

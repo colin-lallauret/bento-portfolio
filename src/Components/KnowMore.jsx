@@ -13,7 +13,13 @@ function KnowMore() {
   return (
     <div className="know-more internal-link">
       <div className="ios-picture">
-        <img src={IosPicture} alt="ios picture" loading="lazy" height="104" width="104" />
+        <img
+          src={IosPicture}
+          alt="ios picture"
+          loading="lazy"
+          height="104"
+          width="104"
+        />
         <h2>
           Colin <br />
           LALLAURET
@@ -21,13 +27,15 @@ function KnowMore() {
       </div>
       <p className="text">
         Hello, moi c’est Colin. Actuellement ? <br />
-        Je suis étudiant en <u>BUT MMI</u> <i>(3ème année)</i> et alternant en
-        développement web. <Link to="/moi">En savoir plus</Link>
+        Je suis étudiant en <u>Master Création Numérique</u> <i>(1er année)</i>{" "}
+        parcours DEDI . <Link to="/moi">En savoir plus</Link>
       </p>
       <div className="availability">
         <div
           className={`dot ${
-            getAvailability() === "Indisponible actuellement (9h - 17h)" ? "red" : ""
+            getAvailability() === "Indisponible actuellement (9h - 17h)"
+              ? "red"
+              : ""
           }`}
         ></div>
         <span>{getAvailability()}</span>

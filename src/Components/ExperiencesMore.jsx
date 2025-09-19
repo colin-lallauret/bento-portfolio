@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import Vidon from "../Assets/Images/vidon.svg";
+import UnivRennes from "../Assets/Images/UNIRENNES_LOGO.svg";
 import Deligel from "../Assets/Images/deligel.png";
 import VieillesCharrues from "../Assets/Images/vieillescharrues.png";
 
@@ -12,6 +13,36 @@ function ExperiencesMore() {
         <p>EXPÉRIENCE</p>
       </div>
       <div className="experiences-wrapper">
+        <div id="stage-rennes" className="experience">
+          <div className="company">
+            <div className="name-date">
+              <p>Université de Rennes</p>
+              <span>juillet 2025</span>
+            </div>
+            <div className="tags">
+              <span>Supabase</span>
+              <span>Vercel</span>
+              <span>React</span>
+              <span>SASS</span>
+              <span>Git</span>
+              <span>UX</span>
+              <span>UI</span>
+            </div>
+          </div>
+          <div className="text-logo">
+            <div className="text">
+              <div className="title">
+                <h4>UI/UX Designer</h4>
+                <span>(en stage)</span>
+              </div>
+              <div className="paragraphs">
+                <p>...</p>
+              </div>
+            </div>
+            <img src={UnivRennes} alt="Université de Rennes" />
+          </div>
+        </div>
+
         <div id="groupe-vidon" className="experience">
           <div className="company">
             <div className="name-date">
