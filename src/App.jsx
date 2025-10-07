@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useRef } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
@@ -27,8 +27,11 @@ const LavalVirtual = lazy(() =>
   import("./Components/Projects/3D_Game/LavalVirtual")
 );
 
+const SECRET_SEQUENCE = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+
 function App() {
   const lenis = new Lenis();
+  const keysPressed = useRef([]);
 
   const scrollSpeed = 1;
 
@@ -40,6 +43,39 @@ function App() {
   requestAnimationFrame(raf);
 
   const location = useLocation();
+
+  // Détection de la séquence secrète
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Vérifier si c'est une touche flèche
+      if (e.key.startsWith("Arrow")) {
+        keysPressed.current.push(e.key);
+        
+        // Garder seulement les 4 dernières touches
+        if (keysPressed.current.length > 4) {
+          keysPressed.current.shift();
+        }
+
+        // Vérifier si la séquence correspond
+        if (keysPressed.current.length === 4) {
+          const isMatch = keysPressed.current.every(
+            (key, index) => key === SECRET_SEQUENCE[index]
+          );
+          
+          if (isMatch) {
+            // Rediriger vers speedtap
+            window.location.href = "https://speedtap.vercel.app/";
+          }
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <Suspense fallback={<div className="loading"></div>}>
