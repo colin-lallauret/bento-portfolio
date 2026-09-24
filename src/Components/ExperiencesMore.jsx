@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import Vidon from "../Assets/Images/vidon.svg";
 import UnivRennes from "../Assets/Images/UNIRENNES_LOGO.svg";
+import GroupeSeb from "../Assets/Images/groupeseb.png";
 import Deligel from "../Assets/Images/deligel.png";
 import VieillesCharrues from "../Assets/Images/vieillescharrues.png";
 
@@ -13,6 +14,32 @@ function ExperiencesMore() {
         <p>EXPÉRIENCE</p>
       </div>
       <div className="experiences-wrapper">
+        <div id="groupe-seb" className="experience">
+          <div className="company">
+            <div className="name-date">
+              <p>Groupe Seb</p>
+              <span>mars - août 2026</span>
+            </div>
+            <div className="tags">
+              <span>UX</span>
+              <span>UI</span>
+              <span>Figma</span>
+            </div>
+          </div>
+          <div className="text-logo">
+            <div className="text">
+              <div className="title">
+                <h4>UX/UI Designer</h4>
+                <span>(en stage)</span>
+              </div>
+              <div className="paragraphs">
+                <p>...</p>
+              </div>
+            </div>
+            <img src={GroupeSeb} alt="Groupe Seb" />
+          </div>
+        </div>
+
         <div id="stage-rennes" className="experience">
           <div className="company">
             <div className="name-date">
@@ -32,7 +59,7 @@ function ExperiencesMore() {
           <div className="text-logo">
             <div className="text">
               <div className="title">
-                <h4>UI/UX Designer</h4>
+                <h4>Developpeur web</h4>
                 <span>(en stage)</span>
               </div>
               <div className="paragraphs">

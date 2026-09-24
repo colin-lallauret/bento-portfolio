@@ -1,49 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Html from "../Assets/Images/Software/html.svg";
-import Css from "../Assets/Images/Software/css.svg";
-import JavaScript from "../Assets/Images/Software/javascript.svg";
-import Php from "../Assets/Images/Software/php.svg";
-import Twig from "../Assets/Images/Software/twig.svg";
-import Scss from "../Assets/Images/Software/scss.svg";
-import ReactLogo from "../Assets/Images/Software/react.svg";
-import Symfony from "../Assets/Images/Software/symfony.svg";
+import Orca from "../Assets/Images/Software/orca.svg";
+import Claude from "../Assets/Images/Software/claude.svg";
+import Figma from "../Assets/Images/Software/figma.svg";
+import ComfyUI from "../Assets/Images/Software/comfyui.svg";
+import Vercel from "../Assets/Images/Software/vercel.svg";
+
+const tools = [
+  {
+    key: "orca",
+    src: Orca,
+    name: "Orca",
+    desc: "Environnement de dev pour piloter plusieurs agents IA en parallèle sur mes projets de code.",
+  },
+  {
+    key: "claude",
+    src: Claude,
+    name: "Claude Code",
+    desc: "Mon assistant IA en ligne de commande pour coder, débugger et refactorer plus vite.",
+  },
+  {
+    key: "figma",
+    src: Figma,
+    name: "Figma",
+    desc: "Outil de design UI/UX pour mes maquettes, prototypes et systèmes de composants.",
+  },
+  {
+    key: "comfyui",
+    src: ComfyUI,
+    name: "ComfyUI",
+    desc: "Génération d'images par workflows IA pour mes visuels et assets créatifs.",
+  },
+  {
+    key: "vercel",
+    src: Vercel,
+    name: "Vercel",
+    desc: "Hébergement et déploiement continu de mes projets web.",
+  },
+];
 
 function Software() {
+  const [hovered, setHovered] = useState(null);
+
+  const handleEnter = (uid, tool, e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setHovered({
+      uid,
+      name: tool.name,
+      desc: tool.desc,
+      top: rect.top,
+      left: rect.left + rect.width / 2,
+    });
+  };
+
   return (
     <div className="software">
       <div className="logo-slider">
-        <div className="img-wrapper">
+        <div className={`img-wrapper${hovered ? " paused" : ""}`}>
           {[...Array(2)].map((_, i) => (
             <React.Fragment key={i}>
-              <div className="img-container">
-                <img src={Html} alt="Html" />
-              </div>
-              <div className="img-container">
-                <img src={Css} alt="Css" />
-              </div>
-              <div className="img-container">
-                <img src={JavaScript} alt="JavaScript" />
-              </div>
-              <div className="img-container">
-                <img src={Php} alt="Php" />
-              </div>
-              <div className="img-container">
-                <img src={Twig} alt="Twig" />
-              </div>
-              <div className="img-container">
-                <img src={Scss} alt="Scss" />
-              </div>
-              <div className="img-container">
-                <img src={ReactLogo} alt="React" />
-              </div>
-              <div className="img-container">
-                <img src={Symfony} alt="Symfony" />
-              </div>
+              {tools.map((tool) => {
+                const uid = `${tool.key}-${i}`;
+                return (
+                  <div
+                    className="img-container"
+                    key={uid}
+                    onMouseEnter={(e) => handleEnter(uid, tool, e)}
+                    onMouseLeave={() => setHovered(null)}
+                  >
+                    <img src={tool.src} alt={tool.name} />
+                  </div>
+                );
+              })}
             </React.Fragment>
           ))}
         </div>
       </div>
+      {hovered && (
+        <div
+          className="tooltip"
+          style={{ top: hovered.top, left: hovered.left }}
+        >
+          <p>{hovered.name}</p>
+          <span>{hovered.desc}</span>
+        </div>
+      )}
       <div className="software-text">
         <span>J'UTILISE ACTUELLEMENT</span>
         <p>ET J'❤️ ÇA</p>

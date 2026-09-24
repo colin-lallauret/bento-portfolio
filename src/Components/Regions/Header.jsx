@@ -31,11 +31,15 @@ const Header = () => {
 
   return (
     <>
-      <Link to="/projet/3d-game/laval-virtual" className="hero-info">
-        <div className="text-new">NEW 🧑‍💻👾</div>Participation au Laval Virtual
-        Hackaton{" "}
-        <div className="text-info">(clique ici pour en savoir plus)</div>
-      </Link>
+      <a
+        href="https://cal.com/colin-lallauret/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hero-info"
+      >
+        🧑‍💻🔍 Actuellement en recherche de stage de fin d'étude{" "}
+        <div className="text-info">(prendre un rdv)</div>
+      </a>
       <header>
         <Link to="/" className="logo-wrapper">
           <div className="logo">

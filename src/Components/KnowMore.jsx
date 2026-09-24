@@ -27,7 +27,7 @@ function KnowMore() {
       </div>
       <p className="text">
         Hello, moi c’est Colin. Actuellement ? <br />
-        Je suis étudiant en <u>Master Création Numérique</u> <i>(1er année)</i>{" "}
+        Je suis étudiant en <u>Master Création Numérique</u> <i>(M2)</i>{" "}
         parcours DEDI . <Link to="/moi">En savoir plus</Link>
       </p>
       <div className="availability">

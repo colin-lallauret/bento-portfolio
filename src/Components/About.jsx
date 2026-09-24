@@ -1,5 +1,6 @@
 import React from "react";
 
+import { getAge } from "../Data/profile";
 import MyPicture from "../Assets/Images/photo.png";
 import LinkedIn from "../Assets/Images/linkedin.svg";
 import Github from "../Assets/Images/github.svg";
@@ -42,7 +43,7 @@ function About() {
         <div className="text">
           <div className="paragraphs">
             <p>
-              Hello, moi c’est <em>Colin</em> j’ai 22 ans et je suis étudiant en
+              Hello, moi c’est <em>Colin</em> j’ai {getAge()} ans et je suis étudiant en
               première année de <em>Master</em> <em>Création Numérique</em>{" "}
               parcours DEDI à l’<em>Université de Toulon</em>.
             </p>
