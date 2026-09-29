@@ -17,20 +17,39 @@ function Studies() {
             </div>
             <div className="tags-wrapper">
               <div className="tags">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+                <span>Recherche UX</span>
+                <span>Ergonomie</span>
+                <span>Design System</span>
               </div>
               <div className="tags">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+                <span>Prototypage</span>
+                <span>Psychologie cognitive</span>
+                <span>Gestion de projet agile</span>
               </div>
             </div>
             <div className="paragraphs">
-              <p>.</p>
-              <p>.</p>
-              <p>.</p>
+              <p>
+                Ce <em>Master</em>, axé sur l’articulation entre{" "}
+                <em>sciences humaines</em> et <em>design numérique
+                interactif</em>, développe une maîtrise concrète de la{" "}
+                <em>sociologie des usages</em> et de la{" "}
+                <em>psychologie cognitive</em> pour analyser les
+                comportements humains, cadrer les besoins et piloter la{" "}
+                <em>recherche utilisateur (UX)</em>.
+              </p>
+              <p>
+                Le cursus approfondit l’<em>ergonomie</em>, la conception
+                d’interfaces (<em>UI</em>), l’élaboration de{" "}
+                <em>design systems</em> et le <em>prototypage interactif</em>,
+                tout en intégrant la <em>gestion de projet agile</em> et l’
+                <em>éco-conception</em>.
+              </p>
+              <p>
+                C’est dans ce cadre que je suis parti en stage chez{" "}
+                <em>Groupe Seb</em>, pour mettre en pratique cette double
+                casquette <em>recherche utilisateur</em> /{" "}
+                <em>conception d’interface</em> sur des produits industriels.
+              </p>
             </div>
           </div>
         </div>

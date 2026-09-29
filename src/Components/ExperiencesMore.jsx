@@ -33,7 +33,28 @@ function ExperiencesMore() {
                 <span>(en stage)</span>
               </div>
               <div className="paragraphs">
-                <p>...</p>
+                <p>
+                  Une <em>immersion</em> au sein du pôle Design, au cœur de
+                  l’équipe <em>Design d’Expérience</em> dédiée à la
+                  conception d’<em>interfaces homme-machine (IHM)</em> pour
+                  les produits de petit électroménager.
+                </p>
+                <p>
+                  Ma mission a porté sur la <em>refonte</em> et la{" "}
+                  <em>modélisation de parcours utilisateurs</em> articulant
+                  commandes physiques et écrans embarqués, avec un équilibre
+                  permanent entre <em>rigueur ergonomique</em>{" "}
+                  (dimensionnement des zones tactiles, lisibilité, retours
+                  d’état) et <em>contraintes techniques industrielles</em>{" "}
+                  (spécificités matérielles, formats d’écran).
+                </p>
+                <p>
+                  Au-delà de la structuration d’un{" "}
+                  <em>Design System modulaire</em>, je me suis appuyé sur la{" "}
+                  <em>recherche utilisateur</em> : animation d’ateliers d’
+                  <em>idéation</em>, co-animation de <em>tests terrain</em> et{" "}
+                  <em>cartographie de parcours</em>.
+                </p>
               </div>
             </div>
             <img src={GroupeSeb} alt="Groupe Seb" />
@@ -63,7 +84,20 @@ function ExperiencesMore() {
                 <span>(en stage)</span>
               </div>
               <div className="paragraphs">
-                <p>...</p>
+                <p>
+                  <em>Modernisation ergonomique</em> et rafraîchissement
+                  visuel d’un site web existant, dans un calendrier resserré.
+                  Le projet a consisté à optimiser les{" "}
+                  <em>parcours utilisateurs (UX)</em> et à ajuster
+                  l’<em>interface (UI)</em> pour gagner en lisibilité, aussi
+                  bien sur le site public que sur le panneau d’administration.
+                </p>
+                <p>
+                  En parallèle, j’ai pris en charge la <em>mise en ligne</em>{" "}
+                  : suivi des versions du code sur <em>GitHub</em>,
+                  automatisation du déploiement via <em>Vercel</em> et
+                  configuration <em>DNS</em> du nom de domaine.
+                </p>
               </div>
             </div>
             <img src={UnivRennes} alt="Université de Rennes" />

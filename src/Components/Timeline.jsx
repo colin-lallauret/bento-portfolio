@@ -14,9 +14,9 @@ function Timeline() {
               </h3>
               <p>Parcours Design d'Expérience et Design d'Interface </p>
               <p>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+                <span>UX</span>
+                <span>UI</span>
+                <span>Design System</span>
               </p>
             </div>
             <div className="time">

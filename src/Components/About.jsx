@@ -1,6 +1,5 @@
 import React from "react";
 
-import { getAge } from "../Data/profile";
 import MyPicture from "../Assets/Images/photo.png";
 import LinkedIn from "../Assets/Images/linkedin.svg";
 import Github from "../Assets/Images/github.svg";
@@ -43,13 +42,26 @@ function About() {
         <div className="text">
           <div className="paragraphs">
             <p>
-              Hello, moi c’est <em>Colin</em> j’ai {getAge()} ans et je suis étudiant en
-              première année de <em>Master</em> <em>Création Numérique</em>{" "}
-              parcours DEDI à l’<em>Université de Toulon</em>.
+              <em>Touche-à-tout assumé.</em> Grandi avec le web, stimulé par
+              la nouveauté.
             </p>
             <p>
-              <em>Créatif, rigoureux et organisé.</em> Je suis actuellement à la
-              recherche d'opportunités dans le monde professionnel.
+              Certains se consacrent à une seule passion toute leur vie.
+              Moi, je fonctionne par <em>vagues d’hyperfocus</em> : un sujet
+              m’intrigue, j’épluche des dizaines de vidéos, de podcasts et
+              de comparatifs, j’expérimente, j’assimile tout à 200 %… et je
+              repars avec une corde de plus à mon arc.
+            </p>
+            <p>
+              Que ce soit le <em>café</em>, l’<em>IA</em>, le{" "}
+              <em>sport</em>, les <em>drones FPV</em>, les{" "}
+              <em>jeux vidéo</em>, la <em>nutrition</em>... : peu importe le
+              terrain de jeu, j’ai besoin de mettre les mains dedans pour
+              comprendre.
+            </p>
+            <p className="quote">
+              « Ne soyez pas quelqu’un qui sait tout, soyez quelqu’un qui
+              apprend tout. » - Satya Nadella
             </p>
           </div>
           <div className="btns">

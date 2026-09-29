@@ -37,7 +37,7 @@ const Header = () => {
         rel="noopener noreferrer"
         className="hero-info"
       >
-        🧑‍💻🔍 Actuellement en recherche de stage de fin d'étude{" "}
+        🧑‍💻🔍 À la recherche d’un stage de fin d’études{" "}
         <div className="text-info">(prendre un rdv)</div>
       </a>
       <header>
