@@ -31,6 +31,9 @@ const Header = () => {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Aller au contenu
+      </a>
       <a
         href="https://cal.com/colin-lallauret/30min"
         target="_blank"
@@ -41,20 +44,23 @@ const Header = () => {
         <div className="text-info">(prendre un rdv)</div>
       </a>
       <header>
-        <Link to="/" className="logo-wrapper">
+        <Link to="/" className="logo-wrapper" aria-label="Accueil">
           <div className="logo">
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Colin Lallauret" />
           </div>
         </Link>
-        <div className="menu">
-          <Link to="/">
+        <nav className="menu" aria-label="Navigation principale">
+          <Link to="/" aria-current={location.pathname === "/" ? "page" : undefined}>
             <div
               className={`item ${location.pathname === "/" ? "active" : ""}`}
             >
               Tous
             </div>
           </Link>
-          <Link to="/moi">
+          <Link
+            to="/moi"
+            aria-current={location.pathname === "/moi" ? "page" : undefined}
+          >
             <div
               className={`item ${location.pathname === "/moi" ? "active" : ""}`}
             >
@@ -69,7 +75,10 @@ const Header = () => {
         >
           Projets
         </button> */}
-          <Link to="/projets">
+          <Link
+            to="/projets"
+            aria-current={location.pathname === "/projets" ? "page" : undefined}
+          >
             <div
               className={`item ${
                 location.pathname === "/projets" ? "active" : ""
@@ -78,18 +87,21 @@ const Header = () => {
               Projets
             </div>
           </Link>
-        </div>
+        </nav>
 
-        <div className="mobile-menu">
+        <nav className="mobile-menu" aria-label="Navigation principale">
           <div className="pages">
-            <Link to="/">
+            <Link to="/" aria-current={location.pathname === "/" ? "page" : undefined}>
               <div
                 className={`btn ${location.pathname === "/" ? "active" : ""}`}
               >
                 <img src={Home} alt="Home" />
               </div>
             </Link>
-            <Link to="/moi">
+            <Link
+              to="/moi"
+              aria-current={location.pathname === "/moi" ? "page" : undefined}
+            >
               <div
                 className={`btn ${
                   location.pathname === "/moi" ? "active" : ""
@@ -106,7 +118,10 @@ const Header = () => {
           >
             <img src={Project} alt="Project" />
           </button> */}
-            <Link to="/projets">
+            <Link
+              to="/projets"
+              aria-current={location.pathname === "/projets" ? "page" : undefined}
+            >
               <div
                 className={`btn ${
                   location.pathname === "/projets" ? "active" : ""
@@ -123,9 +138,10 @@ const Header = () => {
             </a>
             <button
               className="btn"
+              aria-label="Ouvrir le CV"
               onClick={() => window.open("/CV2025_ColinLALLAURET.pdf")}
             >
-              <img src={CV} alt="Cv" />
+              <img src={CV} alt="" />
             </button>
             <a
               className="btn"
@@ -134,7 +150,7 @@ const Header = () => {
               <img src={LinkedIn} alt="LinkedIn" />
             </a>
           </div>
-        </div>
+        </nav>
 
         <div className="empty"></div>
       </header>

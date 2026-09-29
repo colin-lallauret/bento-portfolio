@@ -36,7 +36,7 @@ function Me() {
   return (
     <>
       <Header />
-      <main className="me">
+      <main className="me" id="main-content" tabIndex={-1}>
         <About />
         <Studies />
         <ExperiencesMore />

@@ -65,10 +65,11 @@ function Software() {
                   <div
                     className="img-container"
                     key={uid}
+                    aria-hidden={i === 1 ? "true" : undefined}
                     onMouseEnter={(e) => handleEnter(uid, tool, e)}
                     onMouseLeave={() => setHovered(null)}
                   >
-                    <img src={tool.src} alt={tool.name} />
+                    <img src={tool.src} alt={i === 1 ? "" : tool.name} />
                   </div>
                 );
               })}

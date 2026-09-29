@@ -70,39 +70,53 @@ function Projects() {
   return (
     <>
       <Header />
-      <main className="projects">
+      <main className="projects" id="main-content" tabIndex={-1}>
         <div className="projects internal-link">
           <div className="up-title">
             <span>UN PETIT TEASING DE MES</span>
             <p>PROJETS</p>
           </div>
-          <div className="btns">
-            <div
+          <div className="btns" role="tablist" aria-label="Filtrer les projets">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeProject === "UI / UX Design"}
               className={`btn ${
                 activeProject === "UI / UX Design" ? "active" : ""
               }`}
               onClick={() => setActiveProject("UI / UX Design")}
             >
               UI / UX Design
-            </div>
-            <div
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeProject === "Web"}
               className={`btn ${activeProject === "Web" ? "active" : ""}`}
               onClick={() => setActiveProject("Web")}
             >
               Web
-            </div>
-            <div
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeProject === "3D / Game"}
               className={`btn ${activeProject === "3D / Game" ? "active" : ""}`}
               onClick={() => setActiveProject("3D / Game")}
             >
               3D / Game
-            </div>
+            </button>
           </div>
-          <div className="projects-wrapper">{renderProject()}</div>
+          <div className="projects-wrapper" role="tabpanel">{renderProject()}</div>
 
-          <div className="btn-random" onClick={handleRandomClick}>
-            <img src={Random} alt="Random" />
-          </div>
+          <button
+            type="button"
+            className="btn-random"
+            aria-label="Voir un projet au hasard"
+            onClick={handleRandomClick}
+          >
+            <img src={Random} alt="" />
+          </button>
         </div>
       </main>
       <Footer />

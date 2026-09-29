@@ -15,7 +15,7 @@ function KnowMore() {
       <div className="ios-picture">
         <img
           src={IosPicture}
-          alt="ios picture"
+          alt="Avatar de Colin Lallauret"
           loading="lazy"
           height="104"
           width="104"

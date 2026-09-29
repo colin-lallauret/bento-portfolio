@@ -339,6 +339,9 @@ main {
                                     align-items: center;
                                     cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
                                     transition: .25 ease-in-out;
+                                    border: none;
+                                    background-color: transparent;
+                                    appearance: none;
 
                                     img {
                                         opacity: 0.4;
@@ -901,6 +904,10 @@ main {
                             text-align: center;
                             background-color: var(--c-background);
                             border-radius: 10px;
+                            border: none;
+                            appearance: none;
+                            font-family: inherit;
+                            font-size: inherit;
                             color: #535355;
                             font-weight: $regular;
                             opacity: 0.5;
@@ -1016,6 +1023,8 @@ main {
                         align-self: center;
                         margin-top: 32px;
                         border-radius: 8px;
+                        border: none;
+                        appearance: none;
                         background-color: var(--c-darkgrey);
                         padding: 4px 48px;
                         display: flex;

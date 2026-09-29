@@ -32,7 +32,7 @@ function PolitiqueDeConfidentialite() {
   return (
     <>
       <Header />
-      <main className="project">
+      <main className="project" id="main-content" tabIndex={-1}>
         <div className="title-wrapper">
           <div className="title">
             <h1>Politique de confidentialité</h1>

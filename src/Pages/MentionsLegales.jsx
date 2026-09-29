@@ -32,7 +32,7 @@ function MentionsLegales() {
   return (
     <>
       <Header />
-      <main className="project">
+      <main className="project" id="main-content" tabIndex={-1}>
         <div className="title-wrapper">
           <div className="title">
             <h1>Mentions légales</h1>

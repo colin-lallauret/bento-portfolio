@@ -20,19 +20,25 @@ function ThemeSwitcher() {
   };
 
   return (
-    <div className="theme-switcher">
-      <div
+    <div className="theme-switcher" role="group" aria-label="Choix du thème">
+      <button
+        type="button"
         className={`btn ${theme === "day" ? "active" : ""}`}
+        aria-pressed={theme === "day"}
+        aria-label="Thème clair"
         onClick={() => handleThemeSwitch("day")}
       >
-        <img src={Day} alt="day" />
-      </div>
-      <div
+        <img src={Day} alt="" />
+      </button>
+      <button
+        type="button"
         className={`btn ${theme === "night" ? "active" : ""}`}
+        aria-pressed={theme === "night"}
+        aria-label="Thème sombre"
         onClick={() => handleThemeSwitch("night")}
       >
-        <img src={Night} alt="night" />
-      </div>
+        <img src={Night} alt="" />
+      </button>
     </div>
   );
 }

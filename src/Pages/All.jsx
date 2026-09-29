@@ -82,7 +82,7 @@ function All() {
   return (
     <>
       <Header />
-      <main className="home">
+      <main className="home" id="main-content" tabIndex={-1}>
         <div className="item" id="first">
           <KnowMore />
 
@@ -93,7 +93,7 @@ function All() {
               <img
                 className="map"
                 src={Map}
-                alt="Carte interactive"
+                alt=""
                 width="800"
                 height="600"
                 loading="eager"
@@ -147,35 +147,49 @@ function All() {
               <span>UN PETIT TEASING DE MES</span>
               <p>PROJETS</p>
             </div>
-            <div className="btns">
-              <div
+            <div className="btns" role="tablist" aria-label="Filtrer les projets">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProject === "UI / UX Design"}
                 className={`btn ${
                   activeProject === "UI / UX Design" ? "active" : ""
                 }`}
                 onClick={() => setActiveProject("UI / UX Design")}
               >
                 UI / UX Design
-              </div>
-              <div
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProject === "Web"}
                 className={`btn ${activeProject === "Web" ? "active" : ""}`}
                 onClick={() => setActiveProject("Web")}
               >
                 Web
-              </div>
-              <div
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProject === "3D / Game"}
                 className={`btn ${
                   activeProject === "3D / Game" ? "active" : ""
                 }`}
                 onClick={() => setActiveProject("3D / Game")}
               >
                 3D / Game
-              </div>
+              </button>
             </div>
-            <div className="projects-wrapper">{renderProject()}</div>
+            <div className="projects-wrapper" role="tabpanel">{renderProject()}</div>
 
-            <div className="btn-random" onClick={handleRandomClick}>
-              <img src={Random} alt="Random" />
-            </div>
+            <button
+              type="button"
+              className="btn-random"
+              aria-label="Voir un projet au hasard"
+              onClick={handleRandomClick}
+            >
+              <img src={Random} alt="" />
+            </button>
           </div>
 
           <Experiences />

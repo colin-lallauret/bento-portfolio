@@ -1,3 +1,26 @@
+:focus-visible {
+  outline: 2px solid #3043FE !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 8px;
+  z-index: 999;
+  background-color: #3043FE;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .15s ease-in-out;
+}
+.skip-link:focus-visible {
+  top: 8px;
+}
+
 :root {
   --c-background: #F5F5F5;
   --c-background-rgb: 245, 245, 245;
@@ -683,6 +706,9 @@ main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-swit
   align-items: center;
   cursor: url("/src/Assets/Images/Cursors/Hand.svg"), pointer;
   transition: 0.25 ease-in-out;
+  border: none;
+  background-color: transparent;
+  appearance: none;
 }
 main.home .item#first .know-more-wrapper .map-others-wrapper .others .theme-switcher .btn img {
   opacity: 0.4;
@@ -1181,6 +1207,10 @@ main.home .item#third .projects .btns .btn {
   text-align: center;
   background-color: var(--c-background);
   border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
   color: #535355;
   font-weight: 400;
   opacity: 0.5;
@@ -1287,6 +1317,8 @@ main.home .item#third .projects .btn-random {
   align-self: center;
   margin-top: 32px;
   border-radius: 8px;
+  border: none;
+  appearance: none;
   background-color: var(--c-darkgrey);
   padding: 4px 48px;
   display: flex;
@@ -1884,6 +1916,10 @@ main.projects .projects .btns .btn {
   text-align: center;
   background-color: var(--c-background);
   border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
   color: #535355;
   font-weight: 400;
   opacity: 0.5;
@@ -1990,6 +2026,8 @@ main.projects .projects .btn-random {
   align-self: center;
   margin-top: 32px;
   border-radius: 8px;
+  border: none;
+  appearance: none;
   background-color: var(--c-darkgrey);
   padding: 4px 48px;
   display: flex;

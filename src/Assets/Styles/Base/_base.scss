@@ -1,3 +1,27 @@
+:focus-visible {
+    outline: 2px solid $blue !important;
+    outline-offset: 3px !important;
+    border-radius: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -48px;
+    left: 8px;
+    z-index: 999;
+    background-color: $blue;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: $semibold;
+    text-decoration: none;
+    transition: top .15s ease-in-out;
+
+    &:focus-visible {
+        top: 8px;
+    }
+}
+
 :root {
     --c-background: #{$background};
     --c-background-rgb: 245, 245, 245;
