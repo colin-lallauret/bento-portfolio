@@ -1,17 +1,80 @@
 import React, { useState } from "react";
 
-import Orca from "../Assets/Images/Software/orca.svg";
-import Claude from "../Assets/Images/Software/claude.svg";
 import Figma from "../Assets/Images/Software/figma.svg";
+import Miro from "../Assets/Images/Software/miro.svg";
+import Illustrator from "../Assets/Images/Software/adobeillustrator.svg";
+import Photoshop from "../Assets/Images/Software/adobephotoshop.svg";
+import Unity from "../Assets/Images/Software/unity.svg";
+import VsCode from "../Assets/Images/Software/visualstudiocode.svg";
+import GitHub from "../Assets/Images/Software/github.svg";
+import Jira from "../Assets/Images/Software/jira.svg";
+import Trello from "../Assets/Images/Software/trello.svg";
+import Notion from "../Assets/Images/Software/notion.svg";
+import Claude from "../Assets/Images/Software/claude.svg";
+import Orca from "../Assets/Images/Software/orca.svg";
 import ComfyUI from "../Assets/Images/Software/comfyui.svg";
-import Vercel from "../Assets/Images/Software/vercel.svg";
+import N8n from "../Assets/Images/Software/n8n.svg";
 
 const tools = [
   {
-    key: "orca",
-    src: Orca,
-    name: "Orca",
-    desc: "Environnement de dev pour piloter plusieurs agents IA en parallèle sur mes projets de code.",
+    key: "figma",
+    src: Figma,
+    name: "Figma",
+    desc: "Outil de design UI/UX pour mes maquettes, prototypes et systèmes de composants.",
+  },
+  {
+    key: "miro",
+    src: Miro,
+    name: "Miro",
+    desc: "Tableau blanc collaboratif pour mes brainstorms, user flows et ateliers d'idéation.",
+  },
+  {
+    key: "adobeillustrator",
+    src: Illustrator,
+    name: "Adobe Illustrator",
+    desc: "Création et retouche de visuels vectoriels pour mes maquettes et supports graphiques.",
+  },
+  {
+    key: "adobephotoshop",
+    src: Photoshop,
+    name: "Adobe Photoshop",
+    desc: "Retouche photo et compositing pour mes visuels et assets graphiques.",
+  },
+  {
+    key: "unity",
+    src: Unity,
+    name: "Unity",
+    desc: "Moteur de jeu pour mes projets 3D et expériences interactives.",
+  },
+  {
+    key: "vscode",
+    src: VsCode,
+    name: "VS Code",
+    desc: "Mon éditeur de code au quotidien pour tous mes projets de développement.",
+  },
+  {
+    key: "github",
+    src: GitHub,
+    name: "GitHub",
+    desc: "Versioning et hébergement de mon code, suivi de mes projets.",
+  },
+  {
+    key: "jira",
+    src: Jira,
+    name: "Jira",
+    desc: "Suivi de tickets et gestion de projet en méthode agile.",
+  },
+  {
+    key: "trello",
+    src: Trello,
+    name: "Trello",
+    desc: "Organisation de mes tâches et suivi de projet en mode kanban.",
+  },
+  {
+    key: "notion",
+    src: Notion,
+    name: "Notion",
+    desc: "Prise de notes, documentation et organisation de mes projets.",
   },
   {
     key: "claude",
@@ -20,10 +83,10 @@ const tools = [
     desc: "Mon assistant IA en ligne de commande pour coder, débugger et refactorer plus vite.",
   },
   {
-    key: "figma",
-    src: Figma,
-    name: "Figma",
-    desc: "Outil de design UI/UX pour mes maquettes, prototypes et systèmes de composants.",
+    key: "orca",
+    src: Orca,
+    name: "Orca",
+    desc: "Environnement de dev pour piloter plusieurs agents IA en parallèle sur mes projets de code.",
   },
   {
     key: "comfyui",
@@ -32,10 +95,10 @@ const tools = [
     desc: "Génération d'images par workflows IA pour mes visuels et assets créatifs.",
   },
   {
-    key: "vercel",
-    src: Vercel,
-    name: "Vercel",
-    desc: "Hébergement et déploiement continu de mes projets web.",
+    key: "n8n",
+    src: N8n,
+    name: "n8n",
+    desc: "Automatisation de workflows entre mes outils et services.",
   },
 ];
 

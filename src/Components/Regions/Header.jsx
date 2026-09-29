@@ -139,7 +139,7 @@ const Header = () => {
             <button
               className="btn"
               aria-label="Ouvrir le CV"
-              onClick={() => window.open("/CV2025_ColinLALLAURET.pdf")}
+              onClick={() => window.open("/CV2026_ColinLALLAURET.pdf")}
             >
               <img src={CV} alt="" />
             </button>

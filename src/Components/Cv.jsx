@@ -11,11 +11,11 @@ function Cv() {
         <p>RESUME</p>
       </div>
       <div className="cv-btns">
-        <a href="/CV2025_ColinLALLAURET.pdf" download>
+        <a href="/CV2026_ColinLALLAURET.pdf" download>
           <img src={Download} alt="download" height="28" width="28" />
         </a>
         <button
-          onClick={() => window.open("/CV2025_ColinLALLAURET.pdf", "_blank")}
+          onClick={() => window.open("/CV2026_ColinLALLAURET.pdf", "_blank")}
         >
           <img src={Visuel} alt="visuel" />
         </button>

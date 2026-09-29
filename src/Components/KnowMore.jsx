@@ -3,13 +3,6 @@ import IosPicture from "../Assets/Images/ios_picture.webp";
 import { Link } from "react-router-dom";
 
 function KnowMore() {
-  const getAvailability = () => {
-    const currentHour = new Date().getHours();
-    return currentHour >= 9 && currentHour < 17
-      ? "Disponible maintenant"
-      : "Indisponible actuellement (9h - 17h)";
-  };
-
   return (
     <div className="know-more internal-link">
       <div className="ios-picture">
@@ -31,14 +24,8 @@ function KnowMore() {
         parcours DEDI . <Link to="/moi">En savoir plus</Link>
       </p>
       <div className="availability">
-        <div
-          className={`dot ${
-            getAvailability() === "Indisponible actuellement (9h - 17h)"
-              ? "red"
-              : ""
-          }`}
-        ></div>
-        <span>{getAvailability()}</span>
+        <div className="dot"></div>
+        <span>À la recherche d’un stage</span>
       </div>
     </div>
   );

@@ -7,13 +7,6 @@ import Mail from "../Assets/Images/mail.svg";
 import Cv from "../Assets/Images/cv.svg";
 
 function About() {
-  const getAvailability = () => {
-    const currentHour = new Date().getHours();
-    return currentHour >= 9 && currentHour < 17
-      ? "Disponible"
-      : "Indisponible (9h - 17h)";
-  };
-
   return (
     <div className="container about" id="about">
       <h1 className="visually-hidden">Colin Lallauret — UI/UX Designer</h1>
@@ -25,12 +18,8 @@ function About() {
         <div className="picture-wrapper">
           <div className="availability">
             <div className="text-pulse">
-              <div
-                className={`dot ${
-                  getAvailability() === "Indisponible (9h - 17h)" ? "red" : ""
-                }`}
-              ></div>
-              <span>{getAvailability()}</span>
+              <div className="dot"></div>
+              <span>À la recherche d’un stage</span>
             </div>
             <a href="https://cal.com/colin-lallauret" target="_blank">
               Prendre contact
@@ -76,7 +65,7 @@ function About() {
               <a href="mailto:colinlallauret1@gmail.com">
                 <img src={Mail} alt="Mail" />
               </a>
-              <a href="/CV2025_ColinLALLAURET.pdf" download>
+              <a href="/CV2026_ColinLALLAURET.pdf" download>
                 <img src={Cv} alt="Cv" />
               </a>
             </div>
