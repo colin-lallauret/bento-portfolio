@@ -20,10 +20,10 @@ function KnowMore() {
           height="104"
           width="104"
         />
-        <h2>
+        <h1>
           Colin <br />
           LALLAURET
-        </h2>
+        </h1>
       </div>
       <p className="text">
         Hello, moi c’est Colin. Actuellement ? <br />

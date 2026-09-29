@@ -13,7 +13,7 @@ import ExperiencesMore from "../Components/ExperiencesMore";
 
 function Me() {
   useEffect(() => {
-    document.title = "À Propos — Colin LALLAURET";
+    document.title = "À propos — Colin Lallauret";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -21,7 +21,7 @@ function Me() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "À Propos — Colin LALLAURET";
+        document.title = "À propos — Colin Lallauret";
         favicon.href = FavIcon;
       }
     };

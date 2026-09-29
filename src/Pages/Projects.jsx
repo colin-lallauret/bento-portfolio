@@ -14,7 +14,7 @@ import Project3dGame from "../Components/Project3dGame";
 
 function Projects() {
   useEffect(() => {
-    document.title = "Projets — Colin LALLAURET";
+    document.title = "Projets — Colin Lallauret";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -22,7 +22,7 @@ function Projects() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Projets — Colin LALLAURET";
+        document.title = "Projets — Colin Lallauret";
         favicon.href = FavIcon;
       }
     };
@@ -72,6 +72,7 @@ function Projects() {
       <Header />
       <main className="projects" id="main-content" tabIndex={-1}>
         <div className="projects internal-link">
+          <h1 className="visually-hidden">Projets — Colin Lallauret</h1>
           <div className="up-title">
             <span>UN PETIT TEASING DE MES</span>
             <p>PROJETS</p>

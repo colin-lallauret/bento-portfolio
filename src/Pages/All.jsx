@@ -26,7 +26,7 @@ import Project3dGame from "../Components/Project3dGame";
 
 function All() {
   useEffect(() => {
-    document.title = "Portfolio — Colin LALLAURET";
+    document.title = "Colin Lallauret — UI/UX Designer | Portfolio";
 
     const handleVisibilityChange = () => {
       const favicon = document.querySelector("link[rel='icon']");
@@ -34,7 +34,7 @@ function All() {
         document.title = "Où allez-vous ? 💻✨";
         favicon.href = FavIconOutline;
       } else {
-        document.title = "Portfolio — Colin LALLAURET";
+        document.title = "Colin Lallauret — UI/UX Designer | Portfolio";
         favicon.href = FavIcon;
       }
     };

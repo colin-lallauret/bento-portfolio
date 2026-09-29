@@ -4,6 +4,18 @@
   border-radius: 4px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -48px;
@@ -466,7 +478,7 @@ main.home .item#first .know-more .ios-picture img {
   width: 104px;
   height: auto;
 }
-main.home .item#first .know-more .ios-picture h2 {
+main.home .item#first .know-more .ios-picture h1 {
   font-size: 32px;
   font-weight: 500;
 }

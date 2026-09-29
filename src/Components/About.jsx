@@ -16,6 +16,7 @@ function About() {
 
   return (
     <div className="container about" id="about">
+      <h1 className="visually-hidden">Colin Lallauret — UI/UX Designer</h1>
       <div className="title">
         <span>BESOINS D’UN PEU PLUS D’INFORMATION SUR MOI ?</span>
         <p>À PROPOS</p>
