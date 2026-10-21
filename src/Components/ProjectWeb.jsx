@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import Webdoc from "../Assets/Images/Projects/Webdoc.png";
 import Runner from "../Assets/Images/Projects/Runner.png";
 import Portfolio from "../Assets/Images/Projects/Portfolio.png";
+import { useLang } from "../i18n";
 
 function ProjectWeb() {
+  const { t } = useLang();
   return (
     <>
       <Link to="/projet/web/webdoc-mmi" className="project-item left">
@@ -13,13 +15,21 @@ function ProjectWeb() {
         <div className="project-text">
           <h5>Webdoc MMI</h5>
           <p>
-            Le développement du site web de la formation MMI à Lannion, sous la
-            forme d’un « Webdoc », une réalisation faite en équipe.
+            {t(
+              <>
+                Le développement du site web de la formation MMI à Lannion, sous
+                la forme d’un « Webdoc », une réalisation faite en équipe.
+              </>,
+              <>
+                Developing the website of the MMI programme in Lannion as a “web
+                documentary”, built as a team.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>From scratch</span>
             <span>PHP</span>
-            <span>Équipe</span>
+            <span>{t("Équipe", "Team")}</span>
           </div>
         </div>
       </Link>
@@ -28,13 +38,21 @@ function ProjectWeb() {
         <div className="project-text">
           <h5>Runner</h5>
           <p>
-            La conception technique d’un jeu de type Runner, où esquiver les
-            obstacles est l’objectif pour accumuler le plus de points.
+            {t(
+              <>
+                La conception technique d’un jeu de type Runner, où esquiver les
+                obstacles est l’objectif pour accumuler le plus de points.
+              </>,
+              <>
+                The technical design of a runner game where dodging obstacles is
+                how you rack up the most points.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>Game</span>
             <span>React</span>
-            <span>Mini-Projet</span>
+            <span>{t("Mini-Projet", "Mini-project")}</span>
           </div>
         </div>
         <img src={Runner} alt="Runner" />
@@ -46,8 +64,17 @@ function ProjectWeb() {
         <div className="project-text">
           <h5>Portfolio</h5>
           <p>
-            La réalisation de mon nouveau portfolio, en passant du développement
-            à la rédaction de contenu jusqu'à sa mise en ligne.
+            {t(
+              <>
+                La réalisation de mon nouveau portfolio, en passant du
+                développement à la rédaction de contenu jusqu'à sa mise en
+                ligne.
+              </>,
+              <>
+                Building my new portfolio, from development and copywriting all
+                the way to going live.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>React</span>

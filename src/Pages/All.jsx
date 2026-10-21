@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import transition from "../transition";
 
@@ -12,9 +12,7 @@ import SocialsMedia from "../Components/SocialsMedia";
 
 import Mail from "../Assets/Images/mail.svg";
 
-import FavIcon from "../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
-import Map from "../../public/map.webp";
+import Map from "../../public/map_france.webp";
 import Random from "../Assets/Images/random.svg";
 
 import Software from "../Components/Software";
@@ -23,28 +21,14 @@ import ProjectUIUX from "../Components/ProjectUIUX";
 import Experiences from "../Components/Experiences";
 import ProjectWeb from "../Components/ProjectWeb";
 import Project3dGame from "../Components/Project3dGame";
+import { useLang, usePageTitle } from "../i18n";
 
 function All() {
-  useEffect(() => {
-    document.title = "Colin Lallauret — UI/UX Designer | Portfolio";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "Colin Lallauret — UI/UX Designer | Portfolio";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle(
+    "Colin Lallauret — UI/UX Designer | Portfolio",
+    "Colin Lallauret — UI/UX Designer | Portfolio",
+  );
 
   const [activeProject, setActiveProject] = React.useState("UI / UX Design");
 
@@ -94,8 +78,8 @@ function All() {
                 className="map"
                 src={Map}
                 alt=""
-                width="800"
-                height="600"
+                width="900"
+                height="912"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
@@ -115,39 +99,60 @@ function All() {
             <div className="software-mail">
               <Software />
               <a className="mail" href="mailto:colinlallauret1@gmail.com">
-                <img src={Mail} alt="mail" />
+                <img
+                  className="icon-adaptive"
+                  src={Mail}
+                  alt={t("M’envoyer un mail", "Send me an email")}
+                />
               </a>
             </div>
           </div>
           <div className="studies internal-link">
             <div>
-              <span>BIENTÔT UN BAC+3</span>
-              <p>FORMATIONS</p>
+              <span>{t("BIENTÔT UN BAC+5", "SOON A MASTER’S DEGREE")}</span>
+              <p>{t("FORMATIONS", "EDUCATION")}</p>
             </div>
             <div>
               <Timeline />
             </div>
             <div>
-              <span>
-                <i style={{ opacity: 0 }}>*</i>*BUT : <em>B</em>achelor{" "}
-                <em>U</em>niversitaire <em>T</em>
-                echnologique
-              </span>
-              <span>
-                **MMI : <em>M</em>étiers du <em>M</em>ultimédia et de l’
-                <em>I</em>
-                nternet
-              </span>
+              {t(
+                <>
+                  <span>
+                    <i style={{ opacity: 0 }}>*</i>*BUT : <em>B</em>achelor{" "}
+                    <em>U</em>niversitaire <em>T</em>
+                    echnologique
+                  </span>
+                  <span>
+                    **MMI : <em>M</em>étiers du <em>M</em>ultimédia et de l’
+                    <em>I</em>
+                    nternet
+                  </span>
+                </>,
+                <>
+                  <span>
+                    <i style={{ opacity: 0 }}>*</i>*BUT: French 3-year
+                    technology bachelor’s degree
+                  </span>
+                  <span>
+                    **MMI: <em>M</em>ultimedia and <em>I</em>nternet professions
+                  </span>
+                </>,
+              )}
             </div>
           </div>
         </div>
         <div className="item" id="third">
           <div className="projects internal-link">
             <div className="up-title">
-              <span>UN PETIT TEASING DE MES</span>
-              <p>PROJETS</p>
+              <span>{t("UN PETIT TEASING DE MES", "A SNEAK PEEK AT MY")}</span>
+              <p>{t("PROJETS", "PROJECTS")}</p>
             </div>
-            <div className="btns" role="tablist" aria-label="Filtrer les projets">
+            <div
+              className="btns"
+              role="tablist"
+              aria-label={t("Filtrer les projets", "Filter projects")}
+            >
               <button
                 type="button"
                 role="tab"
@@ -180,15 +185,20 @@ function All() {
                 3D / Game
               </button>
             </div>
-            <div className="projects-wrapper" role="tabpanel">{renderProject()}</div>
+            <div className="projects-wrapper" role="tabpanel">
+              {renderProject()}
+            </div>
 
             <button
               type="button"
               className="btn-random"
-              aria-label="Voir un projet au hasard"
+              aria-label={t(
+                "Voir un projet au hasard",
+                "Show a random project",
+              )}
               onClick={handleRandomClick}
             >
-              <img src={Random} alt="" />
+              <img className="icon-adaptive" src={Random} alt="" />
             </button>
           </div>
 

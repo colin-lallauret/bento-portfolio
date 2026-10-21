@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../../Regions/Header";
 import { Link } from "react-router-dom";
 import transition from "../../../transition";
-import FavIcon from "../../../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
 import Image1 from "../../../Assets/Images/Full_img/portfolio/1.png";
 import Image2 from "../../../Assets/Images/Full_img/portfolio/2.png";
@@ -16,28 +14,14 @@ import Vercel from "../../../Assets/Images/Icons/Logiciels/vercel.png";
 import Infomaniak from "../../../Assets/Images/Icons/Logiciels/infomaniak.png";
 
 import Arrow from "../../../Assets/Images/arrow.svg";
+import { useLang, usePageTitle } from "../../../i18n";
 
 function Portfolio() {
-  useEffect(() => {
-    document.title = "Portfolio (projet) — Colin LALLAURET";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "Portfolio (projet) — Colin LALLAURET";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle(
+    "Portfolio (projet) — Colin LALLAURET",
+    "Portfolio (project) — Colin LALLAURET",
+  );
 
   return (
     <>
@@ -65,43 +49,109 @@ function Portfolio() {
           <div className="text">
             <h3>Portfolio</h3>
             <p>
-              Après un premier site portfolio en MMI (2023), j’ai décidé de
-              repartir de zéro pour concevoir une version plus professionnelle
-              et reflétant mieux mes compétences actuelles. Ce nouveau site
-              vitrine devait allier design moderne et performances optimales.
+              {t(
+                <>
+                  Après un premier site portfolio en MMI (2023), j’ai décidé de
+                  repartir de zéro pour concevoir une version plus
+                  professionnelle et reflétant mieux mes compétences actuelles.
+                  Ce nouveau site vitrine devait allier design moderne et
+                  performances optimales.
+                </>,
+                <>
+                  After a first portfolio site during MMI (2023), I decided to
+                  start from scratch and design a more professional version that
+                  better reflects my current skills. This new showcase site had
+                  to combine modern design with top performance.
+                </>,
+              )}
             </p>
             <div>
-              <h4>Déroulé du projet</h4>
+              <h4>{t("Déroulé du projet", "How it went")}</h4>
               <p>
-                <b>Analyse :</b> Étude des portfolios existants pour identifier
-                les meilleures pratiques.
+                {t(
+                  <>
+                    <b>Analyse :</b> Étude des portfolios existants pour
+                    identifier les meilleures pratiques.
+                  </>,
+                  <>
+                    <b>Analysis:</b> Studying existing portfolios to identify
+                    best practices.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Création :</b> Définition d’une identité visuelle et
-                conception des maquettes desktop et mobile.
+                {t(
+                  <>
+                    <b>Création :</b> Définition d’une identité visuelle et
+                    conception des maquettes desktop et mobile.
+                  </>,
+                  <>
+                    <b>Creation:</b> Defining a visual identity and designing
+                    desktop and mobile mockups.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Rédaction :</b> Rédaction des pages principales (Accueil, À
-                propos, Projets).
+                {t(
+                  <>
+                    <b>Rédaction :</b> Rédaction des pages principales (Accueil,
+                    À propos, Projets).
+                  </>,
+                  <>
+                    <b>Writing:</b> Writing the main pages (Home, About,
+                    Projects).
+                  </>,
+                )}
               </p>
               <p>
-                <b>Développement :</b> Intégration from scratch avec Vite +
-                React.
+                {t(
+                  <>
+                    <b>Développement :</b> Intégration from scratch avec Vite +
+                    React.
+                  </>,
+                  <>
+                    <b>Development:</b> Built from scratch with Vite + React.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Hébergement :</b> Déploiement via Vercel et Infomaniak.
+                {t(
+                  <>
+                    <b>Hébergement :</b> Déploiement via Vercel et Infomaniak.
+                  </>,
+                  <>
+                    <b>Hosting:</b> Deployed with Vercel and Infomaniak.
+                  </>,
+                )}
               </p>
             </div>
             <div>
-              <h4>Acquis</h4>
+              <h4>{t("Acquis", "Skills gained")}</h4>
               <p>
-                <b>Hard skills :</b> Développement front-end (React, SCSS),
-                Hébergement et déploiement web, Rédaction et structuration de
-                contenu
+                {t(
+                  <>
+                    <b>Hard skills :</b> Développement front-end (React, SCSS),
+                    Hébergement et déploiement web, Rédaction et structuration
+                    de contenu
+                  </>,
+                  <>
+                    <b>Hard skills:</b> Front-end development (React, SCSS), Web
+                    hosting and deployment, Content writing and structuring
+                  </>,
+                )}
               </p>
               <p>
-                <b>Soft skills :</b> Gestion du temps et autonomie, Créativité
-                et sens du détail, Capacité d’apprentissage rapide
+                {t(
+                  <>
+                    <b>Soft skills :</b> Gestion du temps et autonomie,
+                    Créativité et sens du détail, Capacité d’apprentissage
+                    rapide
+                  </>,
+                  <>
+                    <b>Soft skills:</b> Time management and autonomy, Creativity
+                    and attention to detail, Fast learning
+                  </>,
+                )}
               </p>
             </div>
           </div>
@@ -117,12 +167,12 @@ function Portfolio() {
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/ui-ux/kult" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet précédent (Kult)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet précédent", "Previous project")} (Kult)
           </Link>
           <Link to="/projet/web/runner" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet suivant (Runner)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet suivant", "Next project")} (Runner)
           </Link>
         </div>
       </main>

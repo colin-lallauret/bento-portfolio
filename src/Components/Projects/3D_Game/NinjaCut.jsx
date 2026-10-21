@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../../Regions/Header";
 import { Link } from "react-router-dom";
 import transition from "../../../transition";
-import FavIcon from "../../../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
 import Image1 from "../../../Assets/Images/Full_img/ninjacut/1.png";
 import Image2 from "../../../Assets/Images/Full_img/ninjacut/2.png";
@@ -12,28 +10,14 @@ import Image3 from "../../../Assets/Images/Full_img/ninjacut/3.png";
 import Unity from "../../../Assets/Images/Icons/Logiciels/unity.png";
 
 import Arrow from "../../../Assets/Images/arrow.svg";
+import { useLang, usePageTitle } from "../../../i18n";
 
 function NinjaCut() {
-  useEffect(() => {
-    document.title = "NinjaCut (projet) — Colin LALLAURET";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "NinjaCut (projet) — Colin LALLAURET";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle(
+    "NinjaCut (projet) — Colin LALLAURET",
+    "NinjaCut (project) — Colin LALLAURET",
+  );
 
   return (
     <>
@@ -47,7 +31,7 @@ function NinjaCut() {
           <div className="tags">
             <p className="tag">Game</p>
             <p className="tag">Unity</p>
-            <p className="tag">Mini-Projet</p>
+            <p className="tag">{t("Mini-Projet", "Mini-project")}</p>
           </div>
         </div>
         <div className="img-wrapper">
@@ -61,40 +45,95 @@ function NinjaCut() {
           <div className="text">
             <h3>NinjaCut</h3>
             <p>
-              Inspiré du célèbre jeu mobile &quot;Fruit Ninja&quot;, l’objectif
-              était de créer une version similaire dans Unity. Ce projet visait
-              à comprendre la mécanique du jeu et à la transposer en un jeu
-              interactif, avec différents niveaux de difficulté et un système de
-              score.
+              {t(
+                <>
+                  Inspiré du célèbre jeu mobile &quot;Fruit Ninja&quot;,
+                  l’objectif était de créer une version similaire dans Unity. Ce
+                  projet visait à comprendre la mécanique du jeu et à la
+                  transposer en un jeu interactif, avec différents niveaux de
+                  difficulté et un système de score.
+                </>,
+                <>
+                  Inspired by the famous mobile game &quot;Fruit Ninja&quot;,
+                  the goal was to build a similar version in Unity. The project
+                  aimed to understand the game’s mechanics and turn them into an
+                  interactive game with several difficulty levels and a scoring
+                  system.
+                </>,
+              )}
             </p>
             <div>
-              <h4>Déroulé du projet</h4>
+              <h4>{t("Déroulé du projet", "How it went")}</h4>
               <p>
-                <b>Compréhension de l&apos;environnement :</b> Analyse des
-                assets fournis pour comprendre la logique du jeu.
+                {t(
+                  <>
+                    <b>Compréhension de l&apos;environnement :</b> Analyse des
+                    assets fournis pour comprendre la logique du jeu.
+                  </>,
+                  <>
+                    <b>Understanding the environment:</b> Analysing the provided
+                    assets to understand the game logic.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Développement :</b> Création de l&apos;écran de démarrage
-                avec 3 niveaux de difficulté, gestion des trajectoires
-                aléatoires des fruits, détection des bonus/malus en fonction des
-                objets touchés. Mise en place de l&apos;écran de game over avec
-                possibilité de relance rapide et gestion du système de score.
+                {t(
+                  <>
+                    <b>Développement :</b> Création de l&apos;écran de démarrage
+                    avec 3 niveaux de difficulté, gestion des trajectoires
+                    aléatoires des fruits, détection des bonus/malus en fonction
+                    des objets touchés. Mise en place de l&apos;écran de game
+                    over avec possibilité de relance rapide et gestion du
+                    système de score.
+                  </>,
+                  <>
+                    <b>Development:</b> Creating the start screen with 3
+                    difficulty levels, handling random fruit trajectories, and
+                    detecting bonuses/penalties based on the objects hit.
+                    Building the game over screen with quick restart and the
+                    scoring system.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Tests & fix :</b> Tests des différents niveaux de difficulté
-                et correction des problèmes liés à la trajectoire aléatoire des
-                gameobjects.
+                {t(
+                  <>
+                    <b>Tests & fix :</b> Tests des différents niveaux de
+                    difficulté et correction des problèmes liés à la trajectoire
+                    aléatoire des gameobjects.
+                  </>,
+                  <>
+                    <b>Tests & fixes:</b> Testing the difficulty levels and
+                    fixing issues with the random trajectories of game objects.
+                  </>,
+                )}
               </p>
             </div>
             <div>
-              <h4>Acquis</h4>
+              <h4>{t("Acquis", "Skills gained")}</h4>
               <p>
-                <b>Hard skills :</b> Développement de jeux vidéo, programmation
-                en Unity, gestion des mécaniques de gameplay.
+                {t(
+                  <>
+                    <b>Hard skills :</b> Développement de jeux vidéo,
+                    programmation en Unity, gestion des mécaniques de gameplay.
+                  </>,
+                  <>
+                    <b>Hard skills:</b> Video game development, Unity
+                    programming, gameplay mechanics.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Soft skills :</b> Résolution de problèmes, gestion de projet,
-                réactivité face aux imprévus.
+                {t(
+                  <>
+                    <b>Soft skills :</b> Résolution de problèmes, gestion de
+                    projet, réactivité face aux imprévus.
+                  </>,
+                  <>
+                    <b>Soft skills:</b> Problem solving, project management,
+                    responsiveness to the unexpected.
+                  </>,
+                )}
               </p>
             </div>
           </div>
@@ -106,12 +145,12 @@ function NinjaCut() {
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/3d-game/minecraft-vr" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet précédent (Minecraft VR)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet précédent", "Previous project")} (Minecraft VR)
           </Link>
           <Link to="/projet/ui-ux/bleep" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet suivant (Bleep)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet suivant", "Next project")} (Bleep)
           </Link>
         </div>
       </main>

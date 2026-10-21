@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 
 import Night from "../Assets/Images/night.svg";
 import Day from "../Assets/Images/day.svg";
+import { useLang } from "../i18n";
 
 function ThemeSwitcher() {
   const [theme, setTheme] = useState("day");
+  const { t } = useLang();
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const initial = saved || "day";
+    const initial =
+      saved || (document.body.classList.contains("dark") ? "night" : "day");
     setTheme(initial);
     document.body.classList.toggle("dark", initial === "night");
   }, []);
@@ -20,24 +23,28 @@ function ThemeSwitcher() {
   };
 
   return (
-    <div className="theme-switcher" role="group" aria-label="Choix du thème">
+    <div
+      className="theme-switcher"
+      role="group"
+      aria-label={t("Choix du thème", "Theme selection")}
+    >
       <button
         type="button"
         className={`btn ${theme === "day" ? "active" : ""}`}
         aria-pressed={theme === "day"}
-        aria-label="Thème clair"
+        aria-label={t("Thème clair", "Light theme")}
         onClick={() => handleThemeSwitch("day")}
       >
-        <img src={Day} alt="" />
+        <img className="icon-adaptive" src={Day} alt="" />
       </button>
       <button
         type="button"
         className={`btn ${theme === "night" ? "active" : ""}`}
         aria-pressed={theme === "night"}
-        aria-label="Thème sombre"
+        aria-label={t("Thème sombre", "Dark theme")}
         onClick={() => handleThemeSwitch("night")}
       >
-        <img src={Night} alt="" />
+        <img className="icon-adaptive" src={Night} alt="" />
       </button>
     </div>
   );

@@ -14,6 +14,11 @@ main {
             flex-direction: column;
             gap: 32px;
 
+            @media (max-width: 512px) {
+                padding: 24px;
+                gap: 24px;
+            }
+
             .title {
                 span {
                     font-size: 12px;
@@ -64,10 +69,18 @@ main {
             flex-direction: column;
             gap: 64px;
 
+            @media (max-width: 768px) {
+                gap: 48px;
+            }
+
             .study {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 32px;
+
+                @media (max-width: 768px) {
+                    gap: 16px;
+                }
 
                 .date {
                     text-wrap: nowrap;
@@ -79,6 +92,8 @@ main {
 
                     @media (max-width: 768px) {
                         text-align: start;
+                        font-size: 28px;
+                        width: auto;
                     }
                 }
 
@@ -131,7 +146,7 @@ main {
                                 font-weight: $bold;
                                 color: var(--c-darkgrey);
                                 border-radius: 50px;
-                                background-color: var(--c-lightgrey);
+                                background-color: var(--c-tag-bg);
                             }
                         }
                     }
@@ -159,10 +174,18 @@ main {
             flex-direction: column;
             gap: 64px;
 
+            @media (max-width: 768px) {
+                gap: 48px;
+            }
+
             .experience {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 32px;
+
+                @media (max-width: 768px) {
+                    gap: 16px;
+                }
 
                 .company {
                     display: flex;
@@ -223,7 +246,7 @@ main {
                             font-weight: $bold;
                             color: var(--c-darkgrey);
                             border-radius: 50px;
-                            background-color: var(--c-lightgrey);
+                            background-color: var(--c-tag-bg);
                             width: fit-content;
                         }
                     }
@@ -265,6 +288,11 @@ main {
                             font-size: 32px;
                             font-weight: $bold;
                             color: var(--c-darkgrey);
+
+                            @media (max-width: 512px) {
+                                font-size: 26px;
+                                line-height: 1.2;
+                            }
                         }
 
                         .paragraphs {
@@ -296,6 +324,18 @@ main {
                         filter: grayscale(1);
                         margin-right: 80px;
 
+                        // Logos are dark on transparent: flip them to stay visible
+                        body.dark & {
+                            filter: grayscale(1) invert(1);
+                            opacity: .5;
+                        }
+
+                        // Groupe Seb ships its own white disc: keep it, just dim it
+                        body.dark &[alt="Groupe Seb"] {
+                            filter: grayscale(1);
+                            opacity: .35;
+                        }
+
                         @media (max-width: 1168px) {
                             display: none;
                         }
@@ -313,6 +353,7 @@ main {
 
             @media (max-width: 768px) {
                 margin-top: 0;
+                gap: 32px;
             }
 
             .picture-wrapper {
@@ -322,15 +363,18 @@ main {
 
                 .availability {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 8px;
+                    max-width: 240px;
 
                     a {
                         background-color: var(--c-darkgrey);
                         border-radius: 8px;
-                        padding: 4px 12px;
+                        padding: 6px 12px;
                         color: var(--c-background);
-                        font-size: 10px;
+                        font-size: 12px;
                         font-weight: $semibold;
                     }
 
@@ -340,7 +384,7 @@ main {
                         align-items: center;
 
                         span {
-                            font-size: 10px;
+                            font-size: 12px;
                             font-weight: $bold;
                             color: var(--c-grey);
                         }
@@ -426,6 +470,10 @@ main {
                     flex-direction: column;
                     gap: 32px;
 
+                    @media (max-width: 768px) {
+                        gap: 20px;
+                    }
+
                     p {
                         line-height: 140%;
 
@@ -460,6 +508,11 @@ main {
                                 max-width: 24px;
                                 height: auto;
                             }
+
+                            @media (max-width: 768px) {
+                                min-width: 44px;
+                                min-height: 44px;
+                            }
                         }
                     }
 
@@ -471,7 +524,7 @@ main {
                         a {
                             padding: 12px 24px;
                             background-color: var(--c-background);
-                            color: var(--c-lightgrey);
+                            color: var(--c-grey);
                             font-size: 14px;
                             font-weight: $medium;
                             border-radius: 10px;

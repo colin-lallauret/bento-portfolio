@@ -1,38 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import transition from "../transition";
 
 import Header from "../Components/Regions/Header";
 import Footer from "../Components/Regions/Footer";
-import FavIcon from "../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../Assets/Favicon/outlinefavicon.ico";
 import Random from "../Assets/Images/random.svg";
 
 import ProjectUIUX from "../Components/ProjectUIUX";
 import ProjectWeb from "../Components/ProjectWeb";
 import Project3dGame from "../Components/Project3dGame";
+import { useLang, usePageTitle } from "../i18n";
 
 function Projects() {
-  useEffect(() => {
-    document.title = "Projets — Colin Lallauret";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "Projets — Colin Lallauret";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle("Projets — Colin Lallauret", "Projects — Colin Lallauret");
 
   const [activeProject, setActiveProject] = React.useState("UI / UX Design");
 
@@ -72,12 +53,18 @@ function Projects() {
       <Header />
       <main className="projects" id="main-content" tabIndex={-1}>
         <div className="projects internal-link">
-          <h1 className="visually-hidden">Projets — Colin Lallauret</h1>
+          <h1 className="visually-hidden">
+            {t("Projets — Colin Lallauret", "Projects — Colin Lallauret")}
+          </h1>
           <div className="up-title">
-            <span>UN PETIT TEASING DE MES</span>
-            <p>PROJETS</p>
+            <span>{t("UN PETIT TEASING DE MES", "A SNEAK PEEK AT MY")}</span>
+            <p>{t("PROJETS", "PROJECTS")}</p>
           </div>
-          <div className="btns" role="tablist" aria-label="Filtrer les projets">
+          <div
+            className="btns"
+            role="tablist"
+            aria-label={t("Filtrer les projets", "Filter projects")}
+          >
             <button
               type="button"
               role="tab"
@@ -108,15 +95,17 @@ function Projects() {
               3D / Game
             </button>
           </div>
-          <div className="projects-wrapper" role="tabpanel">{renderProject()}</div>
+          <div className="projects-wrapper" role="tabpanel">
+            {renderProject()}
+          </div>
 
           <button
             type="button"
             className="btn-random"
-            aria-label="Voir un projet au hasard"
+            aria-label={t("Voir un projet au hasard", "Show a random project")}
             onClick={handleRandomClick}
           >
-            <img src={Random} alt="" />
+            <img className="icon-adaptive" src={Random} alt="" />
           </button>
         </div>
       </main>

@@ -5,8 +5,10 @@ import MinecraftVR from "../Assets/Images/Projects/MinecraftVR.png";
 import IlePerdu from "../Assets/Images/Projects/IlePerdu.png";
 import NinjaCut from "../Assets/Images/Projects/NinjaCut.png";
 import LavalVirtual from "../Assets/Images/Projects/laval.png";
+import { useLang } from "../i18n";
 
 function Project3dGame() {
+  const { t } = useLang();
   return (
     <>
       <Link to="/projet/3d-game/minecraft-vr" className="project-item left">
@@ -14,8 +16,17 @@ function Project3dGame() {
         <div className="project-text">
           <h5>MinecraftVR</h5>
           <p>
-            La réalisation d’un environnement interactif en réalité virtuelle
-            sur le thème du meilleur jeu au monde... nommé « Minecraft » 🥁.
+            {t(
+              <>
+                La réalisation d’un environnement interactif en réalité
+                virtuelle sur le thème du meilleur jeu au monde... nommé «
+                Minecraft » 🥁.
+              </>,
+              <>
+                Building an interactive virtual reality environment themed on
+                the best game in the world... called “Minecraft” 🥁.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>Unity</span>
@@ -27,15 +38,23 @@ function Project3dGame() {
       <div className="separator"></div>
       <Link to="/projet/3d-game/ile-perdu" className="project-item right">
         <div className="project-text">
-          <h5>Île perdu</h5>
+          <h5>{t("Île perdu", "Lost Island")}</h5>
           <p>
-            L’imagination et la conception d’une île abandonnée, figée dans le
-            temps, qui s’est fait piller par des pirates.
+            {t(
+              <>
+                L’imagination et la conception d’une île abandonnée, figée dans
+                le temps, qui s’est fait piller par des pirates.
+              </>,
+              <>
+                Imagining and designing an abandoned island, frozen in time,
+                that was looted by pirates.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>Blender</span>
             <span>3D</span>
-            <span>Créativité</span>
+            <span>{t("Créativité", "Creativity")}</span>
           </div>
         </div>
         <img src={IlePerdu} alt="Île perdu" />
@@ -47,13 +66,20 @@ function Project3dGame() {
         <div className="project-text">
           <h5>NinjaCut</h5>
           <p>
-            Le développement d’un jeu sur Unity, inspiré du célèbre jeu nommé «
-            Fruit Ninja ».
+            {t(
+              <>
+                Le développement d’un jeu sur Unity, inspiré du célèbre jeu
+                nommé « Fruit Ninja ».
+              </>,
+              <>
+                Developing a Unity game inspired by the famous “Fruit Ninja”.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>Game</span>
             <span>Unity</span>
-            <span>Mini-Projet</span>
+            <span>{t("Mini-Projet", "Mini-project")}</span>
           </div>
         </div>
       </Link>
@@ -62,7 +88,14 @@ function Project3dGame() {
       <Link to="/projet/3d-game/laval-virtual" className="project-item right">
         <div className="project-text">
           <h5>Laval Virtual</h5>
-          <p>Un marathon technologique de 30 heures, appelé « hackathon » !</p>
+          <p>
+            {t(
+              <>
+                Un marathon technologique de 30 heures, appelé « hackathon » !
+              </>,
+              <>A 30-hour tech marathon, a.k.a. a “hackathon”!</>,
+            )}
+          </p>
           <div className="tags">
             <span>Hackathon</span>
             <span>30h</span>

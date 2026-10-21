@@ -1,10 +1,15 @@
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // Three columns keep the nav centred whatever the side widths
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 
-    .empty {
-        width: 48px;
+    .logo-wrapper {
+        justify-self: start;
+    }
+
+    .lang-switcher {
+        justify-self: end;
     }
 
     a {
@@ -20,10 +25,44 @@ header {
         }
     }
 
+    .lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        height: 48px;
+        padding: 0 8px;
+        border-radius: 55px;
+        background-color: rgba(var(--c-background-rgb), .6);
+
+        .item {
+            width: 44px;
+            height: 32px;
+            border: none;
+            border-radius: 55px;
+            background-color: transparent;
+            font-size: 13px;
+            font-weight: $medium;
+            color: var(--c-grey);
+            cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
+            transition: $btn-transition;
+
+            &:hover {
+                color: var(--c-black);
+            }
+
+            &.active {
+                background-color: var(--c-background);
+                color: var(--c-black);
+                font-weight: $semibold;
+            }
+        }
+    }
+
     .menu {
         display: flex;
         flex-direction: row;
-        background-color: rgba(#F0F0F1, .6);
+        height: 48px;
+        background-color: rgba(var(--c-background-rgb), .6);
         padding: 0 8px;
         border-radius: 55px;
         justify-content: center;
@@ -49,7 +88,7 @@ header {
             cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
             &.active {
-                background-color: #F8F8F8;
+                background-color: var(--c-background);
                 border-radius: 55px;
                 font-weight: $semibold;
             }
@@ -79,11 +118,6 @@ footer {
     }
 }
 
-body {
-    @media (max-width: 768px) {
-        padding-top: 64px;
-    }
-}
 
 .hero-info {
     display: flex;
@@ -110,5 +144,19 @@ body {
         color: #3F424A;
         font-weight: $light;
         font-size: 12px;
+    }
+
+    // In flow on mobile so a wrapped banner never covers the first card
+    @media (max-width: 768px) {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        margin-bottom: 16px;
+        padding: 10px 16px;
+        gap: 4px 8px;
+        font-size: 14px;
+        line-height: 1.35;
+        text-align: center;
     }
 }

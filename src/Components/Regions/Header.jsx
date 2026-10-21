@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useLang } from "../../i18n";
+import LangSwitcher from "../LangSwitcher";
 
 import Logo from "../../Assets/Images/Logo/logo-black.svg";
 
@@ -12,6 +14,7 @@ import LinkedIn from "../../Assets/Images/Mobile/linkedin2.svg";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { t } = useLang();
 
   const handleRandomClick = () => {
     const urls = [
@@ -32,7 +35,7 @@ const Header = () => {
   return (
     <>
       <a href="#main-content" className="skip-link">
-        Aller au contenu
+        {t("Aller au contenu", "Skip to content")}
       </a>
       <a
         href="https://cal.com/colin-lallauret/30min"
@@ -40,21 +43,33 @@ const Header = () => {
         rel="noopener noreferrer"
         className="hero-info"
       >
-        🧑‍💻🔍 À la recherche d’un stage de fin d’études{" "}
-        <div className="text-info">(prendre un rdv)</div>
+        🧑‍💻🔍{" "}
+        {t(
+          "À la recherche d’un stage de fin d’études",
+          "Looking for a final-year internship",
+        )}{" "}
+        <div className="text-info">
+          {t("(prendre un rdv)", "(book a call)")}
+        </div>
       </a>
       <header>
-        <Link to="/" className="logo-wrapper" aria-label="Accueil">
+        <Link to="/" className="logo-wrapper" aria-label={t("Accueil", "Home")}>
           <div className="logo">
-            <img src={Logo} alt="Colin Lallauret" />
+            <img className="icon-adaptive" src={Logo} alt="Colin Lallauret" />
           </div>
         </Link>
-        <nav className="menu" aria-label="Navigation principale">
-          <Link to="/" aria-current={location.pathname === "/" ? "page" : undefined}>
+        <nav
+          className="menu"
+          aria-label={t("Navigation principale", "Main navigation")}
+        >
+          <Link
+            to="/"
+            aria-current={location.pathname === "/" ? "page" : undefined}
+          >
             <div
               className={`item ${location.pathname === "/" ? "active" : ""}`}
             >
-              Tous
+              {t("Tous", "All")}
             </div>
           </Link>
           <Link
@@ -64,7 +79,7 @@ const Header = () => {
             <div
               className={`item ${location.pathname === "/moi" ? "active" : ""}`}
             >
-              À propos ?
+              {t("À propos ?", "About me?")}
             </div>
           </Link>
           {/* <button
@@ -77,25 +92,33 @@ const Header = () => {
         </button> */}
           <Link
             to="/projets"
-            aria-current={location.pathname === "/projets" ? "page" : undefined}
+            aria-current={
+              location.pathname.startsWith("/projet") ? "page" : undefined
+            }
           >
             <div
               className={`item ${
-                location.pathname === "/projets" ? "active" : ""
+                location.pathname.startsWith("/projet") ? "active" : ""
               }`}
             >
-              Projets
+              {t("Projets", "Projects")}
             </div>
           </Link>
         </nav>
 
-        <nav className="mobile-menu" aria-label="Navigation principale">
+        <nav
+          className="mobile-menu"
+          aria-label={t("Navigation principale", "Main navigation")}
+        >
           <div className="pages">
-            <Link to="/" aria-current={location.pathname === "/" ? "page" : undefined}>
+            <Link
+              to="/"
+              aria-current={location.pathname === "/" ? "page" : undefined}
+            >
               <div
                 className={`btn ${location.pathname === "/" ? "active" : ""}`}
               >
-                <img src={Home} alt="Home" />
+                <img src={Home} alt={t("Accueil", "Home")} />
               </div>
             </Link>
             <Link
@@ -107,7 +130,7 @@ const Header = () => {
                   location.pathname === "/moi" ? "active" : ""
                 }`}
               >
-                <img src={Me} alt="Me" />
+                <img src={Me} alt={t("À propos", "About me")} />
               </div>
             </Link>
             {/* <button
@@ -120,14 +143,16 @@ const Header = () => {
           </button> */}
             <Link
               to="/projets"
-              aria-current={location.pathname === "/projets" ? "page" : undefined}
+              aria-current={
+                location.pathname.startsWith("/projet") ? "page" : undefined
+              }
             >
               <div
                 className={`btn ${
-                  location.pathname === "/projets" ? "active" : ""
+                  location.pathname.startsWith("/projet") ? "active" : ""
                 }`}
               >
-                <img src={Project} alt="Project" />
+                <img src={Project} alt={t("Projets", "Projects")} />
               </div>
             </Link>
           </div>
@@ -138,7 +163,7 @@ const Header = () => {
             </a>
             <button
               className="btn"
-              aria-label="Ouvrir le CV"
+              aria-label={t("Ouvrir le CV", "Open my resume")}
               onClick={() => window.open("/CV2026_ColinLALLAURET.pdf")}
             >
               <img src={CV} alt="" />
@@ -152,7 +177,7 @@ const Header = () => {
           </div>
         </nav>
 
-        <div className="empty"></div>
+        <LangSwitcher />
       </header>
     </>
   );

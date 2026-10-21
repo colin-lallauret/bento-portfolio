@@ -57,25 +57,37 @@ main {
 
                         img {
                             width: 104px;
-                            height: auto;
+                            height: 104px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            background-color: var(--c-generalbackground);
+                            border: 3px solid var(--c-background);
+                            box-shadow: 0 0 0 1px var(--c-lightgrey);
                         }
 
                         h1 {
                             font-size: 32px;
                             font-weight: $medium;
+
+                            @media (max-width: 512px) {
+                                font-size: 28px;
+                            }
                         }
                     }
 
                     .text {
+                        line-height: 1.45;
+
                         i {
-                            font-size: 10px;
+                            font-size: 12px;
                         }
 
                         em,
                         a {
-                            font-size: 10px;
+                            font-size: 12px;
                             font-weight: $bold;
                             text-decoration: underline;
+                            white-space: nowrap;
                         }
                     }
 
@@ -116,9 +128,9 @@ main {
                         }
 
                         span {
-                            font-size: 10px;
+                            font-size: 12px;
                             font-weight: $bold;
-                            color: #7D7D7D;
+                            color: var(--c-grey);
                         }
 
                         @keyframes pulse {
@@ -175,12 +187,12 @@ main {
 
                         &::before {
                             left: 0;
-                            background: linear-gradient(to right, rgba(var(--c-background-rgb), 1), rgba(var(--c-background-rgb), 0));
+                            background: linear-gradient(to right, var(--c-background), rgba(var(--c-background-rgb), 0));
                         }
 
                         &::after {
                             right: 0;
-                            background: linear-gradient(to left, rgba(var(--c-background-rgb), 1), rgba(var(--c-background-rgb), 0));
+                            background: linear-gradient(to left, var(--c-background), rgba(var(--c-background-rgb), 0));
                         }
 
                         .scroll-content {
@@ -233,26 +245,34 @@ main {
                         display: flex;
                         gap: 16px;
 
-                        @media (max-width: 1168px) {
+                        @media (max-width: 600px) {
                             flex-direction: column;
                         }
 
                         .map {
                             width: calc(51% - (16px /2));
                             max-height: 220px;
+                            height: 220px;
+                            object-fit: cover;
+                            border-radius: 24px;
                             // background-image: url('../../../../public/map.webp'), url('../../../../map.webp');
                             background-size: cover;
                             background-position: center;
 
                             @media (max-width: 1168px) {
                                 max-height: 220px;
-                                height: 220px;
-                                width: 100%;
+                                height: 216px;
+                                width: calc(50% - (16px / 2));
                                 // background-image: url('../../../../public/map.webp'), url('../../../../map.webp');
                                 background-size: cover;
                                 background-position: center;
                                 object-fit: cover;
                                 border-radius: 24px;
+                            }
+
+                            @media (max-width: 600px) {
+                                width: 100%;
+                                height: 200px;
                             }
 
                             img {
@@ -268,6 +288,10 @@ main {
                             gap: 16px;
 
                             @media (max-width: 1168px) {
+                                width: calc(50% - (16px / 2));
+                            }
+
+                            @media (max-width: 600px) {
                                 width: 100%;
                             }
 
@@ -279,6 +303,10 @@ main {
 
                                 &.cv {
                                     padding: 0 32px;
+
+                                    @media (max-width: 512px) {
+                                        padding: 0 24px;
+                                    }
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
@@ -348,7 +376,7 @@ main {
                                     }
 
                                     &.active {
-                                        background-color: var(--c-background);
+                                        background-color: var(--c-surface-raised);
                                         box-shadow: 0px 0px 10px -4px rgba(6, 9, 19, .25);
 
                                         img {
@@ -392,6 +420,7 @@ main {
 
                         @media (max-width: 1168px) {
                             width: 100%;
+                            flex-direction: row;
                         }
 
                         a {
@@ -401,6 +430,11 @@ main {
                             align-items: center;
                             border-radius: 24px;
                             height: 128px;
+
+                            @media (max-width: 1168px) {
+                                flex: 1;
+                                height: 96px;
+                            }
                         }
                     }
 
@@ -563,12 +597,20 @@ main {
                             background-color: rgba(var(--c-background-rgb), .8);
                             border-radius: 24px;
                             height: 128px;
+
+                            @media (max-width: 1168px) {
+                                height: 96px;
+                            }
                         }
                     }
                 }
 
                 .studies {
                     min-height: 700px;
+
+                    @media (max-width: 1168px) {
+                        min-height: 0;
+                    }
                     background-color: rgba(var(--c-background-rgb), .8);
                     border-radius: 24px;
                     display: flex;
@@ -765,7 +807,8 @@ main {
                                 }
 
                                 p {
-                                    font-size: 12px !important;
+                                    font-size: 13px !important;
+                                    line-height: 1.4;
                                     color: var(--c-black) !important;
                                     margin: 0;
                                     padding: 0;
@@ -792,6 +835,19 @@ main {
                         @media (max-width: 1168px) {
                             width: 100%;
                             padding-bottom: 0;
+
+                            section article .time h4 {
+                                font-size: 22px;
+                                margin-top: 4px;
+
+                                br {
+                                    display: none;
+                                }
+                            }
+
+                            section article {
+                                padding-bottom: 40px !important;
+                            }
 
                             h1 {
                                 font-size: 40px;
@@ -896,11 +952,21 @@ main {
 
                         @media (max-width: 512px) {
                             justify-content: center;
+                            flex-wrap: nowrap;
                         }
 
                         .btn {
                             padding: 12px;
                             min-width: 120px;
+
+                            @media (max-width: 512px) {
+                                flex: 1 1 auto;
+                                min-width: 0;
+                                padding: 10px 8px;
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
+
                             text-align: center;
                             background-color: var(--c-background);
                             border-radius: 10px;
@@ -908,14 +974,12 @@ main {
                             appearance: none;
                             font-family: inherit;
                             font-size: inherit;
-                            color: #535355;
+                            color: var(--c-grey);
                             font-weight: $regular;
-                            opacity: 0.5;
                             cursor: url('/src/Assets/Images/Cursors/Hand.svg'), pointer;
 
                             &.active {
                                 color: var(--c-darkgrey);
-                                opacity: 1;
                                 font-weight: $medium;
                                 box-shadow: 0px 0px 10px -4px rgba(63, 66, 74, 0.5)
                             }
@@ -994,22 +1058,28 @@ main {
                                     font-size: 32px;
                                     color: var(--c-darkgrey);
                                     font-weight: $bold;
+
+                                    @media (max-width: 512px) {
+                                        font-size: 28px;
+                                    }
                                 }
 
                                 p {
                                     color: var(--c-grey);
                                     font-size: 14px;
+                                    line-height: 1.45;
                                 }
 
                                 .tags {
                                     display: flex;
+                                    flex-wrap: wrap;
                                     gap: 8px;
                                     margin-top: 8px;
 
                                     span {
                                         padding: 2px 12px;
                                         border-radius: 50px;
-                                        background-color: var(--c-lightgrey);
+                                        background-color: var(--c-tag-bg);
                                         color: var(--c-darkgrey);
                                         font-weight: $bold;
                                         font-size: 12px;
@@ -1047,6 +1117,10 @@ main {
                         align-self: center;
                         border-radius: 1px;
                         margin: 48px 0 48px 0;
+
+                        @media (max-width: 512px) {
+                            margin: 32px 0;
+                        }
                     }
 
                     .dev-web,
@@ -1054,17 +1128,6 @@ main {
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
-                    }
-
-                    .summer-job {
-                        .exp {
-                            .title {
-                                p {
-                                    color: var(--c-lightgrey);
-                                    text-decoration: line-through;
-                                }
-                            }
-                        }
                     }
 
                     .exp {
@@ -1087,6 +1150,11 @@ main {
                                 font-size: 32px;
                                 font-weight: $bold;
                                 color: var(--c-darkgrey);
+
+                                @media (max-width: 512px) {
+                                    font-size: 26px;
+                                    line-height: 1.2;
+                                }
                             }
 
                             span {

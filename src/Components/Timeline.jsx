@@ -1,8 +1,10 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { useLang } from "../i18n";
 
 function Timeline() {
+  const { t } = useLang();
   return (
     <div className="timeline">
       <section>
@@ -10,9 +12,15 @@ function Timeline() {
           <Link to="/moi#master-cn-dedi">
             <div className="content">
               <h3>
-                Master Création Numérique<em></em>
+                {t("Master Création Numérique", "Master’s in Digital Creation")}
+                <em></em>
               </h3>
-              <p>Parcours Design d'Expérience et Design d'Interface </p>
+              <p>
+                {t(
+                  "Parcours Design d'Expérience et Design d'Interface",
+                  "Experience Design & Interface Design track",
+                )}
+              </p>
               <p>
                 <span>UX</span>
                 <span>UI</span>
@@ -21,10 +29,7 @@ function Timeline() {
             </div>
             <div className="time">
               <h4>
-                2027
-                <br />
-                —
-                <br />
+                2027 <br />— <br />
                 2025
               </h4>
             </div>
@@ -36,19 +41,21 @@ function Timeline() {
               <h3>
                 BUT MMI<em>**</em>
               </h3>
-              <p>Parcours développement web et dispositifs interactifs</p>
               <p>
-                <span>Développement web</span>
-                <span>Audiovisuel</span>
+                {t(
+                  "Parcours développement web et dispositifs interactifs",
+                  "Web development & interactive media track",
+                )}
+              </p>
+              <p>
+                <span>{t("Développement web", "Web development")}</span>
+                <span>{t("Audiovisuel", "Audiovisual")}</span>
                 <span>Communication</span>
               </p>
             </div>
             <div className="time">
               <h4>
-                2025
-                <br />
-                —
-                <br />
+                2025 <br />— <br />
                 2022
               </h4>
             </div>
@@ -58,12 +65,12 @@ function Timeline() {
           <Link to="/moi#but-info">
             <div className="content">
               <h3>
-                BUT<em>*</em> Informatique
+                BUT<em>*</em> {t("Informatique", "Computer Science")}
               </h3>
               <p>
-                <span>Développement web</span>
-                <span>Algorithmie</span>
-                <span>Programmation</span>
+                <span>{t("Développement web", "Web development")}</span>
+                <span>{t("Algorithmie", "Algorithms")}</span>
+                <span>{t("Programmation", "Programming")}</span>
               </p>
             </div>
             <div className="time">
@@ -74,10 +81,25 @@ function Timeline() {
         <article>
           <Link to="/moi#bac">
             <div className="content">
-              <h3>Baccalauréat série générale</h3>
+              <h3>
+                {t(
+                  "Baccalauréat série générale",
+                  "French Baccalaureate (general)",
+                )}
+              </h3>
               <p>
-                <span>Numérique et Sciences Informatique</span>
-                <span>Sciences Économiques et Sociales</span>
+                <span>
+                  {t(
+                    "Numérique et Sciences Informatique",
+                    "Digital & Computer Science",
+                  )}
+                </span>
+                <span>
+                  {t(
+                    "Sciences Économiques et Sociales",
+                    "Economics & Social Sciences",
+                  )}
+                </span>
               </p>
             </div>
             <div className="time">

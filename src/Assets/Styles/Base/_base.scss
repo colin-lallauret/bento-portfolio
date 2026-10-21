@@ -40,8 +40,10 @@
     --c-generalbackground: #{$generalbackground};
     --c-black: #{$black};
     --c-darkgrey: #{$darkgrey};
-    --c-grey: #{$grey};
+    --c-grey: #6B6E75;
     --c-lightgrey: #{$lightgrey};
+    --c-tag-bg: #{$lightgrey};
+    --c-surface-raised: #{$background};
 }
 
 body.dark {
@@ -50,25 +52,25 @@ body.dark {
     --c-generalbackground: #101114;
     --c-black: #F5F5F5;
     --c-darkgrey: #E7E8EA;
-    --c-grey: #9A9CA3;
+    --c-grey: #A3A6AD;
     --c-lightgrey: #7A7D86;
+    --c-tag-bg: #3A3D46;
+    --c-surface-raised: #33363F;
 }
 
 body.dark {
     background-image: url('/src/Assets/Images/Grid-dark.svg');
+    color-scheme: dark;
 }
 
-body.dark img[src$="linkedin.svg"],
-body.dark img[src$="github.svg"],
-body.dark img[src$="calcom.svg"],
-body.dark img[src$="mail.svg"],
-body.dark img[src$="cv.svg"],
-body.dark img[src$="download.png"],
-body.dark img[src$="visuel.svg"],
-body.dark img[src$="logo-black.svg"],
-body.dark img[src$="day.svg"],
-body.dark img[src$="night.svg"] {
+// Single-colour icons flip with the theme. A class, not src matching:
+// Vite inlines small SVGs as data URIs in production builds.
+body.dark .icon-adaptive {
     filter: invert(1);
+}
+
+body.dark main.home .map {
+    filter: brightness(.85) saturate(.9);
 }
 
 * {
@@ -99,7 +101,7 @@ body {
     transition: background-color .3s ease;
 
     @media (max-width: 768px) {
-        padding: 32px 0 64px 0;
+        padding: 0 0 calc(96px + env(safe-area-inset-bottom, 0px)) 0;
     }
 }
 
@@ -174,13 +176,18 @@ a,
 
 header {
     @media (max-width: 768px) {
-        justify-content: center !important;
-        height: 0px;
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-bottom: 12px;
 
         .logo-wrapper,
-        .empty,
         .menu {
             display: none !important;
+        }
+
+        .lang-switcher {
+            height: 40px;
+            padding: 0 4px;
         }
 
         .mobile-menu {
@@ -190,13 +197,16 @@ header {
             position: fixed;
             flex-wrap: nowrap;
             padding: 6px;
-            border: 1px solid $lightgrey;
+            border: 1px solid var(--c-lightgrey);
             border-radius: 16px;
-            background-color: $background;
+            background-color: var(--c-background);
             box-shadow: 0px 0px 10px rgba($darkgrey, 0.15);
             gap: 10px;
             z-index: 98;
-            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+            max-width: calc(100vw - 16px);
 
             .pages,
             .links {
@@ -205,8 +215,8 @@ header {
                 gap: 10px;
 
                 .btn {
-                    height: 40px;
-                    width: 40px;
+                    height: 44px;
+                    width: 44px;
                     border-radius: 10px;
                     display: flex;
                     justify-content: center;
@@ -218,7 +228,7 @@ header {
 
                     &.active {
                         background-color: $blue;
-                        border: 1px solid $lightgrey;
+                        border: 1px solid var(--c-lightgrey);
 
                         img {
                             filter: brightness(0) invert(1);
@@ -230,7 +240,7 @@ header {
             .separator {
                 height: 20px;
                 width: 1px;
-                background-color: $lightgrey;
+                background-color: var(--c-lightgrey);
                 border-radius: 1px;
             }
         }

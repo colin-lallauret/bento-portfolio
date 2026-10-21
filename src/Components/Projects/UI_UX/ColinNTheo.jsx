@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../../Regions/Header";
 import { Link } from "react-router-dom";
 import transition from "../../../transition";
-import FavIcon from "../../../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
 import Image1 from "../../../Assets/Images/Full_img/cett/1.png";
 import Image2 from "../../../Assets/Images/Full_img/cett/2.png";
@@ -12,28 +10,14 @@ import Image3 from "../../../Assets/Images/Full_img/cett/3.png";
 import Figma from "../../../Assets/Images/Icons/Logiciels/figma.png";
 
 import Arrow from "../../../Assets/Images/arrow.svg";
+import { useLang, usePageTitle } from "../../../i18n";
 
 function ColinNTheo() {
-  useEffect(() => {
-    document.title = "C&T (projet) — Colin LALLAURET";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "C&T (projet) — Colin LALLAURET";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle(
+    "C&T (projet) — Colin LALLAURET",
+    "C&T (project) — Colin LALLAURET",
+  );
 
   return (
     <>
@@ -61,50 +45,112 @@ function ColinNTheo() {
           <div className="text">
             <h3>C&T</h3>
             <p>
-              Dans ce projet en duo, nous avions pour objectif de créer une page
-              web et un article fictif sur le SEO. L&apos;idée était de
-              maximiser la visibilité de notre contenu sur les moteurs de
-              recherche. Nous avons donc conçu un article optimisé intégrant des
-              mots-clés, des backlinks et d&apos;autres techniques de
-              référencement pour assurer une meilleure portée et pertinence.
+              {t(
+                <>
+                  Dans ce projet en duo, nous avions pour objectif de créer une
+                  page web et un article fictif sur le SEO. L&apos;idée était de
+                  maximiser la visibilité de notre contenu sur les moteurs de
+                  recherche. Nous avons donc conçu un article optimisé intégrant
+                  des mots-clés, des backlinks et d&apos;autres techniques de
+                  référencement pour assurer une meilleure portée et pertinence.
+                </>,
+                <>
+                  In this duo project, our goal was to create a web page and a
+                  mock article about SEO. The idea was to maximise our content’s
+                  visibility on search engines, so we designed an optimised
+                  article using keywords, backlinks and other SEO techniques to
+                  improve its reach and relevance.
+                </>,
+              )}
             </p>
             <div>
-              <h4>Déroulé du projet</h4>
+              <h4>{t("Déroulé du projet", "How it went")}</h4>
               <p>
-                <b>Recherche :</b> Étude de l&apos;existant pour comprendre les
-                enjeux du SEO et l&apos;organisation des articles web.
+                {t(
+                  <>
+                    <b>Recherche :</b> Étude de l&apos;existant pour comprendre
+                    les enjeux du SEO et l&apos;organisation des articles web.
+                  </>,
+                  <>
+                    <b>Research:</b> Studying existing work to understand what
+                    is at stake in SEO and how web articles are structured.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Rédaction :</b> Création des titres principaux et rédaction
-                en appliquant les principes du référencement naturel.
+                {t(
+                  <>
+                    <b>Rédaction :</b> Création des titres principaux et
+                    rédaction en appliquant les principes du référencement
+                    naturel.
+                  </>,
+                  <>
+                    <b>Writing:</b> Crafting the main headings and writing the
+                    content following organic SEO principles.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Maquettage :</b> Élaboration d&apos;une direction artistique
-                (couleurs, nom du site, typographie...), puis mise en page de
-                l&apos;article sur une maquette desktop.
+                {t(
+                  <>
+                    <b>Maquettage :</b> Élaboration d&apos;une direction
+                    artistique (couleurs, nom du site, typographie...), puis
+                    mise en page de l&apos;article sur une maquette desktop.
+                  </>,
+                  <>
+                    <b>Mockups:</b> Defining an art direction (colours, site
+                    name, typography...), then laying out the article on a
+                    desktop mockup.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Amélioration :</b> Relecture et optimisation du contenu,
-                ajout de backlinks, intégration d&apos;interactions et
-                réorganisation des sections si nécessaire.
+                {t(
+                  <>
+                    <b>Amélioration :</b> Relecture et optimisation du contenu,
+                    ajout de backlinks, intégration d&apos;interactions et
+                    réorganisation des sections si nécessaire.
+                  </>,
+                  <>
+                    <b>Improvement:</b> Proofreading and optimising the content,
+                    adding backlinks, adding interactions and reorganising
+                    sections where needed.
+                  </>,
+                )}
               </p>
             </div>
             <div>
-              <h4>Acquis</h4>
+              <h4>{t("Acquis", "Skills gained")}</h4>
               <p>
-                <b>Hard skills :</b> Référencement naturel (SEO), Rédaction web
-                optimisée, Maquettage et design UI/UX
+                {t(
+                  <>
+                    <b>Hard skills :</b> Référencement naturel (SEO), Rédaction
+                    web optimisée, Maquettage et design UI/UX
+                  </>,
+                  <>
+                    <b>Hard skills:</b> Organic SEO, Optimised web copywriting,
+                    Mockups and UI/UX design
+                  </>,
+                )}
               </p>
               <p>
-                <b>Soft skills :</b> Travail en équipe, Communication efficace,
-                Sens de l&apos;analyse
+                {t(
+                  <>
+                    <b>Soft skills :</b> Travail en équipe, Communication
+                    efficace, Sens de l&apos;analyse
+                  </>,
+                  <>
+                    <b>Soft skills:</b> Teamwork, Effective communication,
+                    Analytical mindset
+                  </>,
+                )}
               </p>
             </div>
           </div>
           <div className="info-wrapper">
             <div className="group-solo">
-              <h3>Réaliser en groupe</h3>
-              <p>Colin LALLAURET (moi)</p>
+              <h3>{t("Réaliser en groupe", "Group project")}</h3>
+              <p>{t("Colin LALLAURET (moi)", "Colin LALLAURET (me)")}</p>
               <p>Théo LE GOURRIEREC</p>
             </div>
             <div className="used">
@@ -114,12 +160,12 @@ function ColinNTheo() {
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/ui-ux/bleep" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet précédent (Bleep)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet précédent", "Previous project")} (Bleep)
           </Link>
           <Link to="/projet/ui-ux/kult" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet suivant (Kult)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet suivant", "Next project")} (Kult)
           </Link>
         </div>
       </main>

@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../../Regions/Header";
 import { Link } from "react-router-dom";
 import transition from "../../../transition";
-import FavIcon from "../../../Assets/Favicon/favicon.ico";
-import FavIconOutline from "../../../Assets/Favicon/outlinefavicon.ico";
 
 import Image1 from "../../../Assets/Images/Full_img/bleep/1.png";
 import Image2 from "../../../Assets/Images/Full_img/bleep/2.png";
@@ -12,28 +10,14 @@ import Image3 from "../../../Assets/Images/Full_img/bleep/3.png";
 import Figma from "../../../Assets/Images/Icons/Logiciels/figma.png";
 
 import Arrow from "../../../Assets/Images/arrow.svg";
+import { useLang, usePageTitle } from "../../../i18n";
 
 function Bleep() {
-  useEffect(() => {
-    document.title = "Bleep (projet) — Colin LALLAURET";
-
-    const handleVisibilityChange = () => {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (document.visibilityState === "hidden") {
-        document.title = "Où allez-vous ? 💻✨";
-        favicon.href = FavIconOutline;
-      } else {
-        document.title = "Bleep (projet) — Colin LALLAURET";
-        favicon.href = FavIcon;
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  const { t } = useLang();
+  usePageTitle(
+    "Bleep (projet) — Colin LALLAURET",
+    "Bleep (project) — Colin LALLAURET",
+  );
 
   return (
     <>
@@ -61,51 +45,114 @@ function Bleep() {
           <div className="text">
             <h3>Bleep</h3>
             <p>
-              L&apos;objectif de ce projet était de repenser l&apos;expérience
-              des emails en proposant des améliorations notables. Nous avons
-              cherché à optimiser la confidentialité, la gestion et
-              l&apos;efficacité des emails en imaginant des concepts innovants
-              visant à moderniser les boîtes mail actuelles tout en apportant
-              une meilleure expérience utilisateur.
+              {t(
+                <>
+                  L&apos;objectif de ce projet était de repenser
+                  l&apos;expérience des emails en proposant des améliorations
+                  notables. Nous avons cherché à optimiser la confidentialité,
+                  la gestion et l&apos;efficacité des emails en imaginant des
+                  concepts innovants visant à moderniser les boîtes mail
+                  actuelles tout en apportant une meilleure expérience
+                  utilisateur.
+                </>,
+                <>
+                  The goal of this project was to rethink the email experience
+                  with meaningful improvements. We set out to improve email
+                  privacy, management and efficiency by imagining innovative
+                  concepts to modernise today’s inboxes while delivering a
+                  better user experience.
+                </>,
+              )}
             </p>
             <div>
-              <h4>Déroulé du projet</h4>
+              <h4>{t("Déroulé du projet", "How it went")}</h4>
               <p>
-                <b>Analyse :</b> Étude des fonctionnalités des boîtes mail
-                actuelles et de leurs limites.
+                {t(
+                  <>
+                    <b>Analyse :</b> Étude des fonctionnalités des boîtes mail
+                    actuelles et de leurs limites.
+                  </>,
+                  <>
+                    <b>Analysis:</b> Studying the features of current mailboxes
+                    and their limits.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Proposition des concepts :</b> Présentation de trois idées :
-                chiffrement de bout en bout, compression automatique et gestion
-                de projet. Après un oral, le premier concept a été retenu.
+                {t(
+                  <>
+                    <b>Proposition des concepts :</b> Présentation de trois
+                    idées : chiffrement de bout en bout, compression automatique
+                    et gestion de projet. Après un oral, le premier concept a
+                    été retenu.
+                  </>,
+                  <>
+                    <b>Concept proposals:</b> Pitching three ideas: end-to-end
+                    encryption, automatic compression and project management.
+                    After an oral presentation, the first concept was chosen.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Approfondissement des recherches :</b> Étude approfondie du
-                besoin utilisateur et phase d&apos;idéation du concept.
+                {t(
+                  <>
+                    <b>Approfondissement des recherches :</b> Étude approfondie
+                    du besoin utilisateur et phase d&apos;idéation du concept.
+                  </>,
+                  <>
+                    <b>Deeper research:</b> In-depth study of user needs and the
+                    concept’s ideation phase.
+                  </>,
+                )}
               </p>
               <p>
-                <b>Réalisation d&apos;un parcours utilisateur :</b> Simulation
-                complète de l&apos;utilisation de notre application, du
-                déverrouillage du téléphone jusqu&apos;à la lecture et
-                l&apos;envoi sécurisé d&apos;un email.
+                {t(
+                  <>
+                    <b>Réalisation d&apos;un parcours utilisateur :</b>{" "}
+                    Simulation complète de l&apos;utilisation de notre
+                    application, du déverrouillage du téléphone jusqu&apos;à la
+                    lecture et l&apos;envoi sécurisé d&apos;un email.
+                  </>,
+                  <>
+                    <b>Building a user journey:</b> A full simulation of using
+                    our app, from unlocking the phone to reading and securely
+                    sending an email.
+                  </>,
+                )}
               </p>
             </div>
             <div>
-              <h4>Acquis</h4>
+              <h4>{t("Acquis", "Skills gained")}</h4>
               <p>
-                <b>Hard skills :</b> Analyse UX/UI, Sécurité et chiffrement des
-                données, Conception d’expérience utilisateur
+                {t(
+                  <>
+                    <b>Hard skills :</b> Analyse UX/UI, Sécurité et chiffrement
+                    des données, Conception d’expérience utilisateur
+                  </>,
+                  <>
+                    <b>Hard skills:</b> UX/UI analysis, Data security and
+                    encryption, User experience design
+                  </>,
+                )}
               </p>
               <p>
-                <b>Soft skills :</b> Créativité, Prise de parole en public,
-                Esprit critique et prise de décision
+                {t(
+                  <>
+                    <b>Soft skills :</b> Créativité, Prise de parole en public,
+                    Esprit critique et prise de décision
+                  </>,
+                  <>
+                    <b>Soft skills:</b> Creativity, Public speaking, Critical
+                    thinking and decision-making
+                  </>,
+                )}
               </p>
             </div>
           </div>
           <div className="info-wrapper">
             <div className="group-solo">
-              <h3>Réaliser en groupe</h3>
-              <p>Colin LALLAURET (moi)</p>
+              <h3>{t("Réaliser en groupe", "Group project")}</h3>
+              <p>{t("Colin LALLAURET (moi)", "Colin LALLAURET (me)")}</p>
               <p>Théo LE GOURRIEREC</p>
             </div>
             <div className="used">
@@ -115,12 +162,12 @@ function Bleep() {
         </div>
         <div className="btns-wrapper">
           <Link to="/projet/3d-game/ninjacut" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet précédent (NinjaCut)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet précédent", "Previous project")} (NinjaCut)
           </Link>
           <Link to="/projet/ui-ux/cnt" className="btn-next-project">
-            <img src={Arrow} alt="arrow" />
-            Projet suivant (C&T)
+            <img className="icon-adaptive" src={Arrow} alt="" />
+            {t("Projet suivant", "Next project")} (C&T)
           </Link>
         </div>
       </main>

@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import CnT from "../Assets/Images/Projects/CnT.webp";
 import Bleep from "../Assets/Images/Projects/Bleep.webp";
 import Kult from "../Assets/Images/Projects/Kult.webp";
+import { useLang } from "../i18n";
 
 function ProjectUIUX() {
+  const { t } = useLang();
   return (
     <>
       <Link to="/projet/ui-ux/cnt" className="project-item left">
@@ -13,9 +15,17 @@ function ProjectUIUX() {
         <div className="project-text">
           <h5>C&T</h5>
           <p>
-            La création d’une page type d’un site réalisant des articles en
-            ligne et la rédaction de son contenu portant sur le Search Engine
-            Optimization.
+            {t(
+              <>
+                La création d’une page type d’un site réalisant des articles en
+                ligne et la rédaction de son contenu portant sur le Search
+                Engine Optimization.
+              </>,
+              <>
+                Designing a template page for an online articles site and
+                writing its content about Search Engine Optimization.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>SEO</span>
@@ -29,8 +39,17 @@ function ProjectUIUX() {
         <div className="project-text">
           <h5>BLEEP.</h5>
           <p>
-            La simplification et l’accessibilité mises en oeuvre pour réaliser
-            une application « mailbox » sécurisée sur la blockchain.
+            {t(
+              <>
+                La simplification et l’accessibilité mises en oeuvre pour
+                réaliser une application « mailbox » sécurisée sur la
+                blockchain.
+              </>,
+              <>
+                Simplicity and accessibility put to work to build a secure
+                “mailbox” app on the blockchain.
+              </>,
+            )}
           </p>
           <div className="tags">
             <span>Mobile</span>
@@ -47,11 +66,19 @@ function ProjectUIUX() {
         <div className="project-text">
           <h5>KULT’</h5>
           <p>
-            Le design d’une application pour faciliter les sorties culturelles
-            dans le Trégor.
+            {t(
+              <>
+                Le design d’une application pour faciliter les sorties
+                culturelles dans le Trégor.
+              </>,
+              <>
+                Designing an app that makes cultural outings in the Trégor
+                region easier.
+              </>,
+            )}
           </p>
           <div className="tags">
-            <span>Réservation</span>
+            <span>{t("Réservation", "Booking")}</span>
             <span>Figma</span>
             <span>Mobile</span>
           </div>
