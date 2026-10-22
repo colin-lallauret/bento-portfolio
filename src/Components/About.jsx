@@ -112,7 +112,7 @@ function About() {
               <a href="mailto:colinlallauret1@gmail.com">
                 <img className="icon-adaptive" src={Mail} alt="Mail" />
               </a>
-              <a href="/CV2026_ColinLALLAURET.pdf" download>
+              <a href="/CV_ColinLALLAURET_UI_UX.pdf" download>
                 <img
                   className="icon-adaptive"
                   src={Cv}

@@ -13,7 +13,7 @@ function Cv() {
         <p>RESUME</p>
       </div>
       <div className="cv-btns">
-        <a href="/CV2026_ColinLALLAURET.pdf" download>
+        <a href="/CV_ColinLALLAURET_UI_UX.pdf" download>
           <img
             className="icon-adaptive"
             src={Download}
@@ -23,7 +23,7 @@ function Cv() {
           />
         </a>
         <button
-          onClick={() => window.open("/CV2026_ColinLALLAURET.pdf", "_blank")}
+          onClick={() => window.open("/CV_ColinLALLAURET_UI_UX.pdf", "_blank")}
         >
           <img
             className="icon-adaptive"
